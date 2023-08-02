@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-slider';
+// import { Carousel } from 'react-slider';
 
 const Register = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,7 +18,7 @@ const Register = () => {
 
      return (
         <div>
-          <Carousel
+          {/* <Carousel
             value={currentSlide}
             onChange={handleSlideChange}
           >
@@ -27,7 +27,7 @@ const Register = () => {
                 <img src={image} alt={`Slide ${index + 1}`} />
               </div>
             ))}
-          </Carousel>
+          </Carousel> */}
       
           {/* Render your fixed register form here */}
           <div className="register-form">
