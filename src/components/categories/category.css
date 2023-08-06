@@ -1,0 +1,33 @@
+.category {
+    border: 1px solid #000;
+}
+.category__image {
+    width: 10rem;
+}
+.category__heading {
+    
+}
+.category__details {
+
+}
+.category__details--author {
+
+}
+.category__author--image {
+
+}
+.category__author--name {
+
+}
+.category__details--date {
+
+}
+.category__date {
+
+}
+.category__details--comments {
+
+}
+.category__comment {
+
+}
