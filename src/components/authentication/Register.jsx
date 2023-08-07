@@ -18,6 +18,7 @@ const Register = () => {
 
      return (
         <div>
+          Register
           {/* <Carousel
             value={currentSlide}
             onChange={handleSlideChange}
@@ -30,9 +31,9 @@ const Register = () => {
           </Carousel> */}
       
           {/* Render your fixed register form here */}
-          <div className="register-form">
-            {/* Form fields and submit button */}
-          </div>
+          {/* <div className="register-form">
+            
+          </div> */}
         </div>
       );
       
