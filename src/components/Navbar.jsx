@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
+import { BsSearch, BsBell } from "react-icons/bs";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +21,8 @@ const Navbar = () => {
           </span>
         </a>
         <div className="flex items-center md:order-2">
+          <i className='bell'> <BsBell /> </i>
+
           <button
             type="button"
             className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -33,8 +37,13 @@ const Navbar = () => {
               src={profilePhoto}
               alt="user photo"
             />
+
+            
             {/* img*/}
           </button>
+          <span className="ml-5 text-sm">
+            Aselemi Divine
+            </span>
           <div
             className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
             id="user-dropdown"
