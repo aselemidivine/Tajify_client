@@ -8,6 +8,7 @@ const Navbar = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-green-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
@@ -167,7 +168,8 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+
+  )
+}
 
 export default Navbar;
