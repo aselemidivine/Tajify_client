@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-green-900">
+    <nav className="bg-white border-gray-200 dark:bg-[#008001]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
           {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" /> */}
@@ -20,8 +20,8 @@ const Navbar = () => {
             Tajify
           </span>
         </a>
-        <div className="flex items-center md:order-2">
-          <i className='bell'> <BsBell /> </i>
+        <div className="flex justify-center items-center md:order-2 ">
+          <i className='bell mr-5 flex justify-center items-center w-6 h-5 cursor-pointer'> <BsBell /> </i>
 
           <button
             type="button"
@@ -33,7 +33,7 @@ const Navbar = () => {
           >
             <span className="sr-only">Open user menu</span>
             <img
-              className="w-8 h-8 rounded-full"
+              className="w-14 h-21 rounded-full"
               src={profilePhoto}
               alt="user photo"
             />
