@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Ads from "../../components/Ads";
 import Tabs from "../../components/Tabs";
 import AdsSecond from "../../components/Ads2";
+import Feeds from "../../components/Feeds";
 
 const Writer = () => {
   return (
@@ -21,16 +22,17 @@ const Writer = () => {
           </div>
         </div>
         <Tabs />
-        <div className="flex justify-between">
+        <div className="flex justify-between items-end">
           <div className="">
             <AdsSecond />
           </div>
           <div>
-          <div className="w-[166px] h-[40px] bg-[#F06] text-center flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
-          Add Post
-        </div>
+            <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
+              Add Post
+            </button>
           </div>
         </div>
+        <Feeds />
       </div>
     </div>
   );
