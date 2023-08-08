@@ -1,7 +1,7 @@
 import React from "react";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 
-import '../assets/css/style.css'
+import '../pages/blogHome/style.css'
 const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore']
 
 
@@ -11,15 +11,16 @@ function Header() {
             <span className="header__logo">Tajify Logo</span>
             <nav className="navbar">
                 <ui className="navbar__list">
-                {lists.map(list => {
+                  {lists.map(list => {
                     return (
                     <li className="navbar__list--item">
                         <a href="#" className="navbar__list--link">{list}</a>
                     </li>
                     );
-                })}
+                  })}
                 </ui>
-                <Profile />
+                {/* <a href="/signup" className="nav__button">Get Started</a> */}
+                {/* <Profile /> */}
             </nav>
         </header>
     );
@@ -39,4 +40,8 @@ function Profile() {
   );
 }
 
-export default Header
+export default Header;
+
+// #008001
+// #FFC107
+// #FF0066

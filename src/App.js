@@ -4,6 +4,7 @@ import BlogHome from "./pages/blogHome";
 import Register from "./components/authentication/Register";
 import Login from "./components/authentication/Login";
 
+
 function App() {
   return (
     <BrowserRouter>

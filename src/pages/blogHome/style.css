@@ -59,6 +59,68 @@ body {
     height: 100%;
     border: 1px solid #fff;
 }
-.profile__name {
+
+
+a.nav__button:link, a.nav__button:visited {
+    display: inline-block;
+    box-shadow: 0 0 0 .35rem #FF0066;
+    color: #333;
+    padding: -2rem 2rem;
+    /* height: 2rem; */
+    align-self: center;
+}
+
+
+
+
+
+/* ================== HERO SECTION =================== */
+
+.hero__section {
+
+}
+.container {
+
+}
+.hero {
+
+}
+.hero__text--box {
+
+}
+.heading__primary {
+
+}
+.hero--extra {
+
+}
+.heading__description {
+
+}
+.hero__form {
+
+}
+.hero__input {
+
+}
+.hero__form--btn {
+
+}
+.hero__stats {
+
+}
+.hero__images--box {
+
+}
+.hero__image {
+
+}
+.stat {
+
+}
+.stat--figure {
+
+}
+.stat--text {
 
 }
