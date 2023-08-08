@@ -1,15 +1,19 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
+import styled from "styled-components";
 import Ads from "../../components/Ads";
 import Tabs from "../../components/Tabs";
 import AdsSecond from "../../components/Ads2";
 import Feeds from "../../components/Feeds";
+import Filter from "../../components/Filter";
+import TrendyNews from "../../components/TrendyNews";
 
 const Writer = () => {
   return (
-    <div>
+<WriterContainer>
+    <div className="">
       <Navbar />
-      <div className="pl-40 pr-40 ">
+      <div className="pl-40 pr-40 w-full h-full ">
         <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] ">
           <div className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
             <span className="text-white">Top News</span>
@@ -33,9 +37,18 @@ const Writer = () => {
           </div>
         </div>
         <Feeds />
+
+        <Filter />
+        <TrendyNews />
       </div>
     </div>
+        </WriterContainer>
   );
 };
 
 export default Writer;
+
+const WriterContainer = styled.div`
+  
+
+`;
