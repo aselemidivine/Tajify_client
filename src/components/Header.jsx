@@ -8,7 +8,7 @@ const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore']
 function Header() {
     return (
         <header className='header'>
-            <span className="header__logo">Tajify Logo</span>
+            <span className="header__logo">Tajify</span>
             <nav className="navbar">
                 <ui className="navbar__list">
                   {lists.map(list => {
@@ -19,8 +19,7 @@ function Header() {
                     );
                   })}
                 </ui>
-                {/* <a href="/signup" className="nav__button">Get Started</a> */}
-                {/* <Profile /> */}
+                <a href="/signup" className="nav__button">Get Started</a>
             </nav>
         </header>
     );
