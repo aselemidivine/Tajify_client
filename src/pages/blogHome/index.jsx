@@ -8,6 +8,7 @@ const BlogHome = () => {
     <>
       <Header />
       <Hero />
+      {/* <PopularCourses /> */}
     </>
   )
 }

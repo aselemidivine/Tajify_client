@@ -72,7 +72,7 @@ a.nav__button:hover {
 
 /* ================== HERO SECTION =================== */
 .section {
-    padding: 8rem 0;
+    padding: 4.8rem 0;
 }
 .hero__section {
     /* background-color: #008001; */
@@ -104,7 +104,6 @@ a.nav__button:hover {
     color: #fff;
     margin-bottom: 2.4rem;
     letter-spacing: .2px;
-    text-transform: capitalize;
 }
 .hero--extra {
     color: #FFC107;
@@ -175,3 +174,10 @@ a.nav__button:hover {
     font-size: 1.2rem;
     color: #d2d2d289;
 }
+
+/* ======== POPULAR COURSES ========= */
+.course__section {}
+.course__cards {}
+.card__figure {}
+.card__figure--image {}
+.card__figure--title {}

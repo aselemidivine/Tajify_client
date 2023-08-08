@@ -1,5 +1,5 @@
 import HeroImg from '../assets/images/hero-img/photo1.png';
-import Shield from '../assets/images/hero-img/sheild.svg';
+import  ShiedSVG from '../assets/images/hero-img/sheild.svg';
 import { AiOutlineSearch } from "react-icons/ai";
 import '../pages/blogHome/style.css';
 
@@ -11,8 +11,8 @@ function Hero() {
                 <div className="hero">
                     <div className="hero__text--box">
                         <h1 className="heading__primary">
-                            Monitize your&nbsp;
-                            <span className="hero--extra">creativity</span> and trive in a digital world.
+                            Monitize Your&nbsp;
+                            <span className="hero--extra">Creativity</span> and Trive in the Digital World.
                         </h1>
                         <h4 className="heading__description">
                         The ultimate platform created with one purpose in mind: to help creators like you monetize your&nbsp;<span className="hero--extra">content, skills, knowledge, passion, followership, and writing abilities.</span>
@@ -26,7 +26,7 @@ function Hero() {
                         </form>
 
                         <div className="hero__stats">
-                            {/* <Shield /> */}
+                           
                             <Stat figure='1M+' text='services' />
                             <Stat figure='1200+' text='Active users' />
                         </div>
