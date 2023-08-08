@@ -1,7 +1,9 @@
 import HeroImg from '../assets/images/hero-img/photo1.png';
-import Shield from '../assets/images/hero-img/sheild.svg';
+// import Shield from '../components/svgs/Ellipse';
 import { AiOutlineSearch } from "react-icons/ai";
 import '../pages/blogHome/style.css';
+import Elipse from './svgs/Shield';
+import Shield from './svgs/Shield';
 
 
 function Hero() {
@@ -26,7 +28,7 @@ function Hero() {
                         </form>
 
                         <div className="hero__stats">
-                            {/* <Shield /> */}
+                            <Shield />
                             <Stat figure='1M+' text='services' />
                             <Stat figure='1200+' text='Active users' />
                         </div>
