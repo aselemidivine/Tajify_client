@@ -5,11 +5,13 @@ import Feeds1 from "../assets/images/pngs/feeds1.png";
 const TrendyNews = () => {
   return (
     <TrendyContainer>
+      <div className="trendy__container">
+
       <div className="main__news">
         <img
           src={Feeds1}
           className="align-middle w-full object-cover transition duration-300 ease-linear"
-        />
+          />
         <h1 className="bold__text">
           The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
         </h1>
@@ -77,6 +79,11 @@ const TrendyNews = () => {
           </div>
         </div>
       </div>
+          </div>
+          <div className="text-center flex justify-center mt-5 mb-10">
+
+      <button className="read__more">View More</button>
+          </div>
     </TrendyContainer>
   );
 };
@@ -84,10 +91,14 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+ 
   max-width: 1000px;
   padding: 20px;
+
+  .trendy__container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .bold__text {
     color: #000;
