@@ -56,7 +56,7 @@ const BlogCategory = () => {
               </div>
               <div className="mt-2 flex items-center">
                 <LiaComments className="text-gray-600 mr-2" />
-                <span className="text-gray-600 text-[12px]">23 Comments</span>
+                <span className="text-gray-600 text-[12px]">23 Comm</span>
               </div>
             </div>
           </div>
@@ -218,7 +218,7 @@ const BlogCategory = () => {
               </div>
               <div className="mt-2 flex items-center">
                 <LiaComments className="text-gray-600 mr-2" />
-                <span className="text-gray-600 text-[12px]">23 Comments</span>
+                <span className="text-gray-600 text-[12px]">23 Comm</span>
               </div>
             </div>
           </div>
@@ -360,7 +360,7 @@ const BlogCategory = () => {
           <h1 className="bold__text">
             Who is next football Super Hero. Check the future star
           </h1>
-          <div className="p-4">
+          <div className="mt-4">
             <div className="flex items-center justify-between">
               <img
                 src={profilePhoto3}
@@ -380,7 +380,7 @@ const BlogCategory = () => {
               </div>
               <div className="mt-2 flex items-center">
                 <LiaComments className="text-gray-600 mr-2" />
-                <span className="text-gray-600 text-[12px]">23 Comments</span>
+                <span className="text-gray-600 text-[12px]">23 Com</span>
               </div>
             </div>
           </div>
@@ -563,7 +563,7 @@ const BlogCategoryContainer = styled.div`
     margin-right: 10px;
     img {
 
-      width: 400px;
+      width: 485px;
     }
   }
 
