@@ -6,84 +6,82 @@ const TrendyNews = () => {
   return (
     <TrendyContainer>
       <div className="trendy__container">
-
-      <div className="main__news">
-        <img
-          src={Feeds1}
-          className="align-middle w-full object-cover transition duration-300 ease-linear"
+        <div className="main__news">
+          <img
+            src={Feeds1}
+            className="align-middle w-full object-cover transition duration-300 ease-linear"
           />
-        <h1 className="bold__text">
-          The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
-        </h1>
-        <p>
-          When Donald Trump responded to his latest indictment by promising to
-          appoint a special prosecutor if he’s reelected to “go after” President
-          Joe Biden and his family, he signaled that a second......{" "}
-          <span className="read__more">Read more</span>
-        </p>
+          <h1 className="bold__text">
+            The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
+          </h1>
+          <p>
+            When Donald Trump responded to his latest indictment by promising to
+            appoint a special prosecutor if he’s reelected to “go after”
+            President Joe Biden and his family, he signaled that a second......{" "}
+            <span className="read__more">Read more</span>
+          </p>
+        </div>
+        <div className="featured__news">
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Feeds1} className="news__img" />
+            </div>
+            <div className="featured__news_contents">
+              <p className="bold__text">
+                Five things to know about EFCC acting chairman
+              </p>
+              <div className="span__light">1 hour ago</div>
+            </div>
+          </div>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Feeds1} className="news__img" />
+            </div>
+            <div className="featured__news_contents">
+              <p className="bold__text">
+                Five things to know about EFCC acting chairman
+              </p>
+              <div className="span__light">1 hour ago</div>
+            </div>
+          </div>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Feeds1} className="news__img" />
+            </div>
+            <div className="featured__news_contents">
+              <p className="bold__text">
+                Five things to know about EFCC acting chairman
+              </p>
+              <div className="span__light">1 hour ago</div>
+            </div>
+          </div>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Feeds1} className="news__img" />
+            </div>
+            <div className="featured__news_contents">
+              <p className="bold__text">
+                Five things to know about EFCC acting chairman
+              </p>
+              <div className="span__light">1 hour ago</div>
+            </div>
+          </div>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Feeds1} className="news__img" />
+            </div>
+            <div className="featured__news_contents">
+              <p className="bold__text">
+                Five things to know about EFCC acting chairman
+              </p>
+              <div className="span__light">1 hour ago</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="featured__news">
-        <div className="featured__news_1">
-          <div className="featured__news_img">
-            <img src={Feeds1} className="news__img" />
-          </div>
-          <div className="featured__news_contents">
-            <p className="bold__text">
-              Five things to know about EFCC acting chairman
-            </p>
-            <div className="span__light">1 hour ago</div>
-          </div>
-        </div>
-        <div className="featured__news_1">
-          <div className="featured__news_img">
-            <img src={Feeds1} className="news__img" />
-          </div>
-          <div className="featured__news_contents">
-            <p className="bold__text">
-              Five things to know about EFCC acting chairman
-            </p>
-            <div className="span__light">1 hour ago</div>
-          </div>
-        </div>
-        <div className="featured__news_1">
-          <div className="featured__news_img">
-            <img src={Feeds1} className="news__img" />
-          </div>
-          <div className="featured__news_contents">
-            <p className="bold__text">
-              Five things to know about EFCC acting chairman
-            </p>
-            <div className="span__light">1 hour ago</div>
-          </div>
-        </div>
-        <div className="featured__news_1">
-          <div className="featured__news_img">
-            <img src={Feeds1} className="news__img" />
-          </div>
-          <div className="featured__news_contents">
-            <p className="bold__text">
-              Five things to know about EFCC acting chairman
-            </p>
-            <div className="span__light">1 hour ago</div>
-          </div>
-        </div>
-        <div className="featured__news_1">
-          <div className="featured__news_img">
-            <img src={Feeds1} className="news__img" />
-          </div>
-          <div className="featured__news_contents">
-            <p className="bold__text">
-              Five things to know about EFCC acting chairman
-            </p>
-            <div className="span__light">1 hour ago</div>
-          </div>
-        </div>
+      <div className="text-center flex justify-center mt-5 mb-10">
+        <button className="read__more">View More</button>
       </div>
-          </div>
-          <div className="text-center flex justify-center mt-5 mb-10">
-
-      <button className="read__more">View More</button>
-          </div>
     </TrendyContainer>
   );
 };
@@ -91,7 +89,6 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
- 
   max-width: 1000px;
   padding: 20px;
 
@@ -102,7 +99,6 @@ const TrendyContainer = styled.div`
 
   .bold__text {
     color: #000;
-    font-family: Montserrat;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
