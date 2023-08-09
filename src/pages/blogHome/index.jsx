@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
+import MostPopularCourses from '../../components/MostPopularCourses';
+import TreadingArticles from '../../components/TreadingArticles';
+
 
 
 const BlogHome = () => {
@@ -8,7 +11,8 @@ const BlogHome = () => {
     <>
       <Header />
       <Hero />
-      {/* <PopularCourses /> */}
+      <MostPopularCourses />
+      <TreadingArticles />
     </>
   )
 }

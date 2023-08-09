@@ -42,6 +42,8 @@ export default Shield;
 
 let StartWith = styled.svg`
   path {
-    fill: white;
+    fill: #FF0066;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 `;
