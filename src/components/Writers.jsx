@@ -19,7 +19,7 @@ const Writers = () => {
       </div>
       {/* <section className=" py-10"> */}
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
             <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
               <img src={Writers1} alt="Image 1" className="w-full h-auto" />
              
