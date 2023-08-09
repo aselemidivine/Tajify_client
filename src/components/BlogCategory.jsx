@@ -15,8 +15,6 @@ import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import profilePhoto1 from "../assets/images/pngs/Profile-img.png";
 import profilePhoto3 from '../assets/images/profile-image.jfif';
 import profilePhoto2 from "../assets/images/pngs/Profile-img-2.png";
-
-
 import { AiOutlineCalendar } from "react-icons/ai";
 import { LiaComments } from "react-icons/lia";
 
@@ -524,7 +522,7 @@ const BlogCategoryContainer = styled.div`
   .wrapper__div {
     display: flex;
     align-items: end;
-    max-width: 112px;
+    max-width: 158px;
   }
   .header-box {
     width: 11px;
@@ -566,12 +564,6 @@ const BlogCategoryContainer = styled.div`
       width: 485px;
     }
   }
-
-  // .featured__news_contents {
-  //   p {
-  //     margin-bottom: 33px;
-  //   }
-  // }
 
   .news__img {
     width: 330px;
