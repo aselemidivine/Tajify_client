@@ -1,6 +1,10 @@
 import React from 'react'
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
+import MostPopularCourses from '../../components/MostPopularCourses';
+import TreadingArticles from '../../components/TreadingArticles';
+import ExploreSkills from '../../components/ExploreSkills';
+import ExploreCategories from '../../components/ExploreCategories';
 
 
 const BlogHome = () => {
@@ -8,9 +12,12 @@ const BlogHome = () => {
     <>
       <Header />
       <Hero />
-      {/* <PopularCourses /> */}
+      <MostPopularCourses />
+      <TreadingArticles />
+      <ExploreSkills />
+      <ExploreCategories />
     </>
   )
 }
 
-export default BlogHome
+export default BlogHome;
