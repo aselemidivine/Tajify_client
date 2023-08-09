@@ -1,3 +1,4 @@
+import ArticleSocialInfo from './ArticleSocialInfo';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 
 
@@ -19,9 +20,7 @@ function Article({ image, AvatarImg, articleAuthor, articleTime, articleHeading,
                 <h3 className='article__heading'>{articleHeading}</h3>
                 <p className="article__text">{articleWriteup}</p>
 
-                <div className="article__social-info">
-
-                </div>
+                <ArticleSocialInfo avatarImg={AvatarImg} articleComments={articleComments} articleViews={articleViews} articleLikes={articleLikes} />
             </div>
         </figure>
     )
