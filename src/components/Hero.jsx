@@ -12,8 +12,8 @@ function Hero() {
                 <div className="hero">
                     <div className="hero__text--box">
                         <h1 className="heading__primary">
-                            Monitize Your&nbsp;
-                            <span className="hero--extra">Creativity</span> and Trive in the Digital World.
+                            Monitize Your
+                            <span className="hero--extra"> Creativity</span> and Trive in the Digital World.
                         </h1>
                         <h4 className="heading__description">
                         The ultimate platform created with one purpose in mind: to help creators like you monetize your&nbsp;<span className="hero--extra">content, skills, knowledge, passion, followership, and writing abilities.</span>
