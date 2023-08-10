@@ -49,7 +49,7 @@ const Writers = () => {
 export default Writers;
 
 const WritersContainer = styled.div`
-  max-width: 1000px;
+  max-width: 944px;
   margin-top: 34px;
   
   margin-bottom: 10px;

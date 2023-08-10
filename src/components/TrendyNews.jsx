@@ -80,7 +80,7 @@ const TrendyNews = () => {
         </div>
       </div>
       <div className="text-center flex justify-center mt-5 mb-10">
-        <button className="read__more">View More</button>
+        <button className="read___more">View More</button>
       </div>
     </TrendyContainer>
   );
@@ -89,7 +89,7 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-  max-width: 1000px;
+  max-width: 944px;
   padding: 20px;
 
   .trendy__container {
@@ -105,13 +105,11 @@ const TrendyContainer = styled.div`
     line-height: normal;
   }
 
-  .read__more {
+  .read___more {
     color: #0081a7;
-    font-family: Montserrat;
-    font-size: 15px;
+    font-size: 8px;
     font-style: italic;
     font-weight: 400;
-    line-height: normal;
   }
 
   .featured__news_1 {
