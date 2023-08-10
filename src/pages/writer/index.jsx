@@ -11,7 +11,7 @@ import Writers from "../../components/Writers";
 import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
 import WriterFooter from "../../components/WriterFooter";
-import Sidebar from "../../components/Sidebar";
+import Ai from "../../assets/images/pngs/Ai.png";
 
 const Writer = () => {
   return (
@@ -44,11 +44,24 @@ const Writer = () => {
           <Feeds />
           <Filter />
           <TrendyNews />
-          <div className="sidebar">
-            <Sidebar />
-          </div>
-          <div className="ads__second">
-          <AdsSecond />
+
+          <div className="ads__second__">
+            <div className="ads__second__1">
+              <AdsSecond />
+            </div>
+            <div className="recommended__sidebar">
+              <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+                <div className="categories">
+                  <h4>Recommended</h4>
+                </div>
+                <div className="fle">
+                  <div className="featured__news_img">
+                    <img src={Ai} className="" />
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
           <Writers />
           <BlogCategory />
@@ -89,6 +102,39 @@ const WriterContainer = styled.div`
   }
 
   .ads__second {
-      width: 944px;
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+    .custom__style {
+      width: 100%;
+      // margin-bottom: 30px;
+    }
+  }
+
+  .ads__second__ {
+    position: relative;
+  }
+
+  .ads__second__1 {
+    max-width: 920px;
+    display: flex;
+    justify-content: space-between;
+    .custom__style {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .recommended__sidebar {
+    max-width: 240px;
+    position: absolute;
+    right: 0;
+    // right: 31px;
+    top: 0px;
+    .custom__style {
+      width: 100%;
+      height: 282px;
+      margin-bottom: 30px;
+    }
   }
 `;

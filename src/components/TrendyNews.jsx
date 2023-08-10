@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Feeds1 from "../assets/images/pngs/feeds1.png";
+import Ads from "./Ads";
+import Ai from "../assets/images/pngs/Ai.png";
+import { BsChevronRight } from "react-icons/bs";
 
 const TrendyNews = () => {
   return (
@@ -78,6 +81,50 @@ const TrendyNews = () => {
             </div>
           </div>
         </div>
+
+        <div>
+          <div className="ads__sidebar">
+            <Ads />
+          </div>
+          <div className="categories__sidebar ">
+            <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+              <div className="categories">
+                <h4>Categories</h4>
+              </div>
+              <div className="categories__list">
+                <div className="category__h5">
+                  <h5>Fashion</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+
+                <div className="category__h5">
+                  <h5>Sport</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+                <div className="category__h5">
+                  <h5>Education</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+                <div className="category__h5">
+                  <h5>Entertainment</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+                <div className="category__h5">
+                  <h5>Technology</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+                <div className="category__h5">
+                  <h5>Travel</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+                <div className="category__h5">
+                  <h5>Others</h5>
+                  <BsChevronRight className="text-gray-600 mr-2" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="text-center flex justify-center mt-5 mb-10">
         <button className="read___more">View More</button>
@@ -89,12 +136,20 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-  max-width: 944px;
-  padding: 20px;
+  max-width: 1248px;
 
   .trendy__container {
     display: flex;
     justify-content: space-between;
+  }
+
+  .categories__sidebar {
+    .custom__style {
+      width: 100%;
+      height: 358px;
+      margin-bottom: 30px;
+      padding: 23px;
+    }
   }
 
   .bold__text {
@@ -154,5 +209,57 @@ const TrendyContainer = styled.div`
     font-size: 14px;
     font-style: italic;
     font-weight: 400;
+  }
+
+  .categories {
+    width: 134px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    justify-content: center;
+    padding-bottom: 20px;
+    h4 {
+      color: #008001;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .categories__list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    width: 100%;
+    margin-top: 20px;
+    h5 {
+      color: #000;
+      font-size: 13.33px;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .category__h5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ads__sidebar {
+    .custom__style {
+      width: 100%;
+      height: 244px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .ads__sidebar__1 {
+    .custom__style {
+      width: 100%;
+      height: 169px;
+    }
   }
 `;
