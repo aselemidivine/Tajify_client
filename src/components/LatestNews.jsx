@@ -3,10 +3,13 @@ import styled from "styled-components";
 import News1 from "../assets/images/pngs/news-1.png";
 import News2 from "../assets/images/pngs/news-2.png";
 import News3 from "../assets/images/pngs/news-3.png";
+import Ai from "../assets/images/pngs/Ai.png";
+import Ai2 from "../assets/images/pngs/Ai-2.png";
 import News4 from "../assets/images/pngs/news-4.png";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { LiaComments } from "react-icons/lia";
+import { BiTime } from "react-icons/bi";
 import Ads from "./Ads";
 
 const LatestNews = () => {
@@ -14,6 +17,57 @@ const LatestNews = () => {
     <LatestNewsContainer>
       <div className="featured__articles">
         <Ads />
+        <h3 className="featured__h3 ">Featured Articles</h3>
+        <div className="my-6">
+          <h4 className="featured__h4 my-6 ">
+            The Great AI Disruption: Six Startling Predictions That Will Shape
+            Our Lives and Test O...
+          </h4>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Ai} className="" />
+            </div>
+            <div className="featured__news_contents">
+              <div className="span__light">
+                As we rapidly advance into an AI-driven world, our lives are
+                becoming more intertwined with artificial..read more...
+                <span className="read___more">View More</span>
+              </div>
+              <div className="mt-2 flex items-center">
+                <BiTime className="text-gray-600 mr-2" />
+                <span className="text-gray-600 font-bold text-[10px]">
+                  03: 23pm
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-6">
+          <h4 className="featured__h4 my-6 ">
+            The Great AI Disruption: Six Startling Predictions That Will Shape
+            Our Lives and Test O...
+          </h4>
+          <div className="featured__news_1">
+            <div className="featured__news_img">
+              <img src={Ai2} className="" />
+            </div>
+            <div className="featured__news_contents">
+              <div className="span__light">
+                But I must explain to you how all this mistaken idea of
+                denouncing sure and praising pain was born and I will give you a
+                complete account.
+                <span className="read___more">View More</span>
+              </div>
+              <div className="mt-2 flex items-center">
+                <BiTime className="text-gray-600 mr-2" />
+                <span className="text-gray-600 font-bold text-[10px]">
+                  03: 23pm
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div className="lifestyle">
@@ -172,6 +226,20 @@ const LatestNewsContainer = styled.div`
   margin-bottom: 10px;
   justify-content: space-between;
 
+  .featured__h3 {
+    color: #008001;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .featured__h4 {
+    color: #f06;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
   .wrapper__div {
     display: flex;
     align-items: end;
@@ -211,8 +279,12 @@ const LatestNewsContainer = styled.div`
 
   .featured__news_img {
     margin-right: 10px;
+    width: 310px;
+    height: 109px;
     img {
-      width: 485px;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
     }
   }
 
@@ -222,14 +294,28 @@ const LatestNewsContainer = styled.div`
     margin-right: 9px;
   }
 
-    .lifestyle {
-        max-width: 800px;
-    }
+  .lifestyle {
+    max-width: 800px;
+  }
 
   .featured__articles {
+    max-width: 400px;
     .custom__style {
       width: 363px;
       height: 252px;
+      margin-bottom: 40px;
     }
+  }
+
+  .featured__news_contents {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .read___more {
+    color: #0081a7;
+    font-size: 8px;
+    font-style: italic;
   }
 `;
