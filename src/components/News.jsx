@@ -1,4 +1,5 @@
 import React from "react";
+
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { LiaComments } from 'react-icons/lia';
 
@@ -12,10 +13,12 @@ function News({ image, title, date, comments, text }) {
                 <h4 className="news__title">{title}</h4>
                 <span className="news__date--box">
                     <span>
-                        <AiOutlineCalendar /> {date}
+                        <AiOutlineCalendar /> 
+                        <p>{date}</p>
                     </span>
                     <span>
-                        <LiaComments /> {comments}
+                        <LiaComments />
+                        <p>{comments}</p>
                     </span>
                 </span>
                 <p className="news__text">{text}</p>

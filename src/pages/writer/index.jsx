@@ -20,7 +20,7 @@ const Writer = () => {
         <Navbar />
         <div className="pl-40 pr-40 w-full h-full ">
           <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] ">
-            <div className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
+            <div style={{ clipPath: 'polygon(0 0, 78% 0, 100% 100%, 0% 100%)'}} className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
               <span className="text-white">Top News</span>
             </div>
             <div className="w-[362px] h-[20px] text-black span__style">
