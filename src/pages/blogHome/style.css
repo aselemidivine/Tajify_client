@@ -386,3 +386,43 @@ a.nav__button:hover {
 .category__cards .card__figure:hover .card__figure--image {
     transform: scale(1.08);
 }
+
+/* ======  ======= */
+
+.topnews__section {
+    overflow-y: auto;
+}
+.news__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.news__figure {
+    border: 1px solid #000;
+}
+.news__image--box {}
+.news__image {}
+.news__content--box {}
+.news__title {}
+.news__date--box {}
+span {}
+.news__text {}
+
+
+.ads__box--big {
+    width: 90%;
+    height: 25rem;
+}
+.ads__box--big::after {
+    content: 'AD';
+    display: inline-block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 3.6rem;
+    background-color: #008001;
+    color: #fff;
+}
