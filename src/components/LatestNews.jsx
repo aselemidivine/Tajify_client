@@ -11,6 +11,7 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import { LiaComments } from "react-icons/lia";
 import { BiTime } from "react-icons/bi";
 import Ads from "./Ads";
+import WriterFooter from "../components/WriterFooter";
 
 const LatestNews = () => {
   return (
@@ -67,6 +68,11 @@ const LatestNews = () => {
             </div>
           </div>
         </div>
+
+         <div className="writer__foter">
+            <WriterFooter />
+            
+          </div>
 
       </div>
 
@@ -224,7 +230,7 @@ const LatestNewsContainer = styled.div`
   display: flex;
   margin-top: 34px;
   margin-bottom: 10px;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   .featured__h3 {
     color: #008001;
@@ -317,5 +323,12 @@ const LatestNewsContainer = styled.div`
     color: #0081a7;
     font-size: 8px;
     font-style: italic;
+  }
+
+  .writer__foter {
+    .custom__style {
+      width: 363px;
+      height: 95px;
+    }
   }
 `;

@@ -23,7 +23,7 @@ const Writer = () => {
             <div className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
               <span className="text-white">Top News</span>
             </div>
-            <div className="w-[362px] h-[20px] text-black text-md">
+            <div className="w-[362px] h-[20px] text-black span__style">
               <span>Traveling with kids can be rough. Parents ......</span>
             </div>
             <div className="">
@@ -66,9 +66,9 @@ const Writer = () => {
           <Writers />
           <BlogCategory />
           <LatestNews />
-          <div className="writer__foter">
+          {/* <div className="writer__foter">
             <WriterFooter />
-          </div>
+          </div> */}
         </div>
       </div>
     </WriterContainer>
@@ -82,16 +82,6 @@ const WriterContainer = styled.div`
 
   .index__page {
     position: relative;
-  }
-
-  .writer__foter {
-    position: absolute;
-    bottom: 0;
-    left: 100px;
-    .custom__style {
-      width: 363px;
-      height: 95px;
-    }
   }
 
   .sidebar {
@@ -113,6 +103,7 @@ const WriterContainer = styled.div`
 
   .ads__second__ {
     position: relative;
+    max-width: 1235px;
   }
 
   .ads__second__1 {
@@ -121,7 +112,6 @@ const WriterContainer = styled.div`
     justify-content: space-between;
     .custom__style {
       width: 100%;
-      margin-bottom: 30px;
     }
   }
 
@@ -136,5 +126,10 @@ const WriterContainer = styled.div`
       height: 282px;
       margin-bottom: 30px;
     }
+  }
+
+  .span__style {
+    font-size: 13px;
+    font-weight: 500;
   }
 `;
