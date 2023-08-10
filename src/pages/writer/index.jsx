@@ -11,7 +11,7 @@ import Writers from "../../components/Writers";
 import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
 import WriterFooter from "../../components/WriterFooter";
-import Sidebar from "../../components/Sidebar";
+import Ai from "../../assets/images/pngs/Ai.png";
 
 const Writer = () => {
   return (
@@ -23,7 +23,7 @@ const Writer = () => {
             <div className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
               <span className="text-white">Top News</span>
             </div>
-            <div className="w-[362px] h-[20px] text-black text-md">
+            <div className="w-[362px] h-[20px] text-black span__style">
               <span>Traveling with kids can be rough. Parents ......</span>
             </div>
             <div className="">
@@ -44,18 +44,31 @@ const Writer = () => {
           <Feeds />
           <Filter />
           <TrendyNews />
-          <div className="sidebar">
-            <Sidebar />
-          </div>
-          <div className="ads__second">
-          <AdsSecond />
+
+          <div className="ads__second__">
+            <div className="ads__second__1">
+              <AdsSecond />
+            </div>
+            <div className="recommended__sidebar">
+              <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+                <div className="categories">
+                  <h4>Recommended</h4>
+                </div>
+                <div className="fle">
+                  <div className="featured__news_img">
+                    <img src={Ai} className="" />
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
           <Writers />
           <BlogCategory />
           <LatestNews />
-          <div className="writer__foter">
+          {/* <div className="writer__foter">
             <WriterFooter />
-          </div>
+          </div> */}
         </div>
       </div>
     </WriterContainer>
@@ -71,16 +84,6 @@ const WriterContainer = styled.div`
     position: relative;
   }
 
-  .writer__foter {
-    position: absolute;
-    bottom: 0;
-    left: 100px;
-    .custom__style {
-      width: 363px;
-      height: 95px;
-    }
-  }
-
   .sidebar {
     position: absolute;
     top: 999px;
@@ -89,6 +92,44 @@ const WriterContainer = styled.div`
   }
 
   .ads__second {
-      width: 944px;
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+    .custom__style {
+      width: 100%;
+      // margin-bottom: 30px;
+    }
+  }
+
+  .ads__second__ {
+    position: relative;
+    max-width: 1235px;
+  }
+
+  .ads__second__1 {
+    max-width: 920px;
+    display: flex;
+    justify-content: space-between;
+    .custom__style {
+      width: 100%;
+    }
+  }
+
+  .recommended__sidebar {
+    max-width: 240px;
+    position: absolute;
+    right: 0;
+    // right: 31px;
+    top: 0px;
+    .custom__style {
+      width: 100%;
+      height: 282px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .span__style {
+    font-size: 13px;
+    font-weight: 500;
   }
 `;
