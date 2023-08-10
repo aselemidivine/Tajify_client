@@ -9,6 +9,7 @@ import Filter from "../../components/Filter";
 import TrendyNews from "../../components/TrendyNews";
 import Writers from "../../components/Writers";
 import BlogCategory from "../../components/BlogCategory";
+import LatestNews from "../../components/LatestNews";
 
 const Writer = () => {
   return (
@@ -44,6 +45,7 @@ const Writer = () => {
         <AdsSecond />
         <Writers />
         <BlogCategory />
+        <LatestNews />
       </div>
     </div>
         </WriterContainer>
