@@ -89,7 +89,7 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-  max-width: 1000px;
+  max-width: 944px;
   padding: 20px;
 
   .trendy__container {

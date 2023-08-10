@@ -32,7 +32,7 @@ const Filter = () => {
 export default Filter;
 
 const FilterContainer = styled.div`
-  max-width: 1000px;
+  max-width: 944px;
   display: flex;
   height: 40px;
   margin-bottom: 10px;

@@ -11,6 +11,7 @@ import Writers from "../../components/Writers";
 import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
 import WriterFooter from "../../components/WriterFooter";
+import Sidebar from "../../components/Sidebar";
 
 const Writer = () => {
   return (
@@ -31,7 +32,7 @@ const Writer = () => {
           </div>
           <Tabs />
           <div className="flex justify-between items-end">
-            <div className="">
+            <div className="ads__second">
               <AdsSecond />
             </div>
             <div>
@@ -43,7 +44,12 @@ const Writer = () => {
           <Feeds />
           <Filter />
           <TrendyNews />
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="ads__second">
           <AdsSecond />
+          </div>
           <Writers />
           <BlogCategory />
           <LatestNews />
@@ -73,5 +79,16 @@ const WriterContainer = styled.div`
       width: 363px;
       height: 95px;
     }
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 999px;
+    right: 9%;
+    width: 229px;
+  }
+
+  .ads__second {
+      width: 944px;
   }
 `;
