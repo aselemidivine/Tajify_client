@@ -1,13 +1,13 @@
 import React from "react";
-import { BiSolidRightArrowAlt } from 'react-icons/bi';
+import { PiArrowRightFill } from 'react-icons/pi';
 
 const jobsData = [
     {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
-    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
-    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
-    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
-    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
-    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Graphics designer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Digital marketers', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'maths tutor', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'full stack Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'datbase engineer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
 ]
 
 function Jobs() {
@@ -20,10 +20,10 @@ function Jobs() {
 
             <div className="jobs__cards">
                 {jobsData.map(job => {
-                    return <div className="job__figure">
+                    return <div className="job__figure" key={job.title}>
                         <span className="job__title-head">
                             <h3 className="job__title">{job.title}</h3>
-                            <BiSolidRightArrowAlt />
+                            <a href="#"><PiArrowRightFill /></a>
                         </span>
                         <p className="job__text">{job.text}</p>
                     </div>

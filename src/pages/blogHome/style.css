@@ -88,7 +88,7 @@ a.nav__button:hover {
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto;
-    padding: 10rem 0 5rem !important;
+    padding: 9rem 0 4.2rem !important;
     overflow: hidden;
 }
 .section__container {
@@ -438,6 +438,7 @@ a.nav__button:hover {
     font-size: 1.4rem;
     line-height: 1.3;
     margin-bottom: .6rem;
+    text-transform: capitalize;
 }
 .news__date--box {
     display: flex;
@@ -496,6 +497,7 @@ a.nav__button:hover {
     display: flex;
     flex-direction: column;
     gap: .8rem;
+    text-transform: capitalize !important;
 }
 .keywork__link:visited, .keywords__list:link {
     color: inherit;
@@ -540,6 +542,10 @@ a.nav__button:hover {
     display: inline-block;
     text-decoration: none;
     font-size: 1.4rem;
+    transition: all .35s;
+}
+.view-more:hover {
+    text-shadow: .2rem .2rem 2.8rem rgba(0, 0, 0, .15);
 }
 .featured-articles .view-more { 
     margin-left: 40%; 
@@ -559,4 +565,27 @@ a.nav__button:hover {
     justify-content: space-between;
 }
 
+.top-creator__section {
+    background-color: #4CAF5054;
+}
+.top-creators__cards {
+    display: grid;
+    gap: 2.8rem;
+}
+.creator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    cursor: pointer;
+}
 
+.creator img {
+    box-shadow: 0 0 2.4rem rgba(0, 0, 0, .15);
+}
+.creator p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}

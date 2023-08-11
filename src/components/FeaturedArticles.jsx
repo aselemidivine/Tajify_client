@@ -31,7 +31,6 @@ function FeaturedArticles() {
             
             <div className="feacture-articles__cards">
                 {FeaturedArticleData.map(article => {
-                    console.log(article);
                     return <FeaturedArticleFigure key={article.imagePath} title={article.title} imagePath={article.imagePath} text={article.text} time={article.time} />
                 })}
             </div>

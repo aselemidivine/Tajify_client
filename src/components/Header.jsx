@@ -13,7 +13,7 @@ function Header() {
                 <ui className="navbar__list">
                   {lists.map(list => {
                     return (
-                    <li className="navbar__list--item">
+                    <li className="navbar__list--item" key={list}>
                         <a href="#" className="navbar__list--link">{list}</a>
                     </li>
                     );

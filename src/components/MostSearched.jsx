@@ -15,7 +15,6 @@ function MostSearched() {
                 </span>
                 <span>
                     {data.slice(5).map((el) => {
-                        console.log(el)
                         return <Keyword title={el} key={el}/>
                     })}
                 </span>
