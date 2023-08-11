@@ -65,6 +65,7 @@ const Writer = () => {
                     <div></div>
                   </div>
                 </div>
+                
               </div>
             </div>
           <Writers />
