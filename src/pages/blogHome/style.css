@@ -432,7 +432,7 @@ a.nav__button:hover {
 .news__image {
     width: 100%;
 }
-.news__title, .feature-article__title {
+.news__title, .feature-article__title, .job__title {
     color: #FF0066;
     font-weight: 600;
     font-size: 1.4rem;
@@ -453,7 +453,7 @@ a.nav__button:hover {
 .news__date--box span p {
     font-size: 1rem;
 }
-.news__text, .feature-article__text {
+.news__text, .feature-article__text, .job__text {
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -512,7 +512,6 @@ a.nav__button:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    align-items: center;
     gap: 2.8rem;
 }
 .feature-article__figure {
@@ -548,9 +547,16 @@ a.nav__button:hover {
 }
 
 /* ======= ======== */
-.job-head {
+.jobs__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.job-head, .job__title-head {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
+
 

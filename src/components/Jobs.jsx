@@ -1,6 +1,15 @@
 import React from "react";
 import { BiSolidRightArrowAlt } from 'react-icons/bi';
 
+const jobsData = [
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+    {title: 'Senior Web Developer', text: '4 years Experience and Proficient with HTML, CSS, JavaScript. also have knowledge of PHP..'},
+]
+
 function Jobs() {
     return (
         <div className="jobs">
@@ -10,12 +19,15 @@ function Jobs() {
             </span>
 
             <div className="jobs__cards">
-                <div className="job__figure">
-                    <span className="job__title-head">
-                        <h3 className="job__title">{Jobs.title}</h3>
-                        <BiSolidRightArrowAlt />
-                    </span>
-                </div>
+                {jobsData.map(job => {
+                    return <div className="job__figure">
+                        <span className="job__title-head">
+                            <h3 className="job__title">{job.title}</h3>
+                            <BiSolidRightArrowAlt />
+                        </span>
+                        <p className="job__text">{job.text}</p>
+                    </div>
+                })}
             </div>
         </div>
     )
