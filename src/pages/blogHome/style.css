@@ -577,7 +577,7 @@ a.nav__button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.4rem;
+    gap: .6rem;
     cursor: pointer;
 }
 
@@ -585,7 +585,49 @@ a.nav__button:hover {
     box-shadow: 0 0 2.4rem rgba(0, 0, 0, .15);
 }
 .creator p {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     text-transform: capitalize;
+}
+
+/* ======= ======= */
+
+.explore-more {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 8rem;
+}
+
+.explore-more .heading__tetariary {
+    max-width: 45%;
+}
+.explore-more--text {
+
+}
+.explore-more--description {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 2.8rem;
+    margin-top: -1rem;
+    max-width: 90%;
+}
+.explore-more--figures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;}
+.explore-more--figure {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    justify-content: center;
+    align-items: center;
+}
+.explore-more--figure img {
+    width: 100%;
+}
+.explore-more--figure p {
+    text-transform: capitalize;
+    color: #008001;
+    font-size: 1.6rem;
 }

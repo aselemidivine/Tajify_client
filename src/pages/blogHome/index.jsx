@@ -7,6 +7,7 @@ import ExploreSkills from '../../components/ExploreSkills';
 import ExploreCategories from '../../components/ExploreCategories';
 import TopNewsAndFeaturedArticles from '../../components/TopNewsAndFeaturedArticles';
 import TopCreators from '../../components/TopCreators';
+import ExploreMore from '../../components/ExploreMore';
 
 
 const BlogHome = () => {
@@ -20,6 +21,7 @@ const BlogHome = () => {
       <ExploreCategories />
       <TopNewsAndFeaturedArticles />
       <TopCreators />
+      <ExploreMore />
     </>
   )
 }

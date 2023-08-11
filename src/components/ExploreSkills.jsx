@@ -1,5 +1,5 @@
-import ExploreImg from '../assets/images/pngs/explore-skill-img.png'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import ExploreImg from '../assets/images/pngs/explore-skill-img.png';
+import ExploreButton from './ExploreButton';
 
 function ExploreSkills() {
     return (
@@ -21,9 +21,7 @@ function ExploreSkills() {
                             <p className='content__text'>Earn as a creator or as a user</p>
                         </span>
 
-                        <a href="#" className="content__button button">
-                            Explore Blog <BsFillArrowRightCircleFill style={{display: 'inline'}} />
-                        </a>
+                        <ExploreButton>explore blog</ExploreButton>
                     </div>
                 </div>
                 <div className="explore-skills--image">
