@@ -631,3 +631,109 @@ a.nav__button:hover {
     color: #008001;
     font-size: 1.6rem;
 }
+
+
+
+/* ======== footer ========== */
+
+
+.footer {
+    background-color: #4CAF50;
+    padding: 8rem 0;
+}
+.footer__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+.cta {
+    background-color: #FF0066;
+    padding: 6.2rem 4.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
+    margin-bottom: 6.2rem;
+}
+.cta__subscribe-text {
+    color: #fff;
+    font-size: 4.2rem;
+}
+.cta__form {
+    display: flex;
+    gap: 1.2rem;
+    width: 55rem;
+}
+.cta__form input.form__input {
+    background-color: #fff;
+    padding: .6rem 1.2rem;
+    border: none;
+}
+.cta__form input.form__input:focus {
+    outline: none;
+    border: none;
+}
+.cta__form button.form__button {
+    background-color: #008001;
+    height: 0;
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.links-n-socials {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 12rem;
+    margin-bottom: 8rem;
+}
+.links__list {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    transform: translateX(35rem);
+}
+.links__link:link, .links__link:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.socials__icons {
+    display: flex;
+    gap: 1.2rem;
+}
+.social__icon--link:link, .social__icon--link:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.6rem;
+}
+.logo-n-copyright {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: #fff;
+    padding: 0 3.6rem;
+}
+.footer__logo {
+    font-size: 3.6rem;
+}
+.footer__copyright {
+    display: flex;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+.footer__copyright--text {
+}
+.footer__copyright--links {
+    display: flex;
+    gap: 1.4rem;
+}
+.footer__copyright--link:link, .footer__copyright--link:visited {
+    color: inherit;
+    text-decoration: none;
+}

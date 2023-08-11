@@ -8,7 +8,7 @@ import ExploreCategories from '../../components/ExploreCategories';
 import TopNewsAndFeaturedArticles from '../../components/TopNewsAndFeaturedArticles';
 import TopCreators from '../../components/TopCreators';
 import ExploreMore from '../../components/ExploreMore';
-
+import Footer from '../../components/Footer';
 
 const BlogHome = () => {
   return (
@@ -22,6 +22,7 @@ const BlogHome = () => {
       <TopNewsAndFeaturedArticles />
       <TopCreators />
       <ExploreMore />
+      <Footer />
     </>
   )
 }
