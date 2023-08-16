@@ -42,8 +42,8 @@ const categories = [
 
 function ExploreCategories() {
     return (
-        <section className="section explore-category">
-            <div className="section__container">
+        <section className="section explore-category__section">
+            <div className="section__container explore-category">
                 <h3 className="heading__tetariary">Explore categories</h3>
                 <div className="category__cards" style={{gridTemplateColumns: `repeat(${categories.length}, 1fr)`}}>
                     {categories.map(category => {
