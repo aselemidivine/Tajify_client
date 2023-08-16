@@ -819,6 +819,13 @@ a.nav__button:hover {
     .explore-more .heading__tetariary {
         width: 100%;
     }
+    .explore-more {
+        gap: 3.2rem;
+    }
+    .explore-more--figures {
+        gap: 1rem;
+        margin-top: -2rem;
+    }
 }
 /* 895px = 89.5rem = 55.94em */
 @media screen and (max-width: 55.94em) {
@@ -846,5 +853,111 @@ a.nav__button:hover {
         display: flex;
         gap: 2rem;
         flex-wrap: nowrap;
+    }
+}
+
+/* 800px = 80rem = 50em */
+@media screen and (max-width: 50em) {
+    html { font-size: 52.5%;}
+    .hero__section {
+        background-image: linear-gradient(#008001, #008001);
+    }
+}
+
+/* 750px = 75rem = 46.875em */
+@media screen and (max-width: 46.875em) {
+    .topnews-and-article {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .topnews {
+        overflow: visible;
+        padding: 0 !important;
+    }
+    .feacture-articles__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.8rem;
+    }
+    .top-creators__cards {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    .explore-more {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4.8rem;
+    }
+    .explore-more--figures {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: 0rem;
+    }
+    .explore-skills {
+        gap: 4.8rem;
+    }
+    .explore-more--description {
+        margin-bottom: 1.8rem;
+    }
+}
+
+/* 600px = 60rem = 37.5em */
+@media screen and (max-width: 37.5em) {
+    .ads__box--big { width: 100%; }
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero__text--box, .heading__description {
+        max-width: 100%;
+    }
+    .hero__images--box {
+        display: none;
+    }
+    .feacture-articles__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+    .explore-skills {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+    .article__cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .explore-more--figures {
+        gap: .8rem;
+    }
+    
+
+    .cta {
+        align-items: flex-start;
+    }
+    .cta__subscribe-text {
+        color: #fff;
+        font-size: 3.2rem;
+    }
+    .cta__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .links-n-socials {
+        display: block;
+    }
+}
+
+
+/* 400px = 40rem = 25em */
+@media screen and (max-width: 25em) {
+    .top-creators__cards {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.6rem;
     }
 }
