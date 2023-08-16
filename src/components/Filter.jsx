@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { BsChevronDown } from "react-icons/bs";
+
 
 const Filter = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,6 +22,7 @@ const Filter = () => {
         <span className="filter__">Filter</span>
         <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           {/* Dropdown content */}
+          <i className='dropdown mr-5 flex justify-center items-center w-6 h-5 cursor-pointer'> <BsChevronDown /> </i>
         </div>
       </div>
       
@@ -71,7 +74,6 @@ const FilterContainer = styled.div`
 
   .dropdown {
     position: relative;
-    background-color: black;
     color: black;
     /* Other dropdown styling */
   }

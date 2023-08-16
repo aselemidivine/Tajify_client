@@ -557,6 +557,10 @@ const BlogCategoryContainer = styled.div`
     margin-bottom: 16px;
   }
 
+  .featured__news {
+    margin-right: 23px;
+  }
+
   .featured__news_img {
     margin-right: 10px;
     img {

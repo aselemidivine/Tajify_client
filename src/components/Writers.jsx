@@ -69,7 +69,7 @@ const WritersContainer = styled.div`
 
   .ads__sidebar {
     height: 217px;
-    width: 245px;
+    width: 279px;
     .custom__style {
       width: 100%;
       height: 155px;

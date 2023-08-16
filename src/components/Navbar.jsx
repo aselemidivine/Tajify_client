@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
-import { BsSearch, BsBell } from "react-icons/bs";
+import { BsSearch, BsBell, BsChevronDown } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 
 
 
@@ -14,6 +16,8 @@ const Navbar = () => {
 
 
   return (
+    <NavbarContainer>
+
     <nav className="bg-white border-gray-200 dark:bg-[#008001]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
@@ -45,9 +49,11 @@ const Navbar = () => {
             {/* img*/}
           </button>
           </Link>
-          <span className="ml-5 text-sm">
+          <span className="ml-5 writers__name">
             Aselemi Divine
             </span>
+          <i className='bell mr-5 flex justify-center items-center w-6 h-5 cursor-pointer'> <BsChevronDown /> 
+
           <div
             className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
             id="user-dropdown"
@@ -95,6 +101,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          </i>
+
           {/* <button data-collapse-toggle="navbar-user" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -139,7 +147,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white text-md bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:text-white"
+                className="block py-2 pl-3 pr-4 text-white custom__navbar__text__style bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:text-white"
                 aria-current="page"
               >
                 Blogs
@@ -148,7 +156,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white-900 text-md rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent "
+                className="block py-2 pl-3 pr-4 text-white-900 custom__navbar__text__style rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent "
               >
                 Gigs
               </a>
@@ -156,7 +164,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white-900 rounded text-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 text-white-900 rounded custom__navbar__text__style hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Course
               </a>
@@ -164,7 +172,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white-900 rounded text-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 text-white-900 rounded custom__navbar__text__style hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Market
               </a>
@@ -172,7 +180,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-white-900 rounded text-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 text-white-900 rounded custom__navbar__text__style hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Explore
               </a>
@@ -181,8 +189,21 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </NavbarContainer>
 
   )
 }
 
 export default Navbar;
+
+
+const NavbarContainer = styled.div`
+.custom__navbar__text__style {
+  font-size: 16px;
+}
+
+.writers__name {
+  font-size: 13.33px;
+  margin-right: 18px;
+}
+`;
