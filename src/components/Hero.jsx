@@ -31,7 +31,9 @@ function Hero() {
                             <Stat figure='1M+' text='services' />
                             <Stat figure='1200+' text='Active users' />
                         </div>
+                        
                     </div>
+
                     <div className="hero__images--box">
                         <img src={HeroImg} alt="hero photo tajify" className="hero__image" />
                     </div>
@@ -40,7 +42,6 @@ function Hero() {
         </div>
     )
 }
-
 
 function Stat({ figure, text }) {
     return (

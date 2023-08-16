@@ -10,28 +10,30 @@ import coursesImg from '../assets/images/hero-img/courses.png';
 function ExploreMore() {
     return (
         <section className="section explore-more__section">
-            <div className="section__container explore-more">
-                <div className="explore-more--text">
-                    <h3 className="heading__tetariary">Explore more services</h3>
-                    <p className="explore-more--description">Explore more on our platform as we bring you different  kind of services. </p>
-                    <ExploreButton>Try tajify</ExploreButton>
-                </div>
-                <div className="explore-more--figures">
-                    <div className="explore-more--figure">
-                        <img src={jobsImg} alt="" />
-                        <p>Jobs</p>
+            <div className="section__container">
+            <h3 className="heading__tetariary">Explore more services</h3>
+                <div className="explore-more">
+                    <div className="explore-more--text">
+                        <p className="explore-more--description">Explore more on our platform as we bring you different  kind of services. </p>
+                        <ExploreButton>Try tajify</ExploreButton>
                     </div>
-                    <div className="explore-more--figure">
-                        <img src={gigsImg} alt="" />
-                        <p>Gigs</p>
-                    </div>
-                    <div className="explore-more--figure">
-                        <img src={marketImg} alt="" />
-                        <p>Market</p>
-                    </div>
-                    <div className="explore-more--figure">
-                        <img src={coursesImg} alt="" />
-                        <p>Courses</p>
+                    <div className="explore-more--figures">
+                        <div className="explore-more--figure">
+                            <img src={jobsImg} alt="" />
+                            <p>Jobs</p>
+                        </div>
+                        <div className="explore-more--figure">
+                            <img src={gigsImg} alt="" />
+                            <p>Gigs</p>
+                        </div>
+                        <div className="explore-more--figure">
+                            <img src={marketImg} alt="" />
+                            <p>Market</p>
+                        </div>
+                        <div className="explore-more--figure">
+                            <img src={coursesImg} alt="" />
+                            <p>Courses</p>
+                        </div>
                     </div>
                 </div>
             </div>
