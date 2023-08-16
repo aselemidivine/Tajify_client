@@ -262,4 +262,6 @@ const TrendyContainer = styled.div`
       height: 169px;
     }
   }
+
+  
 `;

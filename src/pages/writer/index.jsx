@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import Ads from "../../components/Ads";
 import Tabs from "../../components/Tabs";
+import Feeds1 from "../../assets/images/pngs/feeds1.png";
 import AdsSecond from "../../components/Ads2";
 import Feeds from "../../components/Feeds";
 import Filter from "../../components/Filter";
@@ -10,8 +11,7 @@ import TrendyNews from "../../components/TrendyNews";
 import Writers from "../../components/Writers";
 import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
-import WriterFooter from "../../components/WriterFooter";
-import Ai from "../../assets/images/pngs/Ai.png";
+import { BiTime } from "react-icons/bi";
 
 const Writer = () => {
   return (
@@ -58,24 +58,58 @@ const Writer = () => {
                   <div className="categories">
                     <h4>Recommended</h4>
                   </div>
-                  <div className="fle">
-                    <div className="featured__news_img">
-                      <img src={Ai} className="" />
+                  <div className="recommended__news_1">
+                    <div className="recommended__news_img">
+                      <img src={Feeds1} className="news__img" />
                     </div>
-                    <div></div>
+                    <div className="recommended__news_contents">
+                      <p className="bold__text">
+                        Five things to know about EFCC acting chairman
+                      </p>
+                      <p className="normal__text">
+                        The organisers of Felabration have announced that
+                        this....
+                      </p>
+                      <div className="mt-2 flex items-center">
+                        <BiTime className="text-gray-600 mr-2" />
+                        <span className="text-gray-600 font-bold text-[10px]">
+                          03: 23pm
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="recommended__news_1">
+                    <div className="recommended__news_img">
+                      <img src={Feeds1} className="news__img" />
+                    </div>
+                    <div className="recommended__news_contents">
+                      <p className="bold__text">
+                      Al Pacino, 83, 
+welcomes son..
+                      </p>
+                      <p className="normal__text">
+                      Hollywood icon Al Pacino has 
+become a dad again. The S..
+                      </p>
+                      <div className="mt-2 flex items-center">
+                        <BiTime className="text-gray-600 mr-2" />
+                        <span className="text-gray-600 font-bold text-[10px]">
+                          06: 13pm
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
+                {/* <div className="categories__sidebar ">
+                  <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center"></div>
+                </div> */}
               </div>
             </div>
-          <Writers />
-          <BlogCategory />
-          <LatestNews />
-          {/* <div className="writer__foter">
-            <WriterFooter />
-          </div> */}
-        </div>
+            <Writers />
+            <BlogCategory />
+            <LatestNews />
           </div>
+        </div>
       </div>
     </WriterContainer>
   );
@@ -89,7 +123,6 @@ const WriterContainer = styled.div`
   .custom__width {
     max-width: 1400px;
     padding: 0 50px;
-   
   }
 
   .custom__alignment {
@@ -134,7 +167,7 @@ const WriterContainer = styled.div`
   }
 
   .recommended__sidebar {
-    max-width: 240px;
+    max-width: 279px;
     position: absolute;
     right: 0;
     // right: 31px;
@@ -149,5 +182,53 @@ const WriterContainer = styled.div`
   .span__style {
     font-size: 13px;
     font-weight: 500;
+  }
+
+  .categories {
+    width: 134px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    justify-content: center;
+    padding-bottom: 20px;
+    h4 {
+      color: #008001;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .recommended__news_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .recommended__news_img {
+    margin-right: 23px;
+    max-width: 58px;
+    height: 55px;
+  }
+
+  .news__img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .recommended__news_contents {
+    width: 141px;
+  }
+
+  .bold__text {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .normal__text {
+    font-size: 9.23px;
+    margin: 5px 0;
   }
 `;

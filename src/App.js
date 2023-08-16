@@ -6,6 +6,9 @@ import Login from "./components/authentication/Login";
 import BlogDetails from "./pages/blogDetails";
 import EditorsPage from "./pages/editorPage";
 import WritersProfile from "./pages/writersProfile";
+import About from "./pages/about";
+import Help from "./pages/help";
+import Privacy from "./pages/privacy";
 
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
         <Route path="/writer" element={<Writer />}></Route>
         <Route path="/signup" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/privacy" element={<Privacy />}></Route>
+        <Route path="/help" element={<Help />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </BrowserRouter>
   );
