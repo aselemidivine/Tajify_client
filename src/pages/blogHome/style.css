@@ -76,6 +76,13 @@ a.nav__button:hover {
     box-shadow: inset 0 0 0 .15rem #666;
     color: #FF0066;
 }
+.mobile__nav--icon {
+    color: #FF0066;
+    display: none;
+    opacity: 0;
+    margin-left: auto;
+    font-size: 2.8rem;
+}
 
 
 /* ================== HERO SECTION =================== */
@@ -778,17 +785,9 @@ a.nav__button:hover {
     }
     .header {
         gap: 20rem;
-        display: none;
     }
     .navbar__list {
         gap: 3.2rem;
-    }
-    .explore-category {
-        overflow: hidden;
-    }
-    .category__cards {
-        overflow-x: scroll !important;
-        width: 100rem;
     }
 }
 /* 1000px = 100rem = 62.5em */
@@ -799,13 +798,6 @@ a.nav__button:hover {
 @media screen and (max-width: 60.25em) {
     .hero__section {
         background-position: 125%;
-    }
-    .course__section .section__container {
-        overflow: hidden;
-    }
-    .course__cards {
-        width: 90rem;
-        overflow-x: scroll !important;
     }
     .article__cards {
         grid-template-columns: 1fr 1fr;
@@ -826,9 +818,17 @@ a.nav__button:hover {
         gap: 1rem;
         margin-top: -2rem;
     }
+    /* .category__cards
+    .course__cards */
 }
 /* 895px = 89.5rem = 55.94em */
 @media screen and (max-width: 55.94em) {
+    .navbar__list {
+        gap: 2rem;
+    }
+    .header {
+        gap: 18rem;
+    }
     .topnews {
         padding-right: 2.8rem;
     }
@@ -861,6 +861,9 @@ a.nav__button:hover {
     html { font-size: 52.5%;}
     .hero__section {
         background-image: linear-gradient(#008001, #008001);
+    }
+    .header {
+        gap: 16rem;
     }
 }
 
@@ -906,6 +909,14 @@ a.nav__button:hover {
 /* 600px = 60rem = 37.5em */
 @media screen and (max-width: 37.5em) {
     .ads__box--big { width: 100%; }
+    .navbar .navbar__list, .navbar a.nav__button {
+        display: none;
+        opacity: 0;
+    }
+    .mobile__nav--icon {
+        display: block;
+        opacity: 1;
+    }
     .hero {
         display: flex;
         flex-direction: column;
@@ -916,6 +927,34 @@ a.nav__button:hover {
     .hero__images--box {
         display: none;
     }
+    .hero__form {
+        max-width: 80%;
+    }
+    .hero__form--btn {
+        padding: 1.4rem 3.2rem;
+    }
+    .hero__stats {
+        max-width: 45%;
+        justify-content: space-between;
+    }
+
+
+    .explore-category {
+        overflow: hidden;
+    }
+    .category__cards {
+        overflow-x: scroll !important;
+        width: 125rem;
+    }
+    .course__section .section__container {
+        overflow: hidden;
+    }
+    .course__cards {
+        width: 115rem;
+        overflow-x: scroll !important;
+    }
+
+
     .feacture-articles__cards {
         display: flex;
         flex-direction: column;
@@ -954,6 +993,22 @@ a.nav__button:hover {
 }
 
 
+/* 450px = 45rem = 28em */
+@media screen and (max-width: 28em) {
+    .heading__primary {
+        font-size: 4rem;
+    }
+    .hero__form {
+        max-width: 100%;
+    }
+    .hero__form--btn {
+        padding: 1.4rem 2.8rem;
+    }
+    .hero__stats {
+        max-width: 65%;
+        justify-content: space-between;
+    }
+}
 /* 400px = 40rem = 25em */
 @media screen and (max-width: 25em) {
     .top-creators__cards {

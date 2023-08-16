@@ -3,7 +3,9 @@ import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import { Link } from "react-router-dom";
 
 import '../pages/blogHome/style.css'
-const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore']
+const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore'];
+
+import { AiOutlineMenu } from 'react-icons/ai';
 
 
 function Header() {
@@ -21,8 +23,10 @@ function Header() {
                   })}
                 </ui>
                 <a href="/signup" className="nav__button">Get Started</a>
+              <AiOutlineMenu className="mobile__nav--icon" />
             </nav>
         </header>
+
     );
 };
 
