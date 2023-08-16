@@ -758,20 +758,52 @@ a.nav__button:hover {
     .jobs__cards {
         gap: 1.2rem;
     }
+    .topnews {
+        padding-right: 4.8rem;
+    }
+    .topnews-and-article {
+        gap: 6.2rem;
+    }
+    .feature-article__figure {
+        width: 100%;
+    }
 }
 /* 1050px = 105rem = 65.625em */
 @media screen and (max-width: 65.625em) {
     .hero {
         gap: 0;
     }
-    .topnews-and-article {
-        margin-bottom: 3.2rem;
+    .header {
+        gap: 20rem;
+        display: none;
+    }
+    .navbar__list {
+        gap: 3.2rem;
+    }
+    .explore-category {
+        overflow: hidden;
     }
     .category__cards {
-        grid-template-columns: repeat(5, 1fr) !important;
+        overflow: scroll !important;
+        width: 100rem;
     }
 }
-/* 1000px = 100em = 62.5em */
+/* 1000px = 100rem = 62.5em */
 @media screen and (max-width: 62.5em) {
     html { font-size: 56.25;}
+}
+/* 964 = 96.4rem = 60.25em */
+@media screen and (max-width: 60.25em) {
+    .course__cards {
+        width: 90rem;
+    }
+    .article__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .explore-skills--image {
+        width: 100%;
+    }
+    .explore-skills {
+        gap: 8rem;
+    }
 }
