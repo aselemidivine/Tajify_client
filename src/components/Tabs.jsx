@@ -5,8 +5,8 @@ import { HiDotsVertical } from "react-icons/hi";
 const Tabs = () => {
   return (
     <div className="flex text-center items-center text-white gap-10 " >
-      <div className="flex text-center items-center h-[90px] text-white gap-10 mr-[50px]">
-        <div className="w-[119px] h-[40px] bg-[#F06] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
+      <div className="flex text-center custom__style items-center h-[90px] text-white gap-10 mr-[50px]">
+        <div className="w-[119px] h-[40px] custom__tab__bg bg-[#F06] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
           News
         </div>
         <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">

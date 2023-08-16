@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import { BsSearch, BsBell } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
 
 
 const Navbar = () => {
@@ -22,6 +24,7 @@ const Navbar = () => {
         </a>
         <div className="flex justify-center items-center md:order-2 ">
           <i className='bell mr-5 flex justify-center items-center w-6 h-5 cursor-pointer'> <BsBell /> </i>
+          <Link to = "/writers-profile" className="navbar__list--link">
 
           <button
             type="button"
@@ -41,6 +44,7 @@ const Navbar = () => {
             
             {/* img*/}
           </button>
+          </Link>
           <span className="ml-5 text-sm">
             Aselemi Divine
             </span>

@@ -18,51 +18,56 @@ const Writer = () => {
     <WriterContainer>
       <div className="index__page">
         <Navbar />
-        <div className="pl-40 pr-40 w-full h-full ">
-          <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] ">
-            <div style={{ clipPath: 'polygon(0 0, 78% 0, 100% 100%, 0% 100%)'}} className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center">
-              <span className="text-white">Top News</span>
-            </div>
-            <div className="w-[362px] h-[20px] text-black span__style">
-              <span>Traveling with kids can be rough. Parents ......</span>
-            </div>
-            <div className="">
-              <Ads />
-            </div>
-          </div>
-          <Tabs />
-          <div className="flex justify-between items-end">
-            <div className="ads__second">
-              <AdsSecond />
-            </div>
-            <div>
-              <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
-                Add Post
-              </button>
-            </div>
-          </div>
-          <Feeds />
-          <Filter />
-          <TrendyNews />
-
-          <div className="ads__second__">
-            <div className="ads__second__1">
-              <AdsSecond />
-            </div>
-            <div className="recommended__sidebar">
-              <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
-                <div className="categories">
-                  <h4>Recommended</h4>
-                </div>
-                <div className="fle">
-                  <div className="featured__news_img">
-                    <img src={Ai} className="" />
-                  </div>
-                  <div></div>
-                </div>
+        <div className="custom__alignment">
+          <div className=" custom__width h-full ">
+            <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] ">
+              <div
+                style={{ clipPath: "polygon(0 0, 78% 0, 100% 100%, 0% 100%)" }}
+                className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center"
+              >
+                <span className="text-white">Top News</span>
+              </div>
+              <div className="w-[362px] h-[20px] text-black span__style">
+                <span>Traveling with kids can be rough. Parents ......</span>
+              </div>
+              <div className="">
+                <Ads />
               </div>
             </div>
-          </div>
+            <Tabs />
+            <div className="flex justify-between items-end">
+              <div className="ads__second">
+                <AdsSecond />
+              </div>
+              <div>
+                <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
+                  Add Post
+                </button>
+              </div>
+            </div>
+            <Feeds />
+            <Filter />
+            <TrendyNews />
+
+            <div className="ads__second__">
+              <div className="ads__second__1">
+                <AdsSecond />
+              </div>
+              <div className="recommended__sidebar">
+                <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+                  <div className="categories">
+                    <h4>Recommended</h4>
+                  </div>
+                  <div className="fle">
+                    <div className="featured__news_img">
+                      <img src={Ai} className="" />
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
           <Writers />
           <BlogCategory />
           <LatestNews />
@@ -70,6 +75,7 @@ const Writer = () => {
             <WriterFooter />
           </div> */}
         </div>
+          </div>
       </div>
     </WriterContainer>
   );
@@ -79,6 +85,18 @@ export default Writer;
 
 const WriterContainer = styled.div`
   margin-bottom: 80px;
+
+  .custom__width {
+    max-width: 1400px;
+    padding: 0 50px;
+   
+  }
+
+  .custom__alignment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .index__page {
     position: relative;
