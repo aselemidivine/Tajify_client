@@ -773,6 +773,9 @@ a.nav__button:hover {
     .hero {
         gap: 0;
     }
+    .heading__primary {
+        font-size: 4.8rem;
+    }
     .header {
         gap: 20rem;
         display: none;
@@ -784,7 +787,7 @@ a.nav__button:hover {
         overflow: hidden;
     }
     .category__cards {
-        overflow: scroll !important;
+        overflow-x: scroll !important;
         width: 100rem;
     }
 }
@@ -794,8 +797,15 @@ a.nav__button:hover {
 }
 /* 964 = 96.4rem = 60.25em */
 @media screen and (max-width: 60.25em) {
+    .hero__section {
+        background-position: 125%;
+    }
+    .course__section .section__container {
+        overflow: hidden;
+    }
     .course__cards {
         width: 90rem;
+        overflow-x: scroll !important;
     }
     .article__cards {
         grid-template-columns: 1fr 1fr;
@@ -805,5 +815,36 @@ a.nav__button:hover {
     }
     .explore-skills {
         gap: 8rem;
+    }
+    .explore-more .heading__tetariary {
+        width: 100%;
+    }
+}
+/* 895px = 89.5rem = 55.94em */
+@media screen and (max-width: 55.94em) {
+    .topnews {
+        padding-right: 2.8rem;
+    }
+    .topnews-and-article {
+        gap: 3.2rem;
+    }
+    .jobs__cards {
+        gap: .8rem;
+    }
+    .feacture-articles__cards {
+        gap: 1.8rem;
+    }
+    .logo-n-copyright {
+        display: flex;
+        justify-content: space-between;
+    }
+    .links-n-socials {
+        display: flex;
+        justify-content: space-between;
+    }
+    .links__list li {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: nowrap;
     }
 }
