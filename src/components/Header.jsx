@@ -26,7 +26,6 @@ function Header() {
               <AiOutlineMenu className="mobile__nav--icon" />
             </nav>
         </header>
-
     );
 };
 

@@ -2,17 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@100&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: Montserrat, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
 }
 
+body {
+  font-family: 'Montserrat' sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #333;
+  font-weight: 400;
+}
+
+::selection {
+  background-color: rgba(0, 128, 0, 0.25);
+  color: #666;
+}
+
+.section {
+  padding: 4.8rem 0;
+}
+.heading__primary {
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+  color: #fff;
+  margin-bottom: 2.4rem;
+  letter-spacing: .2px;
+}
+.heading__tetariary {
+  font-size: 2.2rem;
+  margin-bottom: 2.8rem;
+  color: #008001;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.hero--extra {
+  color: #FFC107;
+}

@@ -10,6 +10,9 @@ import TopCreators from '../../components/TopCreators';
 import ExploreMore from '../../components/ExploreMore';
 import Footer from '../../components/Footer';
 
+import '../../index.css'
+import './style.css';
+
 const BlogHome = () => {
   return (
     <>
