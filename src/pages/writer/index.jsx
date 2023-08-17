@@ -13,6 +13,8 @@ import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
 import { BiTime } from "react-icons/bi";
 
+import '../../index.css'
+
 const Writer = () => {
   return (
     <WriterContainer>
@@ -121,8 +123,8 @@ const WriterContainer = styled.div`
   margin-bottom: 80px;
 
   .custom__width {
-    max-width: 1400px;
-    padding: 0 50px;
+    max-width: 120rem;
+    padding: 0 2.8rem;
   }
 
   .custom__alignment {
