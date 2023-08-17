@@ -84,12 +84,10 @@ const Writer = () => {
                     </div>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
-                      Al Pacino, 83, 
-welcomes son..
+                        Al Pacino, 83, welcomes son..
                       </p>
                       <p className="normal__text">
-                      Hollywood icon Al Pacino has 
-become a dad again. The S..
+                        Hollywood icon Al Pacino has become a dad again. The S..
                       </p>
                       <div className="mt-2 flex items-center">
                         <BiTime className="text-gray-600 mr-2" />

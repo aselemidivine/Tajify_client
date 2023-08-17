@@ -4,6 +4,8 @@ import Writers1 from "../assets/images/pngs/writers-1.png";
 import Writers2 from "../assets/images/pngs/writers-2.png";
 import Writers3 from "../assets/images/pngs/writers-3.png";
 import Writers4 from "../assets/images/pngs/writers-4.png";
+import { Link } from "react-router-dom";
+
 import Ads from "./Ads";
 
 const Writers = () => {
@@ -19,11 +21,15 @@ const Writers = () => {
         </div>
         <div className="container mx-auto ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+              <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
+            <Link to="/writers-profile">
+                <img src={Writers1} alt="Image 1" className="w-full h-auto" />
+            </Link>
+              </div>
             <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
-              <img src={Writers1} alt="Image 1" className="w-full h-auto" />
-            </div>
-            <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
+            <Link to="/writers-profile">
               <img src={Writers2} alt="Image 2" className="w-full h-auto" />
+            </Link>
             </div>
             <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
               <img src={Writers3} alt="Image 3" className="w-full h-auto" />
