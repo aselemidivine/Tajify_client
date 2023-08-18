@@ -1,18 +1,87 @@
+.login__section {
+    padding: 8rem 0;
+}
+.login__container {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 0;
+}
+.auth {
+    background-color: #008001;
+    padding: 8rem;
+    border-radius: 3.2rem;
+}
+.auth__heading {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 2.4rem;
+    text-transform: capitalize;
+}
+.auth__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+}
+.auth__head--card {
+    padding: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.auth__head--card p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222;
+}
+.auth__mid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.login__section {}
-.login__container {}
-.login {}
-.auth {}
-.auth__heading {}
-.auth__head {}
-.auth__head--card {}
-p
-.auth__mid {}
-p
-.login__form {}
-.form__item {}
-.form__input {}
+    margin-bottom: 1.8em;
+}
+.auth__mid::after, .auth__mid::before {
+    content: '';
+    display: inline-block;
+    width: 45%;
+    height: .1rem;
+
+    background-color: #fff;
+}
+.auth__mid p {
+    color: #fff;
+    font-size: 1.4rem;
+}
+.login__form {
+    gap: .8rem;
+}
+.login__form, .form__item {
+    display: flex;
+    flex-direction: column;
+}
+.form__item {
+    gap: .4rem;
+}
+input.form__input {
+    background-color: #ccc !important;
+    padding: 1rem !important;
+    width: auto !important;
+}
+input.form__input, .auth__head--card {
+    border-radius: .4rem !important;
+}
 .form__flex {}
 .form__check-box {}
 .form__label {}
