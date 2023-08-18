@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@100&display=swap');
 
@@ -48,12 +48,4 @@ body {
 }
 .hero--extra {
   color: #FFC107;
-}
-
-input {
-  border: none !important;
-  outline: none !important;
-  height: 0 !important;
-  width: 0 !important;
-  margin: 0 !important;
 }
