@@ -899,19 +899,23 @@ a.nav__button:hover {
     }
 
 
-    /* .explore-category {
+    .explore-category {
         overflow: hidden;
-    } */
+        border: 1px solid #000;
+    }
     .category__cards {
         width: 125rem;
-        overflow: auto;
+        height: auto;
+        overflow-x: scroll;
     }
-    /* .course__section .section__container {
+    .course__section .section__container {
         overflow: hidden;
-    } */
+    border: 1px solid #000;
+    }
     .course__cards {
         width: 125rem;
-        overflow: auto;
+        height: auto;
+        overflow-x: scroll;
     }
 
 
