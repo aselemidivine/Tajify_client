@@ -41,8 +41,8 @@ const Login = () => {
                     </div>
                     <div className="form__flex">
                         <div className="form__item">
-                            <input type="password" className="form__check-box" id='check'/>
-                            <label htmlFor="check" className="form__label">Remember me</label>
+                            <input type="checkbox" className="form__checkbox" id='checkbox'/>
+                            <label htmlFor="checkbox" className="form__label">Remember me</label>
                         </div>
                         <a href="#" className="form__link">forgot password?</a>
                     </div>
