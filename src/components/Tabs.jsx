@@ -1,10 +1,14 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { HiDotsVertical } from "react-icons/hi";
+import styled from "styled-components";
+
+
 
 const Tabs = () => {
   return (
-    <div className="flex text-center items-center text-white gap-10 " >
+    <TabsContainer>
+    <div className="custom__tabs " >
       <div className="flex text-center custom__style items-center h-[90px] text-white gap-10 mr-[50px]">
         <div className="w-[119px] h-[40px] custom__tab__bg bg-[#F06] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
           News
@@ -37,7 +41,20 @@ const Tabs = () => {
         </i>
      </div>
     </div> 
+    </TabsContainer> 
   );
 };
 
 export default Tabs;
+
+const TabsContainer = styled.div`
+
+.custom__tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+`
