@@ -2,7 +2,7 @@
     padding: 8rem 0;
 }
 .signup__section .signup {
-    padding: 10rem 0 3.2rem 8rem;
+    padding: 10rem 0 1.8rem 6rem;
     transform: translateY(-4.8rem);
 }
 .login__container, .signup__container {
@@ -21,7 +21,7 @@
     grid-template-columns: 1fr 1.1fr;
 }
 .signup {
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.3fr;
     gap: 12rem;
 }
 .login .auth, .signup {
@@ -175,5 +175,5 @@ input.form__input, .auth__head--card {
 .signup__images--box img {
     width: 100%;
     height: 100%;
-    transform: translateX(-6.2rem);
+    transform: translate(-6.4rem, -2rem);
 }

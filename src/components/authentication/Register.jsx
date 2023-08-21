@@ -56,7 +56,7 @@ const Register = () => {
       <div className="signup__container ">
         <div className="signup">
           <div>
-            <h3 className="auth__heading">Signup</h3>
+            <h3 className="auth__heading">Register</h3>
             <div className="auth__head">
               <div className="auth__head--card">
                   <FcGoogle />
