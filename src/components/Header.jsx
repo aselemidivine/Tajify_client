@@ -13,16 +13,16 @@ function Header() {
         <header className='header'>
             <span className="header__logo">Tajify</span>
             <nav className="navbar">
-                <ui className="navbar__list">
-                  {lists.map(list => {
-                    return (
-                    <li className="navbar__list--item" key={list}>
-                      <Link to = "/writer" className="navbar__list--link">{list}</Link>
-                    </li>
-                    );
-                  })}
-                </ui>
-                <a href="/signup" className="nav__button">Get Started</a>
+              <ui className="navbar__list">
+                {lists.map(list => {
+                  return (
+                  <li className="navbar__list--item" key={list}>
+                    <Link to = "/writer" className="navbar__list--link">{list}</Link>
+                  </li>
+                  );
+                })}
+              </ui>
+              <a href="/signup" className="nav__button">Get Started</a>
               <AiOutlineMenu className="mobile__nav--icon" />
             </nav>
         </header>
