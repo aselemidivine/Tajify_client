@@ -29,7 +29,7 @@ const Editor = () => {
           {/* </div> */}
           <div className="editor__button">
 
-            <button className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">Publish</button>
+            <button className="w-[119px] h-[40px] bg-[#4CAF50] text-white text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">Publish</button>
           </div>
         </div>
         {/* <div className="editor__content">

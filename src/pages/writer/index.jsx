@@ -161,6 +161,23 @@ const WriterContainer = styled.div`
 
   .index__page {
     position: relative;
+      .header {
+        background-color: #008001;
+        max-width: 100%;
+        color: #fff;
+      }
+      .navbar__icons {
+        color: #fff;
+    
+      }
+    
+      .navbar__list--link:visited {
+        color: #fff;
+      }
+
+      .nav__button {
+        color: #fff;
+      }
   }
 
   .sidebar {

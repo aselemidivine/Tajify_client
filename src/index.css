@@ -55,3 +55,18 @@ body {
 #FFC107
 #FF0066
 */
+
+/* FEEDS */
+.feeds__section {
+  padding: 30px;
+  margin-bottom: 12px;
+}
+
+.feeds__img__container {
+  width: 490px;
+  height: 476px;
+}
+
+.feeds__img__container__1 {
+  
+}
