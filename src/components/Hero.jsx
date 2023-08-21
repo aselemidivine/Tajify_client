@@ -32,6 +32,7 @@ function Hero() {
                             <Stat figure='1200+' text='Active users' />
                         </div>
                         
+                        
                     </div>
 
                     <div className="hero__images--box">

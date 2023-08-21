@@ -19,10 +19,13 @@
     box-shadow: none;
     justify-content: space-between;
 }
+.navbar {
+    width: 100%;
+}
 .navbar__list {
     display: flex;
     align-items: center;
-    gap: 4.8rem;
+    gap: 3.6rem;
     list-style: none;
 }
 .navbar__list--link:link, .navbar__list--link:visited {
@@ -94,7 +97,7 @@ a.nav__button:hover {
     padding-left: 1rem;
     gap: .8rem;
     align-items: center;
-    max-width: 30rem;
+    max-width: 33.3rem;
     border-radius: 100rem;
     background-color: rgba(255, 255, 255, 0.15);
     margin-bottom: 1.8rem;
@@ -104,14 +107,15 @@ a.nav__button:hover {
 }
 .hero__form .hero__form--input {
     border: none;
-    margin: 0;
+    padding: 1.2rem;
+    background-color: transparent;
 }
 .hero__form .hero__form--inputt::placeholder {
     color: #fff;
 }
 .hero__form .hero__form--input:focus {
-    border: none !important;
-    outline: none !important;
+    border: none;
+    outline: none;
 }
 .hero__form--btn {
     margin: .45rem ;    
@@ -623,12 +627,12 @@ a.nav__button:hover {
     gap: 1.2rem;
     width: 55rem;
 }
-.cta__form input.form__input {
+.cta__form .form__input {
     background-color: #fff;
     padding: .6rem 1.2rem;
     border: none;
 }
-.cta__form input.form__input:focus {
+.form__input:focus {
     outline: none;
     border: none;
 }
@@ -685,8 +689,6 @@ a.nav__button:hover {
     display: flex;
     font-size: 1.2rem;
     gap: 1rem;
-}
-.footer__copyright--text {
 }
 .footer__copyright--links {
     display: flex;
@@ -897,7 +899,6 @@ a.nav__button:hover {
         max-width: 45%;
         justify-content: space-between;
     }
-
 
     .explore-category {
         overflow: hidden;
