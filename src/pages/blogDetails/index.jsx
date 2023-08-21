@@ -21,7 +21,7 @@ const BlogDetails = () => {
       {/* <BlogDetailsContainer> */}
       {/* <Navbar /> */}
       <Header />
-      <div>
+      <div className="blog__content">
       <div className="custom__width">
         <div className="ads__body">
           <div className="ads__second">

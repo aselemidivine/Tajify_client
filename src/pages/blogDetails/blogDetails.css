@@ -13,8 +13,14 @@
   }
 }
 
+.blog__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .custom__width {
-  max-width: 136rem;
+  max-width: 93rem;
   padding: 70px;
   /* display: flex;
     justify-content: center;
