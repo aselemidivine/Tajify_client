@@ -29,7 +29,7 @@
     list-style: none;
 }
 .navbar__list--link:link, .navbar__list--link:visited {
-    color: #333;
+    color: #444;
     font-weight: 600;
     font-size: 1.6rem;
     transition: all .35s;
@@ -59,6 +59,40 @@ a.nav__button:hover {
     opacity: 0;
     margin-left: auto;
     font-size: 2.8rem;
+}
+.Navbar__others {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navbar__icons {
+    font-size: 2.4rem;
+    color: #666;
+    cursor: pointer;
+    transition: all .35s;
+}
+.navbar__icons:hover {
+    color: #FF0066;
+}
+.header__profile--box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile__image--box {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 1.2px solid #666;
+    cursor: pointer;
+}
+.profile__image {
+    height: 100%;
+    height: 100%;
+}
+.profile__name {
+    font-size: 1.4rem;
 }
 
 
