@@ -13,13 +13,13 @@ const Writers = () => {
     <WritersContainer>
       <div className="writers__container__1">
         <div className="writers__container">
-          <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center text-16  text-white flex items-center cursor-pointer justify-center mt-15 ">
+          <div className="writers__container__1 ">
             Top Writers
           </div>
 
           <div className="view__all">View All</div>
         </div>
-        <div className="container mx-auto ">
+        <div className="container__ ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
               <div className="bg-white rounded-lg shadow-md h-[267px] w-[201px]">
             <Link to="/writers-profile">
@@ -72,6 +72,27 @@ const WritersContainer = styled.div`
   .view__all {
     margin-right: 10px;
   }
+
+  .writers__container__1 {
+    width: 119px;
+    height: 40px;
+    background-color: #4CAF50;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .container__ {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  
 
   .ads__sidebar {
     height: 217px;

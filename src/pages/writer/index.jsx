@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
+// import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import Ads from "../../components/Ads";
 import Tabs from "../../components/Tabs";
@@ -14,25 +14,28 @@ import LatestNews from "../../components/LatestNews";
 import { BiTime } from "react-icons/bi";
 
 import '../../index.css'
+import Header from "../../components/Header";
 
 const Writer = () => {
   return (
     <WriterContainer>
       <div className="index__page">
-        <Navbar />
+        {/* <Navbar /> */}
+        <Header />
         <div className="custom__alignment">
-          <div className=" custom__width h-full ">
-            <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] ">
+          <div className=" custom__width ">
+            {/* <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] "> */}
+            <div className="writers-body">
               <div
                 style={{ clipPath: "polygon(0 0, 78% 0, 100% 100%, 0% 100%)" }}
-                className="w-[145px] h-[44px] bg-[#4CAF50] text-center flex items-center justify-center"
+                className=" polygon__button"
               >
-                <span className="text-white">Top News</span>
+                <span className="span__white">Top News</span>
               </div>
-              <div className="w-[362px] h-[20px] text-black span__style">
+              <div className="span__style">
                 <span>Traveling with kids can be rough. Parents ......</span>
               </div>
-              <div className="">
+              <div className="ads__first">
                 <Ads />
               </div>
             </div>
@@ -122,7 +125,32 @@ const WriterContainer = styled.div`
 
   .custom__width {
     max-width: 120rem;
+    height: 100%;
     padding: 0 2.8rem;
+  }
+
+  .writers-body {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 90px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    // flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px]
+  }
+
+  .polygon__button {
+    width: 145px;
+    height: 44px;
+    background-color: #4CAF50;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .span__white {
+    color: white;
   }
 
   .custom__alignment {
@@ -140,6 +168,14 @@ const WriterContainer = styled.div`
     top: 999px;
     right: 9%;
     width: 229px;
+  }
+
+  .ads__first {
+    width: 728px;
+height: 90px;
+    .custom__style {
+      width: 100%;
+    }
   }
 
   .ads__second {
@@ -182,6 +218,9 @@ const WriterContainer = styled.div`
   .span__style {
     font-size: 13px;
     font-weight: 500;
+    color: #000;
+    width: 362px;
+    height: 20px;
   }
 
   .categories {
