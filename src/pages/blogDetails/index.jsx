@@ -22,67 +22,60 @@ const BlogDetails = () => {
       {/* <Navbar /> */}
       <Header />
       <div className="blog__content">
-      <div className="custom__width">
-        <div className="ads__body">
-          <div className="ads__second">
-            <AdsSecond />
+        <div className="custom__width">
+          <div className="ads__body">
+            <div className="ads__second">
+              <AdsSecond />
+            </div>
           </div>
-        </div>
-        <h1>
-          Hey haole! If you’ve taken a trip to Maui, you need to give back
-        </h1>
+          <h1>
+            Hey haole! If you’ve taken a trip to Maui, you need to give back
+          </h1>
 
-        <div className="writers__stats">
-          <div className="writers__stats__container">
-            <div className="img__and__details__container">
-              <div className="img__and__details">
-                <div>
-                   <div className="profile__comments">
-                    <div className="profile__photo">
-
-                    <img
-                      src={profilePhoto}
-                      alt="Profile"
-                      className=""
-                      />
+          <div className="writers__stats">
+            <div className="writers__stats__container">
+              <div className="img__and__details__container">
+                <div className="img__and__details">
+                  <div>
+                    <div className="profile__comments">
+                      <div className="profile__photo">
+                        <img src={profilePhoto} alt="Profile" className="" />
                       </div>
-                    <div>
-                      <p className="text-[12px] text-gray-800">John Doe</p>
-                      <p className="text-gray-600 text-sm"></p>
+                      <div>
+                        <p className="text-[12px] text-gray-800">John Doe</p>
+                        <p className="text-gray-600 text-sm"></p>
+                      </div>
                     </div>
-              
-                </div>
-                </div>
-              </div>
-              <div className="img__and__details__2">
-                <div className="icons__flex">
-                  <div className="reaction">
-                    <PiHandsClappingThin className="writer__icons" />
-                    <span>4.5k</span>
-                  </div>
-                  <div className="reaction">
-                  <AiOutlineComment className="writer__icons" />
-                  <span>65</span>
                   </div>
                 </div>
-                <div className="downloads">
-                  <BsSave className="writer__icons" />
-                  <FiShare className="writer__icons" />
+                <div className="img__and__details__2">
+                  <div className="icons__flex">
+                    <div className="reaction">
+                      <PiHandsClappingThin className="writer__icons" />
+                      <span>4.5k</span>
+                    </div>
+                    <div className="reaction">
+                      <AiOutlineComment className="writer__icons" />
+                      <span>65</span>
+                    </div>
+                  </div>
+                  <div className="downloads">
+                    <BsSave className="writer__icons" />
+                    <FiShare className="writer__icons" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-<div className="blog__post--picture">
-
-        <div className="main__news__img">
-            <img
-              src={Lifestyle}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+          <div className="blog__post--picture">
+            <div className="main__news__img">
+              <img
+                src={Lifestyle}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
+            </div>
           </div>
-              </div>
-      </div>
+        </div>
       </div>
       {/* </BlogDetailsContainer> */}
     </div>

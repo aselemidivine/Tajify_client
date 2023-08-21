@@ -13,6 +13,10 @@
   }
 }
 
+h1 {
+  font-size: 52px;
+}
+
 .blog__content {
     display: flex;
     align-items: center;
@@ -21,7 +25,7 @@
 
 .custom__width {
   max-width: 93rem;
-  padding: 70px;
+  padding: 46px;
   /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -85,7 +89,6 @@
 
 .ads__body {
   margin-bottom: 33px;
-  margin-top: 33px;
   padding: 0 10px;
 }
 
