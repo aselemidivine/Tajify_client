@@ -1,6 +1,7 @@
 import React from "react";
 import Feeds1 from "../assets/images/pngs/feeds1.png";
 import Feeds2 from "../assets/images/pngs/feeds2.png";
+import { Link } from "react-router-dom";
 
 const Feeds = () => {
   return (
@@ -16,7 +17,7 @@ const Feeds = () => {
               src={Feeds1}
               className="align-middle w-full h-full object-cover transition duration-300 ease-linear"
             />
-            <a href="#!">
+            <Link to="/details">
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed">
                 <div className="flex h-full items-end justify-start">
                   <div className="m-6 text-white">
@@ -32,7 +33,7 @@ const Feeds = () => {
                 </div>
               </div>
               <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed transition duration-300 ease-in-out hover:bg-[hsla(0,0%,99%,0.15)]"></div>
-            </a>
+            </Link>
           </div>
 
           <div className="zoom relative overflow-hidden rounded-lg w-[380px] h-[476px] bg-cover bg-no-repeat shadow-lg">
@@ -41,7 +42,7 @@ const Feeds = () => {
               alt="Feed Image"
               className="object-cover w-full h-full transition duration-300 ease-linear"
             />
-            <a href="#!">
+            <Link to="/details">
               <div className="absolute inset-0 flex items-end justify-start bg-[hsla(0,0%,0%,0.4)] bg-fixed">
                 <div className="m-6 text-white">
                   <h5 className="mb-3 text-lg font-bold">
@@ -55,7 +56,7 @@ const Feeds = () => {
                 </div>
               </div>
               <div className="absolute inset-0 overflow-hidden transition duration-300 ease-in-out hover:bg-[hsla(0,0%,99%,0.15)]"></div>
-            </a>
+            </Link>
           </div>
 
           <div className="space-y-10">
@@ -69,7 +70,8 @@ const Feeds = () => {
                   src="https://mdbcdn.b-cdn.net/img/new/standard/nature/045.jpg"
                   className="w-full align-middle transition duration-300 ease-linear"
                 />
-                <a href="#!">
+
+                <Link to="/details">
                   <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed">
                     <div className="flex h-full items-end justify-start">
                       <div className="m-6 text-white">
@@ -85,7 +87,7 @@ const Feeds = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed transition duration-300 ease-in-out hover:bg-[hsla(0,0%,99%,0.15)]"></div>
-                </a>
+                </Link>
               </div>
             </div>
 
