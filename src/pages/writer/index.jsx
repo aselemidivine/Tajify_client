@@ -14,14 +14,14 @@ import LatestNews from "../../components/LatestNews";
 import { BiTime } from "react-icons/bi";
 
 import '../../index.css'
-import Header from "../../components/Header";
+import MainHeader from "../../components/MainHeader";
 
 const Writer = () => {
   return (
     <WriterContainer>
       <div className="index__page">
         {/* <Navbar /> */}
-        <Header />
+        <MainHeader />
         <div className="custom__alignment">
           <div className=" custom__width ">
             {/* <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] "> */}

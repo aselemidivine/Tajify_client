@@ -3,7 +3,7 @@ import React from "react";
 
 // import Navbar from "../../components/Navbar";
 import AdsSecond from "../../components/Ads2";
-import Header from "../../components/Header";
+import SubHeader from "../../components/SubHeader";
 import TabsArticle from "../../components/TabsArticle";
 import profilePhoto from "../../assets/images/pngs/Profile-img-skills.png";
 import Lifestyle from "../../assets/images/pngs/profile-news.png";
@@ -31,7 +31,7 @@ const BlogDetails = () => {
     <div className="blog__container">
       {/* <BlogDetailsContainer> */}
       {/* <Navbar /> */}
-      <Header />
+      <SubHeader />
       <div className="blog__content">
         <div className="custom__width">
           <div className="ads__body">

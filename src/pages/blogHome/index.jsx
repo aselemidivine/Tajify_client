@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from '../../components/Header';
+import MainHeader from '../../components/MainHeader';
+import SubHeader from '../../components/SubHeader';
 import Hero from '../../components/Hero';
 import MostPopularCourses from '../../components/MostPopularCourses';
 import TreadingArticles from '../../components/TreadingArticles';
@@ -16,7 +17,8 @@ import './style.css';
 const BlogHome = () => {
   return (
     <>
-      <Header />
+      {/* <MainHeader /> */}
+      <SubHeader />
       <Hero />
       <MostPopularCourses />
       <TreadingArticles />

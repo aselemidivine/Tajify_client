@@ -4,11 +4,14 @@ import Navbar from "../../components/Navbar";
 import Tabs from "../../components/Tabs";
 import AdsSecond from "../../components/Ads2";
 import Profile from "../../components/Profile";
+import SubHeader from "../../components/SubHeader";
 
 const WritersProfile = () => {
   return (
     <WritersProfileContainer>
-      <Navbar />
+    <div className="blog__container">
+
+      <SubHeader />
       <div className="custom__alignment">
         <div className=" custom__width h-full mt-[33px] mb-[33px] ">
           <div className="flex justify-between items-end">
@@ -26,6 +29,7 @@ const WritersProfile = () => {
           </div>
           <Profile />
         </div>
+      </div>
       </div>
     </WritersProfileContainer>
   );
@@ -46,6 +50,14 @@ const WritersProfileContainer = styled.div`
     justify-content: space-between;
     .custom__style {
       width: 100%;
+    }
+  }
+
+  .blog__container {
+    .header {
+      background-color: #008001;
+      max-width: 100%;
+      color: #fff;
     }
   }
 
