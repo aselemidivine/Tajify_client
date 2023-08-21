@@ -19,7 +19,7 @@ import { FiShare } from "react-icons/fi";
 import { AiOutlineComment } from "react-icons/ai";
 import { BsSave } from "react-icons/bs";
 
-import "../../index.css";
+// import "../../index.css";
 import "../../pages/blogDetails/blogDetails.css";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
