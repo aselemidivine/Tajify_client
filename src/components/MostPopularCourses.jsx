@@ -1,5 +1,5 @@
 import React from "react";
-import '../pages/blogHome/style.css';
+
 import Card from './Card';
 
 import SoftwareDev from '../assets/images/pngs/software-development.png'

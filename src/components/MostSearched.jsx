@@ -1,5 +1,5 @@
 import React from "react";
-// import ke
+
 
 const keywordsData = ['Messi', 'Endsars', 'Online money', 'dreams', 'manchester united', 'wealth', 'nigeria', 'tinubu', 'petrol price', 'election results'];
 function MostSearched() {

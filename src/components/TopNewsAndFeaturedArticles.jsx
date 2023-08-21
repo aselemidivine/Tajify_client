@@ -1,6 +1,6 @@
 import React from "react";
 import TopNews from "./TopNews";
-import './../pages/blogHome/style.css';
+
 import MostSearchedAndFeaturedArticles from './MostSearchedAndFeaturedArticles';
 
 

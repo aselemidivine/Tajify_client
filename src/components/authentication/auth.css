@@ -94,14 +94,14 @@ input.form__input {
 input.form__input, .auth__head--card {
     border-radius: .4rem !important;
 }
-.form__flex {}
+/* .form__flex {} */
 .form__checkbox {
     padding: .2rem;
 }
-.form__label {}
+/* .form__label {}
 .form__link {}
 .form__submit {}
-.form__extra {}
+.form__extra {} */
 
 .login__slide, .signup__images--box {
     width: 100%;

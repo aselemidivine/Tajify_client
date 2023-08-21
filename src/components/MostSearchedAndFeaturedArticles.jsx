@@ -4,7 +4,6 @@ import FeaturedArticles from './FeaturedArticles';
 import Jobs from './Jobs';
 
 
-
 function MostSearchedAndFeaturedArticles() {
     return (
         <div>

@@ -10,15 +10,13 @@ import TopNewsAndFeaturedArticles from '../../components/TopNewsAndFeaturedArtic
 import TopCreators from '../../components/TopCreators';
 import ExploreMore from '../../components/ExploreMore';
 import Footer from '../../components/Footer';
+import './main.css';
 
-import '../../index.css'
-import './style.css';
 
 const BlogHome = () => {
   return (
     <>
-      {/* <MainHeader /> */}
-      <SubHeader />
+      <MainHeader />
       <Hero />
       <MostPopularCourses />
       <TreadingArticles />

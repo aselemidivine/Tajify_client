@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AiOutlineInstagram, AiFillFacebook, AiFillTwitterSquare } from 'react-icons/ai';
 import { BsPinterest } from 'react-icons/bs'
 
@@ -10,9 +9,9 @@ function Footer() {
                 <div className="cta">
                     <h2 className="cta__subscribe-text">Subcribe to our newletter</h2>
                     <form action="" className="cta__form">
-                        <input type="text" name="cta-name" id="cta__name" className="form__input" placeholder='Name' />
-                        <input type="email" name="cta-email" id="cta__email" className="form__input" placeholder='Enter your Email' />
-                        <button className='form__button'>Send</button>
+                        <input type="text" name="cta-name" id="cta__name" className="cta__input" placeholder='Name' />
+                        <input type="email" name="cta-email" id="cta__email" className="cta__input" placeholder='Enter your Email' />
+                        <button className='cta__button'>Send</button>
                     </form>
                 </div>
 
