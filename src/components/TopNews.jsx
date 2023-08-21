@@ -1,7 +1,5 @@
 import React from 'react';
 import News from './News';
-import './../pages/blogHome/style.css';
-
 import news1 from '../assets/images/pngs/article1.png';
 import news2 from '../assets/images/pngs/article2.png';
 import news3 from '../assets/images/pngs/article3.png';

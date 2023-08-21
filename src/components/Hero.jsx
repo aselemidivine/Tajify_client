@@ -1,7 +1,6 @@
 import HeroImg from '../assets/images/hero-img/photo1.png';
 // import Shield from '../components/svgs/Ellipse';
 import { AiOutlineSearch } from "react-icons/ai";
-import '../pages/blogHome/style.css';
 import Shield from './svgs/Shield';
 
 

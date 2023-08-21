@@ -1,13 +1,13 @@
 import React from "react";
-import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import { Link } from "react-router-dom";
-
-import "../pages/blogHome/style.css";
-const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
-
+import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
+import "../pages/blogHome/main.css";
 import { LiaAngleDownSolid } from "react-icons/lia";
 import { FiBell } from "react-icons/fi";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
+
+
+const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
 function SubHeader() {
   return (

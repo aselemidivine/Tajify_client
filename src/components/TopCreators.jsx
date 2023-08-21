@@ -1,6 +1,5 @@
 import React from "react";
 import Card from './Card';
-
 import creator1 from '../assets/images/pngs/creator-1.png';
 import creator2 from '../assets/images/pngs/creator-2.png';
 import creator3 from '../assets/images/pngs/creator-3.png';

@@ -598,9 +598,6 @@ a.nav__button:hover {
 .explore-more .heading__tetariary {
     max-width: 45%;
 }
-.explore-more--text {
-
-}
 .explore-more--description {
     font-size: 1.4rem;
     line-height: 1.4;
@@ -661,16 +658,16 @@ a.nav__button:hover {
     gap: 1.2rem;
     width: 55rem;
 }
-.cta__form .form__input {
+.cta__form .cta__input {
     background-color: #fff;
     padding: .6rem 1.2rem;
     border: none;
 }
-.form__input:focus {
+.cta__input:focus {
     outline: none;
     border: none;
 }
-.cta__form button.form__button {
+.cta__form button.cta__button {
     background-color: #008001;
     height: 0;
     padding: 2rem 2rem;

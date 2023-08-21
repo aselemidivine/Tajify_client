@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../pages/blogHome/style.css'
+
 
 const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore'];
 

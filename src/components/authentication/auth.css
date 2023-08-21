@@ -1,31 +1,37 @@
 .login__section {
     padding: 8rem 0;
 }
-.signup__section {
-    padding: 0 0 8rem;
+.signup__section .signup {
+    padding: 10rem 0 1.8rem 6rem;
+    transform: translateY(-4.8rem);
 }
 .login__container, .signup__container {
-    max-width: 100rem;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+.signup__container {
+    max-width: 75rem;
     margin: 0 auto;
 }
 .login, .signup {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
+    align-items: center;
+}
+.login {
+    grid-template-columns: 1fr 1.1fr;
 }
 .signup {
-    gap: 6.2rem;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 12rem;
 }
 .login .auth, .signup {
     background-color: #008001;
-    border-radius: 3.2rem;
-}
-.signup {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 3.6rem;
 }
 .auth {
     padding: 4.8rem 8rem;
+    transform: translateX(3.2rem);
+    z-index: 20;
 }
 .auth__heading {
     font-size: 2.8rem;
@@ -43,19 +49,20 @@
 }
 .auth__head--card {
     padding: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 1.4rem;
 }
 .auth__head--card p {
     font-size: 1.2rem;
     font-weight: 500;
     color: #222;
 }
+
 .auth__mid {
     width: 100%;
     display: flex;
@@ -64,7 +71,7 @@
 
     margin-bottom: 1.8em;
 }
-.auth__mid::after, .auth__mid::before {
+.login__mid::after, .login__mid::before {
     content: '';
     display: inline-block;
     width: 45%;
@@ -77,7 +84,7 @@
     font-size: 1.4rem;
 }
 .login__form {
-    gap: .8rem;
+    gap: 1.4rem;
 }
 .login__form, .form__item {
     display: flex;
@@ -85,37 +92,88 @@
 }
 .form__item {
     gap: .4rem;
+    position: relative;
 }
-input.form__input {
-    background-color: #ccc !important;
-    padding: 1rem !important;
-    width: auto !important;
+.form__input {
+    background-color: rgba(255, 255, 255, 0.75) ;
+    padding: 1rem 1rem 1rem 3.6rem;
+    width: auto;
+}
+.form__input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: capitalize;
 }
 input.form__input, .auth__head--card {
-    border-radius: .4rem !important;
+    border-radius: .8rem;
 }
-.form__flex {}
+.form__flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.26rem;
+}
 .form__checkbox {
     padding: .2rem;
+    border: 1px solid #fff;
+    background-color: transparent;
 }
-.form__label {}
-.form__link {}
-.form__submit {}
-.form__extra {}
-
-.login__slide, .signup__images--box {
+.form__link:link, .form__link:visited {
+    margin-left: auto;
+    color: #FF0066;
+}
+.form__submit {
+    background-color: #FF0066;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.2rem 2.4rem;
+}
+.form__extra {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+.form__extra a:link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.input__icon, .password__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+}
+.input__icon {
+    left: 1rem;
+}
+.password__icon {
+    right: 1rem;
+}
+.login__slide {
     width: 100%;
+    height: 100%;
+}
+.signup__images--box {
+    width: 140%;
     height: 100%;
 }
 .login__slide {
     overflow: hidden;
 }
-
 .login__slide img {
     width: 100%;
     height: 100%;
+    filter: drop-shadow(.6rem 1.2rem 2rem rgba(0, 0, 0, .5));
+}
+.login__slide img.login__image {
+    padding-top: 2.8rem;
 }
 .signup__images--box img {
-    width: 150%;
+    width: 100%;
     height: 100%;
+    transform: translate(-6.4rem, -2rem);
 }
