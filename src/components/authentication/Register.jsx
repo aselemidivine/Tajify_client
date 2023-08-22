@@ -21,12 +21,12 @@ import SignupImg from '../../assets/images/pngs/signup-img.png';
         setCurrentSlide(index);
      }
 
-     const backgroundImages = [
-        'image1.jpg',
-        'image2.jpg',
-        'image3.jpg',
-        // Add more image URLs as needed
-      ];
+    const backgroundImages = [
+      'image1.jpg',
+      'image2.jpg',
+      'image3.jpg',
+      // Add more image URLs as needed
+    ];
       
 
      return (
