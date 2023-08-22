@@ -9,6 +9,7 @@ import About from "./pages/about";
 import Help from "./pages/help";
 import Privacy from "./pages/privacy";
 import Editor from "./pages/editor";
+import Profile from "./pages/profile";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/help" element={<Help />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/editor" element={<Editor />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   );
