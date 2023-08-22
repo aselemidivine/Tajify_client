@@ -96,14 +96,18 @@
 }
 .form__input {
     background-color: rgba(255, 255, 255, 0.75) ;
-    padding: 1rem 1rem 1rem 3.6rem;
+    padding: 1rem 3.6rem;
     width: auto;
+    font-size: 1.4rem;
 }
 .form__input::placeholder {
     font-size: 1.2rem;
     font-weight: 600;
     color: #666;
     text-transform: capitalize;
+}
+.form__input:focus {
+    outline: none;
 }
 input.form__input, .auth__head--card {
     border-radius: .8rem;
