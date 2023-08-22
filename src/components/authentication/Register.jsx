@@ -20,12 +20,12 @@ import { Link } from "react-router-dom";
         setCurrentSlide(index);
      }
 
-     const backgroundImages = [
-        'image1.jpg',
-        'image2.jpg',
-        'image3.jpg',
-        // Add more image URLs as needed
-      ];
+    const backgroundImages = [
+      'image1.jpg',
+      'image2.jpg',
+      'image3.jpg',
+      // Add more image URLs as needed
+    ];
       
 
      return (
