@@ -5,6 +5,8 @@ import Tabs from "../../components/Tabs";
 import AdsSecond from "../../components/Ads2";
 import Profile from "../../components/Profile";
 import SubHeader from "../../components/SubHeader";
+import '../../pages/blogHome/main.css'
+
 
 const WritersProfile = () => {
   return (
@@ -16,7 +18,7 @@ const WritersProfile = () => {
         <div className=" custom__width h-full mt-[33px] mb-[33px] ">
           <div className="flex justify-between items-end">
             <div>
-              <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
+              <button className="add__post ">
                 Add Post
               </button>
             </div>
@@ -42,14 +44,21 @@ const WritersProfileContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+      .custom__width {
+        max-width: 160rem;
+        padding: 46px;
+      }
   }
 
   .ads__second {
-    width: 920px;
+    width: 728px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
+    background-color: #d9d9d9d9;
     .custom__style {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -62,10 +71,27 @@ const WritersProfileContainer = styled.div`
   }
 
   .custom__tabs {
+    padding: 10px;
     .custom__style {
       .custom__tab__bg {
         background: #4caf50;
       }
     }
+  }
+
+  .add__post {
+    width: 166px;
+    height: 40px;
+    background-color: #F06;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 21px;
+    padding-left: 26px;
+    padding-right: 20px;
   }
 `;

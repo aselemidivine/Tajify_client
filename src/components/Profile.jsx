@@ -79,7 +79,7 @@ const Profile = () => {
           <div className="main__news__img">
             <img
               src={Lifestyle}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              className="align-middle object-cover transition duration-300 ease-linear mb-5"
             />
           </div>
           <div className="p-4 ">
@@ -122,11 +122,10 @@ const Profile = () => {
         </div>
         <div className="flex flex-wrap gap-16">
           <div className="main__news__1">
-            <img
-              src={News1}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img src={News1} className="align-middle " />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -156,11 +155,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-            <img
-              src={News2}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img
+                src={News2}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -190,11 +191,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-            <img
-              src={News3}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img
+                src={News3}
+                className="align-middle object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -224,11 +227,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-            <img
-              src={News4}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img
+                src={News4}
+                className="align-middle object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -262,7 +267,7 @@ const Profile = () => {
           <div className="main__news__img">
             <img
               src={ProfileNews2}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              className="align-middle object-cover transition duration-300 ease-linear mb-5"
             />
           </div>
           <div className="p-4 ">
@@ -305,11 +310,15 @@ const Profile = () => {
         </div>
         <div className="flex flex-wrap gap-16">
           <div className="main__news__1">
+          <div className="img__container">
+
+
             <img
               src={News3}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+              className="align-middle object-cover transition duration-300 ease-linear mb-5"
+              />
+              </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -339,11 +348,15 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
+          <div className="img__container">
+
+
             <img
               src={News2}
               className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+              />
+              </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -373,11 +386,15 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
+          <div className="img__container">
+
+
             <img
               src={News3}
               className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+              />
+              </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -407,11 +424,15 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
+          <div className="img__container">
+
+
             <img
               src={News4}
               className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+              />
+              </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -447,13 +468,14 @@ const Profile = () => {
 
         <div className="flex flex-wrap gap-16">
           <div className="main__news__1">
-            {/* <div className="main__news_img"> */}
+            <div className="img__container">
               <img
                 src={News2}
                 className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-            {/* </div> */}
-            <h1 className="bold__text">
+            </div>
+
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -483,11 +505,15 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
+          <div className="img__container">
+
+
             <img
               src={News2}
               className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+              />
+              </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -517,11 +543,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-            <img
-              src={News3}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img
+                src={News3}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -551,11 +579,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-            <img
-              src={News4}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
-            <h1 className="bold__text">
+            <div className="img__container">
+              <img
+                src={News4}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
+            <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
@@ -668,6 +698,7 @@ const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 10px;
 
   h3 {
     font-size: 24px;
@@ -841,5 +872,15 @@ const ProfileContainer = styled.div`
   .main__news_img {
     width: 388px;
     height: 242px;
+  }
+
+  .align-middle {
+    object-fit: cover;
+  }
+
+  .img__container {
+    width: 388px;
+    height: 242px;
+    margin-bottom: 23px;
   }
 `;

@@ -14,6 +14,7 @@ import LatestNews from "../../components/LatestNews";
 import { BiTime } from "react-icons/bi";
 
 import '../../index.css'
+import '../../pages/blogHome/main.css'
 import MainHeader from "../../components/MainHeader";
 
 const Writer = () => {

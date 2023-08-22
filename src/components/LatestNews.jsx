@@ -69,11 +69,9 @@ const LatestNews = () => {
           </div>
         </div>
 
-         <div className="writer__foter">
-            <WriterFooter />
-            
-          </div>
-
+        <div className="writer__foter">
+          <WriterFooter />
+        </div>
       </div>
 
       <div className="lifestyle">

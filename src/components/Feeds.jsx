@@ -18,7 +18,7 @@ const Feeds = () => {
               className="align-middle w-full h-full object-cover transition duration-300 ease-linear"
             />
             <Link to="/details">
-              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed">
+              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden">
                 <div className="flex h-full items-end justify-start">
                   <div className="m-6 text-white">
                     <h5 className="mb-3 text-lg font-bold">
@@ -32,7 +32,7 @@ const Feeds = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed transition duration-300 ease-in-out hover:bg-[hsla(0,0%,99%,0.15)]"></div>
+              <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed transition duration-300 ease-in-out"></div>
             </Link>
           </div>
 
@@ -43,7 +43,7 @@ const Feeds = () => {
               className="object-cover w-full h-full transition duration-300 ease-linear"
             />
             <Link to="/details">
-              <div className="absolute inset-0 flex items-end justify-start bg-[hsla(0,0%,0%,0.4)] bg-fixed">
+              <div className="absolute inset-0 flex items-end justify-start">
                 <div className="m-6 text-white">
                   <h5 className="mb-3 text-lg font-bold">
                     How to Increase Your ROI Through scientific SEM?
@@ -55,7 +55,7 @@ const Feeds = () => {
                   </p>
                 </div>
               </div>
-              <div className="absolute inset-0 overflow-hidden transition duration-300 ease-in-out hover:bg-[hsla(0,0%,99%,0.15)]"></div>
+              <div className="absolute inset-0 overflow-hidden transition duration-300 ease-in-out "></div>
             </Link>
           </div>
 
@@ -72,7 +72,7 @@ const Feeds = () => {
                 />
 
                 <Link to="/details">
-                  <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed">
+                  <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
                     <div className="flex h-full items-end justify-start">
                       <div className="m-6 text-white">
                         <h5 className="mb-3 text-lg font-bold">
@@ -102,7 +102,7 @@ const Feeds = () => {
                   className="w-full align-middle transition duration-300 ease-linear"
                 />
                 <a href="#!">
-                  <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed">
+                  <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
                     <div className="flex h-full items-end justify-start">
                       <div className="m-6 text-white">
                         <h5 className="mb-3 text-lg font-bold">
@@ -124,6 +124,8 @@ const Feeds = () => {
         </div>
       </div>
     </section>
+
+
     // <section id="blogs" className=" p-3 mb-12">
     //   <div className="container  my-24 mx-auto md:px-6">
     //     <div className="grid gap-6 lg:grid-cols-3">

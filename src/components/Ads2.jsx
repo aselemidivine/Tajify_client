@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const AdsSecond = () => {
   return (
-    <adsContainer className='bg-[#D9D9D9] custom__style h-[122px]'>
+    <adsContainer className='custom__style'>
       ads
     </adsContainer>
   )

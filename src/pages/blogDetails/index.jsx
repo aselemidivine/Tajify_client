@@ -26,6 +26,8 @@ import Footer from "../../components/Footer";
 import TreadingArticles from "../../components/TreadingArticles";
 import Profile from "../../components/Profile";
 
+
+
 const BlogDetails = () => {
   return (
     <div className="blog__container">
