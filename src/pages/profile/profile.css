@@ -82,3 +82,59 @@
     bottom: 0;
     right: 0;
 }
+
+
+/* ******************** */
+.bio__section {}
+.bio--cards {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    gap: 4.8rem;
+}
+.info--figures {
+    display: flex;
+    flex-direction: column;
+}
+.followers--numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.followers--numbers {
+    margin-bottom: 2.4rem;
+}
+.numbers, .info span {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    justify-content: center;
+    align-items: center;
+}
+.numbers-count {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #FF0066;
+}
+.numbers-text {
+    font-size: 1.2rem;
+}
+.info--icons {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.info span {
+}
+p
+.bio--content {}
+.bio__heading {}
+.bio--content--box {}
+.contents-box {}
+content
+span
+p
+.bio--text {}

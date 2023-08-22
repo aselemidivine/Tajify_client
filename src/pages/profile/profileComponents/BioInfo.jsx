@@ -34,22 +34,26 @@ function BioFigure () {
                 </span>
             </div>
             <div className="info--icons">
-                <span>
-                    <PiNotePencilFill />
-                    <p>post</p>
-                </span>
-                <span>
-                    <BiSolidMessageAltDots />
-                    <p>messages</p>
-                </span>
-                <span>
-                    <AiOutlineFolderAdd />
-                    <p>saved</p>
-                </span>
-                <span>
-                    <PiGearBold />
-                    <p>saved</p>
-                </span>
+                <div className="info">
+                    <span>
+                        <PiNotePencilFill />
+                        <p>post</p>
+                    </span>
+                    <span>
+                        <BiSolidMessageAltDots />
+                        <p>messages</p>
+                    </span>
+                </div>
+                <div className="info">
+                    <span>
+                        <AiOutlineFolderAdd />
+                        <p>saved</p>
+                    </span>
+                    <span>
+                        <PiGearBold />
+                        <p>saved</p>
+                    </span>
+                </div>
             </div>
         </figure>
     )
