@@ -14,7 +14,8 @@ function MainHeader() {
                 {lists.map(list => {
                   return (
                   <li className="navbar__list--item" key={list}>
-                    <Link to = "/writer" className="navbar__list--link">{list}</Link>
+                    <Link to = "" className="navbar__list--link">{list}</Link>
+                    {/* <Link to = "/writer" className="navbar__list--link">{list}</Link> */}
                   </li>
                   );
                 })}
