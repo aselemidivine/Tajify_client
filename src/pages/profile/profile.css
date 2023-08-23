@@ -23,7 +23,7 @@
     height: 18rem;
     border-radius: 50%;
     position: relative;
-    border: 1.6px solid #FF0066;
+    border: 2px solid #FF0066;
 }
 .profile-hero__image {
     width: 100%;
@@ -44,6 +44,7 @@
     right: 0;
 
     z-index: 5;
+    cursor: pointer;
 }
 .image__icon {
     color: #fff;
@@ -88,12 +89,16 @@
 .bio__section {}
 .bio--cards {
     display: grid;
-    grid-template-columns: 1fr 3.5fr;
+    grid-template-columns: 1fr 5fr;
     gap: 4.8rem;
 }
 .info--figures {
     display: flex;
     flex-direction: column;
+    padding: 1.6rem;
+    border-radius: .2rem;
+
+    box-shadow: .6rem .6rem 4rem rgba(0, 0, 0, 0.15);
 }
 .followers--numbers {
     display: flex;
@@ -103,7 +108,7 @@
 .followers--numbers {
     margin-bottom: 2.4rem;
 }
-.numbers, .info span {
+.numbers, .info span, .info {
     display: flex;
     flex-direction: column;
     gap: .4rem;
@@ -115,23 +120,29 @@
     font-weight: 600;
     color: #FF0066;
 }
+.info span p,
 .numbers-text {
     font-size: 1.2rem;
 }
 .info--icons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     gap: .6rem;
 }
 .info {
-    display: flex;
-    justify-content: space-between;
-}
-.info span {
+    gap: 1rem;
 }
 p
-.bio--content {}
-.bio__heading {}
+.bio--content {
+    color: red;
+}
+.bio__heading {
+    font-size: 2.4rem;
+    color: #008001;
+}
+.bio__heading::after {
+    
+}
 .bio--content--box {}
 .contents-box {}
 content

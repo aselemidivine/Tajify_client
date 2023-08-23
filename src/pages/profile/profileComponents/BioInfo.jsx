@@ -40,14 +40,14 @@ function BioFigure () {
                         <p>post</p>
                     </span>
                     <span>
-                        <BiSolidMessageAltDots />
-                        <p>messages</p>
+                        <AiOutlineFolderAdd />
+                        <p>saved</p>
                     </span>
                 </div>
                 <div className="info">
                     <span>
-                        <AiOutlineFolderAdd />
-                        <p>saved</p>
+                        <BiSolidMessageAltDots />
+                        <p>message</p>
                     </span>
                     <span>
                         <PiGearBold />
@@ -93,8 +93,8 @@ function ContentsInfo () {
                 <p className='bio--text'>Photography, Video Creation, Cinematic Effects, Images, Adobe Creative Suites, Imaginary.</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
 function ContactsInfo () {
     return (
@@ -121,7 +121,7 @@ function ContactsInfo () {
                 <p className='bio--text'>andrewtateportfolio.com</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default BioInfo
