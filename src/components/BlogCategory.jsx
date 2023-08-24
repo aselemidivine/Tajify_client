@@ -517,6 +517,7 @@ const BlogCategoryContainer = styled.div`
   display: flex;
   margin-top: 34px;
   margin-bottom: 10px;
+  margin-top: 98px;
   justify-content: space-between;
 
   .wrapper__div {

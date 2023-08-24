@@ -10,10 +10,12 @@ const TrendyNews = () => {
     <TrendyContainer>
       <div className="trendy__container">
         <div className="main__news">
-          <img
-            src={Feeds1}
-            className="align-middle w-full object-cover transition duration-300 ease-linear"
-          />
+          <div className="trendy__img">
+            <img
+              src={Feeds1}
+              className="align-middle object-cover transition duration-300 ease-linear"
+            />
+          </div>
           <h1 className="bold__text">
             The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
           </h1>
@@ -249,11 +251,24 @@ const TrendyContainer = styled.div`
   }
 
   .ads__sidebar {
+    height: 244px;
+    margin-bottom: 20px;
+    background: #d9d9d9;
     .custom__style {
       width: 100%;
       height: 244px;
       margin-bottom: 30px;
     }
+  }
+
+  .trendy__img {
+    // width: 477px;
+    height: 294px;
+        margin-bottom: 26px;
+      .align-middle {
+        height: 100%;
+        object-fit: cover;
+      }
   }
 
   .ads__sidebar__1 {
@@ -262,6 +277,4 @@ const TrendyContainer = styled.div`
       height: 169px;
     }
   }
-
-  
 `;

@@ -32,7 +32,7 @@ const Feeds = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed transition duration-300 ease-in-out"></div>
+              {/* <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed transition duration-300 ease-in-out"></div> */}
             </Link>
           </div>
 
