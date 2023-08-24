@@ -13,15 +13,15 @@ import BlogCategory from "../../components/BlogCategory";
 import LatestNews from "../../components/LatestNews";
 import { BiTime } from "react-icons/bi";
 
-import '../../index.css'
-import '../../pages/blogHome/main.css'
+import "../../index.css";
+import "../../pages/blogHome/main.css";
 import MainHeader from "../../components/MainHeader";
+import TopCreators from "../../components/TopCreators";
 
 const Writer = () => {
   return (
     <WriterContainer>
       <div className="index__page">
-        {/* <Navbar /> */}
         <MainHeader />
         <div className="custom__alignment">
           <div className=" custom__width ">
@@ -40,8 +40,11 @@ const Writer = () => {
                 <Ads />
               </div>
             </div>
-            <Tabs />
-            <div className="flex justify-between items-end">
+            {/* <div className="custom__width">
+
+            <Tabs /> 
+            </div> */}
+            <div className="flex justify-between items-end mb-10">
               <div className="ads__second">
                 <AdsSecond />
               </div>
@@ -51,9 +54,11 @@ const Writer = () => {
                 </button>
               </div>
             </div>
-            <Feeds />
+            {/* <Feeds /> */}
             <Filter />
             <TrendyNews />
+
+            <TopCreators />
 
             <div className="ads__second__">
               <div className="ads__second__1">
@@ -104,14 +109,13 @@ const Writer = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="categories__sidebar ">
-                  <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center"></div>
-                </div> */}
               </div>
             </div>
-            <Writers />
+            {/* <Writers /> */}
             <BlogCategory />
-            <LatestNews />
+            <div className="custom__width">
+              <LatestNews />
+            </div>
           </div>
         </div>
       </div>
@@ -127,6 +131,7 @@ const WriterContainer = styled.div`
   .custom__width {
     max-width: 120rem;
     height: 100%;
+    margin: 0 auto;
     padding: 0 2.8rem;
   }
 
@@ -134,6 +139,7 @@ const WriterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
     height: 90px;
     margin-top: 33px;
     margin-bottom: 33px;
@@ -143,7 +149,7 @@ const WriterContainer = styled.div`
   .polygon__button {
     width: 145px;
     height: 44px;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     text-align: center;
     display: flex;
     align-items: center;
@@ -154,31 +160,29 @@ const WriterContainer = styled.div`
     color: white;
   }
 
-  .custom__alignment {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  // .custom__alignment {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
 
   .index__page {
-    position: relative;
-      .header {
-        background-color: #008001;
-        max-width: 100%;
-        color: #fff;
-      }
-      .navbar__icons {
-        color: #fff;
-    
-      }
-    
-      .navbar__list--link:visited {
-        color: #fff;
-      }
+    .header {
+      background-color: #008001;
+      max-width: 100%;
+      color: #fff;
+    }
+    .navbar__icons {
+      color: #fff;
+    }
 
-      .nav__button {
-        color: #fff;
-      }
+    .navbar__list--link:visited {
+      color: #fff;
+    }
+
+    .nav__button {
+      color: #fff;
+    }
   }
 
   .sidebar {
@@ -190,7 +194,8 @@ const WriterContainer = styled.div`
 
   .ads__first {
     width: 728px;
-height: 90px;
+    background: #d9d9d9;
+    height: 90px;
     .custom__style {
       width: 100%;
     }
@@ -198,6 +203,8 @@ height: 90px;
 
   .ads__second {
     width: 920px;
+    height: 122px;
+    background: #d9d9d9;
     display: flex;
     justify-content: space-between;
     .custom__style {
@@ -206,13 +213,28 @@ height: 90px;
     }
   }
 
-  .ads__second__ {
-    position: relative;
-    max-width: 1235px;
-  }
+  // .ads__second__ {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   max-width: 1235px;
+  // }
 
+  .ads__second__ {
+    height: 111px;
+    max-width: 1239px;
+    align-items: center;
+    margin-top: 136px;
+    display: flex;
+    justify-content: space-between;
+    .custom__style {
+      width: 100%;
+    }
+  }
   .ads__second__1 {
-    max-width: 920px;
+    width: 831px;
+    height: 111px;
+    background: #d9d9d9;
     display: flex;
     justify-content: space-between;
     .custom__style {
@@ -222,7 +244,7 @@ height: 90px;
 
   .recommended__sidebar {
     max-width: 279px;
-    position: absolute;
+    // position: absolute;
     right: 0;
     // right: 31px;
     top: 0px;
@@ -287,5 +309,41 @@ height: 90px;
   .normal__text {
     font-size: 9.23px;
     margin: 5px 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    .writers-body {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .ads__second {
+      max-width: 637px;
+    }
+    .ads__first {
+      width: 488px;
+    }
+    .custom__width {
+      .featured__container {
+        height: 100%;
+      }
+    }
+
+    .main__news {
+      max-width: 254px;
+    }
+
+    .featured__articles {
+      max-width: 321px;
+    }
+
+    .news__flex {
+      max-width: 563px;
+    }
+
+
+
+
   }
 `;

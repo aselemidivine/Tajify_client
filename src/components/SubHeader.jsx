@@ -9,6 +9,9 @@ import { HiOutlinePencilSquare } from "react-icons/hi2";
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
 function SubHeader() {
+
+  const [isRegistered, setIsRegistered] = useState(false);
+
   return (
     <header className="header">
       <span className="header__logo">Tajify</span>
@@ -41,13 +44,31 @@ function SubHeader() {
               </li>
         </ui>
 
-        <span className="Navbar__others">
-          <Link to="/editor">
-            <HiOutlinePencilSquare className="navbar__icons" />
-          </Link>
+        {/* {isRegistered ? (
+            <>
+              <Link to="/editor">
+                <HiOutlinePencilSquare className="navbar__icons" />
+              </Link>
+              <FiBell className="navbar__icons" />
+              <Profile />
+            </>
+          ) : (
+            <button className="get-started-button">Get Started</button>
+          )} */}
 
-          <FiBell className="navbar__icons" />
-          <Profile />
+        <span className="Navbar__others">
+
+        {isRegistered ? (
+            <>
+              <Link to="/editor">
+                <HiOutlinePencilSquare className="navbar__icons" />
+              </Link>
+              <FiBell className="navbar__icons" />
+              <Profile />
+            </>
+          ) : (
+            <Link to="/signup" className="nav__button">Get Started</Link>
+          )}
         </span>
       </nav>
     </header>

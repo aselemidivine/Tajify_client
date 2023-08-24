@@ -3,58 +3,88 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { HiDotsVertical } from "react-icons/hi";
 import styled from "styled-components";
 
-
-
 const Tabs = () => {
   return (
     <TabsContainer>
-    <div className="custom__tabs " >
-      <div className="flex text-center custom__style items-center h-[90px] text-white gap-10 mr-[50px]">
-        <div className="w-[119px] h-[40px] custom__tab__bg bg-[#F06] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          News
+      <div className="custom__tabs ">
+        <div className="custom__tab__container">
+          <div className="custom__tab__bg ">News</div>
+          <div className="custom__tab__bg__ ">Sport</div>
+          <div className="custom__tab__bg__ ">Travel</div>
+          <div className="custom__tab__bg__ ">Future</div>
+          <div className="custom__tab__bg__ ">Culture</div>
+          <div className="custom__tab__bg__ ">Style</div>
+          <div className="custom__tab__bg__ ">Health</div>
         </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Sport
-        </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Travel
-        </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Future
-        </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Culture
-        </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Style
-        </div>
-        <div className="w-[119px] h-[40px] bg-[#4CAF50] text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">
-          Health
+        <div className="icons ">
+          <i className="cursor-pointer text-black h-6 w-6">
+            <AiOutlineSearch />
+          </i>
+          <i className="cursor-pointer text-black h-6 w-6">
+            <HiDotsVertical />
+          </i>
         </div>
       </div>
-     <div className="icons flex items-center w-[200px] justify-between ml-[50px]"> 
-        <i className="cursor-pointer text-black h-6 w-6">
-          <AiOutlineSearch />
-        </i>
-        <i className="cursor-pointer text-black h-6 w-6">
-          <HiDotsVertical />
-        </i>
-     </div>
-    </div> 
-    </TabsContainer> 
+    </TabsContainer>
   );
 };
 
 export default Tabs;
 
 const TabsContainer = styled.div`
+  .custom__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+  }
 
-.custom__tabs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  gap: 10px;
-}
+  .custom__tab__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    color: white;
+    gap: 10px;
+    margin-right: 50px;
+  }
 
-`
+  .custom__tab__bg {
+    width: 119px;
+    height: 40px;
+    background-color: #f06;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .custom__tab__bg__ {
+    width: 119px;
+    height: 40px;
+    background-color: #4caf50;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+`;

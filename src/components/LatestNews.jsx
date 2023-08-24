@@ -16,8 +16,12 @@ import WriterFooter from "../components/WriterFooter";
 const LatestNews = () => {
   return (
     <LatestNewsContainer>
+      <div className="featured__container">
+
       <div className="featured__articles">
-        <Ads />
+        <div className="featured__articles__ads">
+          <Ads />
+        </div>
         <h3 className="featured__h3 ">Featured Articles</h3>
         <div className="my-6">
           <h4 className="featured__h4 my-6 ">
@@ -79,12 +83,14 @@ const LatestNews = () => {
           <div className="header-box"></div>
           <div className="bold__text">Latest News</div>
         </div>
-        <div className="flex flex-wrap gap-5">
+        <div className=" news__flex flex flex-wrap gap-5">
           <div className="main__news">
-            <img
-              src={News1}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
+            <div className="main__news__img">
+              <img
+                src={News1}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -97,28 +103,30 @@ const LatestNews = () => {
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="text-[12px] text-gray-800">John Doe</p>
+                  <p className="text-[10px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
                 </div>
                 <p className="mt-2 text-gray-700"></p>
                 <div className="mt-2 flex items-center">
                   <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">
+                  <span className="text-gray-600 text-[10px]">
                     12th, May 2023 - 03: 23pm
                   </span>
                 </div>
                 <div className="mt-2 flex items-center">
                   <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">23 Comm</span>
+                  <span className="text-gray-600 text-[10px]">23 Comm</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="main__news">
-            <img
-              src={News2}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
+            <div className="main__news__img">
+              <img
+                src={News2}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -131,28 +139,30 @@ const LatestNews = () => {
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="text-[12px] text-gray-800">John Doe</p>
+                  <p className="text-[10px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
                 </div>
                 <p className="mt-2 text-gray-700"></p>
                 <div className="mt-2 flex items-center">
                   <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">
+                  <span className="text-gray-600 text-[10px]">
                     12th, May 2023 - 03: 23pm
                   </span>
                 </div>
                 <div className="mt-2 flex items-center">
                   <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">23 Comm</span>
+                  <span className="text-gray-600 text-[10px]">23 Comm</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="main__news">
-            <img
-              src={News3}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
+            <div className="news__img">
+              <img
+                src={News3}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -165,28 +175,30 @@ const LatestNews = () => {
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="text-[12px] text-gray-800">John Doe</p>
+                  <p className="text-[10px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
                 </div>
                 <p className="mt-2 text-gray-700"></p>
                 <div className="mt-2 flex items-center">
                   <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">
+                  <span className="text-gray-600 text-[10px]">
                     12th, May 2023 - 03: 23pm
                   </span>
                 </div>
                 <div className="mt-2 flex items-center">
                   <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">23 Comm</span>
+                  <span className="text-gray-600 text-[10px]">23 Comm</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="main__news">
-            <img
-              src={News4}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-            />
+            <div className="news__img">
+              <img
+                src={News4}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              />
+            </div>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -199,25 +211,27 @@ const LatestNews = () => {
                   className="w-10 h-10 rounded-full"
                 />
                 <div>
-                  <p className="text-[12px] text-gray-800">John Doe</p>
+                  <p className="text-[10px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
                 </div>
                 <p className="mt-2 text-gray-700"></p>
                 <div className="mt-2 flex items-center">
                   <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">
+                  <span className="text-gray-600 text-[10px]">
                     12th, May 2023 - 03: 23pm
                   </span>
                 </div>
                 <div className="mt-2 flex items-center">
                   <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[12px]">23 Comm</span>
+                  <span className="text-gray-600 text-[10px]">23 Comm</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
+
     </LatestNewsContainer>
   );
 };
@@ -225,10 +239,20 @@ const LatestNews = () => {
 export default LatestNews;
 
 const LatestNewsContainer = styled.div`
+
+.featured__container {
+
   display: flex;
   margin-top: 34px;
   margin-bottom: 10px;
-  // justify-content: space-between;
+  justify-content: space-between;
+}
+
+  .news__flex {
+    width: 678px;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .featured__h3 {
     color: #008001;
@@ -269,7 +293,7 @@ const LatestNewsContainer = styled.div`
   }
 
   .main__news {
-    max-width: 388px;
+    max-width: 315px;
     // margin-right: 23px;
     margin-top: 20px;
   }
@@ -278,7 +302,7 @@ const LatestNewsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
 
   .featured__news_img {
@@ -293,21 +317,32 @@ const LatestNewsContainer = styled.div`
   }
 
   .news__img {
-    width: 330px;
-    height: 127px;
+    width: 315px;
+    // height: 127px;
     margin-right: 9px;
   }
 
-  .lifestyle {
-    max-width: 800px;
+  // .lifestyle {
+  //   max-width: 689px;
+  // }
+
+  .main__news__img {
+    max-width: 315px;
+    margin-top: 20px;
   }
 
   .featured__articles {
-    max-width: 400px;
-    .custom__style {
-      width: 363px;
+    // max-width: 400px;
+    .featured__articles__ads {
+      // width: 363px;
+      margin-bottom: 41px;
       height: 252px;
-      margin-bottom: 40px;
+      background: #d9d9d9;
+      .custom__style {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+      }
     }
   }
 
