@@ -1,15 +1,17 @@
 import React from 'react';
-import MainHeader from '../../components/MainHeader';
+import ProfileHeader from '../../components/ProfileHeader';
 import ProfileHero from './profileComponents/ProfileHero';
 import BioInfo from './profileComponents/BioInfo';
 import './profile.css';
+import FollowAndPersonals from './profileComponents/FollowAndPersonals';
 
 function UserProfile() {
   return (
     <>
-      <MainHeader />
+      <ProfileHeader />
       <ProfileHero />
       <BioInfo />
+      <FollowAndPersonals />
     </>
   )
 }

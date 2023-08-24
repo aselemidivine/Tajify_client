@@ -1,12 +1,25 @@
 .header {
     background-color: #fff;
-    height: 7rem;
-    padding: 3.2rem;
+    height: 8rem;
+    padding: 3.2rem 8rem;
     display: flex;
     align-items: center;
     gap: 30rem;
-    max-width: 120rem;
     margin: 0 auto;
+    color: #fff;
+}
+header.header-green {
+    background-color: #008001;
+    gap: 6.2rem;
+}
+header.header-green .header__input {
+    padding: 1.2rem;
+}
+header.header-green .navbar__list--link, .header-green .navbar__icons {
+    color: #fff;
+}
+header.header-green .navbar__list {
+    gap: 2rem;
 }
 .header__logo {
     font-size: 2.8rem;
@@ -28,16 +41,17 @@
     gap: 3.6rem;
     list-style: none;
 }
-.navbar__list--link:link, .navbar__list--link:visited {
+.navbar__list--link, .navbar__list--link:visited {
     color: #444;
     font-weight: 600;
     font-size: 1.6rem;
     transition: all .35s;
+    text-decoration: none;
 }
 .navbar__list--link:hover {
     color: #FF0066;
 }
-a.nav__button:link, a.nav__button:visited {
+.nav__button:link, .nav__button:visited {
     display: inline-block;
     box-shadow: inset 0 0 0 .15rem #FF0066;
     color: #333;
@@ -49,7 +63,7 @@ a.nav__button:link, a.nav__button:visited {
     justify-content: center;
     align-items: center;
 }
-a.nav__button:hover {
+.nav__button:hover {
     box-shadow: inset 0 0 0 .15rem #666;
     color: #FF0066;
 }
@@ -105,11 +119,6 @@ a.nav__button:hover {
     background-size: auto;
     padding: 9rem 0 4.2rem !important;
     overflow: hidden;
-}
-.section__container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 2.8rem;
 }
 .hero {
     display: grid;
@@ -455,28 +464,6 @@ a.nav__button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
 }
-.ads__box--big {
-    width: 90%;
-    height: 25rem;
-    background-color: #eee;
-    position: relative;
-}
-.ads__box--big::after {
-    content: 'AD';
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.6rem;
-    height: 2.4rem;
-    background-color: #008001;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .keywords__list {
     list-style: decimal;
 
@@ -930,7 +917,6 @@ a.nav__button:hover {
         max-width: 45%;
         justify-content: space-between;
     }
-
     .explore-category {
         overflow: hidden;
         border: 1px solid #000;
@@ -949,8 +935,6 @@ a.nav__button:hover {
         height: auto;
         overflow-x: scroll;
     }
-
-
     .feacture-articles__cards {
         display: flex;
         flex-direction: column;
@@ -968,8 +952,6 @@ a.nav__button:hover {
     .explore-more--figures {
         gap: .8rem;
     }
-    
-
     .cta {
         align-items: flex-start;
     }
@@ -982,7 +964,6 @@ a.nav__button:hover {
         flex-direction: column;
         width: 100%;
     }
-
     .links-n-socials {
         display: block;
     }
