@@ -36,21 +36,21 @@ function BioFigure () {
             <div className="info--icons">
                 <div className="info">
                     <span>
-                        <PiNotePencilFill />
+                        <PiNotePencilFill className='info--icon' />
                         <p>post</p>
                     </span>
                     <span>
-                        <AiOutlineFolderAdd />
+                        <AiOutlineFolderAdd className='info--icon' />
                         <p>saved</p>
                     </span>
                 </div>
                 <div className="info">
                     <span>
-                        <BiSolidMessageAltDots />
+                        <BiSolidMessageAltDots className='info--icon' />
                         <p>message</p>
                     </span>
                     <span>
-                        <PiGearBold />
+                        <PiGearBold className='info--icon' />
                         <p>saved</p>
                     </span>
                 </div>
@@ -80,14 +80,14 @@ function ContentsInfo () {
         <div className="contents-box">
             <div className="content">
                 <span>
-                    <FaUserAlt />
+                    <FaUserAlt className='bio--icon' />
                     <p>Bio</p>
                 </span>
                 <p className='bio--text'>I’m a professional Photographer and Videographer with over 5 years of experience working as a freelancer and contract staff, i capture imaginary pictures and make awesome videos for a living.</p>
             </div>
             <div className="content">
                 <span>
-                    <FaBicycle />
+                    <FaBicycle className='bio--icon' />
                     <p>Interest</p>
                 </span>
                 <p className='bio--text'>Photography, Video Creation, Cinematic Effects, Images, Adobe Creative Suites, Imaginary.</p>
@@ -101,21 +101,21 @@ function ContactsInfo () {
         <div className="contents-box">
             <div className="content">
                 <span>
-                    <LiaEnvelopeSolid />
+                    <LiaEnvelopeSolid className='bio--icon' />
                     <p>Email</p>
                 </span>
                 <p className='bio--text'>andrewtate63@yahoo.com</p>
             </div>
             <div className="content">
                 <span>
-                    <FiPhone />
+                    <FiPhone className='bio--icon' />
                     <p>Phone</p>
                 </span>
                 <p className='bio--text'>+234 815 6723 827</p>
             </div>
             <div className="content">
                 <span>
-                    <PiGlobeSimpleBold />
+                    <PiGlobeSimpleBold className='bio--icon' />
                     <p>Web</p>
                 </span>
                 <p className='bio--text'>andrewtateportfolio.com</p>
