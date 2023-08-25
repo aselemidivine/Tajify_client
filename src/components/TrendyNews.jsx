@@ -4,18 +4,21 @@ import Feeds1 from "../assets/images/pngs/feeds1.png";
 import Ads from "./Ads";
 import Ai from "../assets/images/pngs/Ai.png";
 import { BsChevronRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const TrendyNews = () => {
   return (
     <TrendyContainer>
       <div className="trendy__container">
         <div className="main__news">
-          <div className="trendy__img">
-            <img
-              src={Feeds1}
-              className="align-middle object-cover transition duration-300 ease-linear"
-            />
-          </div>
+          <Link to="/details">
+            <div className="trendy__img">
+              <img
+                src={Feeds1}
+                className="align-middle object-cover transition duration-300 ease-linear"
+              />
+            </div>
+          </Link>
           <h1 className="bold__text">
             The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
           </h1>
@@ -23,7 +26,9 @@ const TrendyNews = () => {
             When Donald Trump responded to his latest indictment by promising to
             appoint a special prosecutor if he’s reelected to “go after”
             President Joe Biden and his family, he signaled that a second......{" "}
-            <span className="read__more">Read more</span>
+            <Link to="/details">
+              <span className="read__more">Read more</span>
+            </Link>
           </p>
         </div>
         <div className="featured__news">
@@ -138,8 +143,7 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-
-.trendy__container {
+  .trendy__container {
     max-width: 1248px;
     display: flex;
     justify-content: space-between;
@@ -264,11 +268,11 @@ const TrendyContainer = styled.div`
   .trendy__img {
     // width: 477px;
     height: 294px;
-        margin-bottom: 26px;
-      .align-middle {
-        height: 100%;
-        object-fit: cover;
-      }
+    margin-bottom: 26px;
+    .align-middle {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .ads__sidebar__1 {

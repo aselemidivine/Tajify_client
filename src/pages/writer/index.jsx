@@ -17,6 +17,7 @@ import "../../index.css";
 import "../../pages/blogHome/main.css";
 import MainHeader from "../../components/MainHeader";
 import TopCreators from "../../components/TopCreators";
+import { Link } from "react-router-dom";
 
 const Writer = () => {
   return (
@@ -49,9 +50,11 @@ const Writer = () => {
                 <AdsSecond />
               </div>
               <div>
-                <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
-                  Add Post
-                </button>
+                <Link to="/editor">
+                  <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
+                    Add Post
+                  </button>
+                </Link>
               </div>
             </div>
             {/* <Feeds /> */}
@@ -68,9 +71,13 @@ const Writer = () => {
                     <h4>Recommended</h4>
                   </div>
                   <div className="recommended__news_1">
+                  <Link to="/details">
+
+
                     <div className="recommended__news_img">
                       <img src={Feeds1} className="news__img" />
                     </div>
+                  </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Five things to know about EFCC acting chairman
@@ -88,9 +95,13 @@ const Writer = () => {
                     </div>
                   </div>
                   <div className="recommended__news_1">
+                  <Link to="/writers-profile">
+
+
                     <div className="recommended__news_img">
                       <img src={Feeds1} className="news__img" />
                     </div>
+                  </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Al Pacino, 83, welcomes son..
@@ -224,7 +235,7 @@ const WriterContainer = styled.div`
     align-items: center;
     margin-top: 136px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     .custom__style {
       width: 100%;
     }
@@ -327,7 +338,7 @@ const WriterContainer = styled.div`
     .recommended__sidebar {
       max-width: 236px;
     }
-    
+
     .ads__first {
       width: 488px;
     }
