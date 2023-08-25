@@ -197,6 +197,7 @@ header.header-green .navbar__list {
     color: #d2d2d289;
 }
 
+
 /* ======== POPULAR COURSES ========= */
 .course__section {
     border-bottom: .25rem solid #008001;
@@ -617,7 +618,6 @@ header.header-green .navbar__list {
 
 /* ======== footer ========== */
 
-
 .footer {
     background-color: #4CAF50;
     padding: 8rem 0;
@@ -968,7 +968,6 @@ header.header-green .navbar__list {
         display: block;
     }
 }
-
 
 /* 450px = 45rem = 28em */
 @media screen and (max-width: 28em) {

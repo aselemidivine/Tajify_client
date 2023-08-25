@@ -1,12 +1,13 @@
 import React from 'react';
 
 import PersonalTabs from './PersonalTabs';
+import PersonalBlog from './PersonalBlog';
 
 function PersonalAndBlogs() {
     return (
-        <div className="">
+        <div className="personalTagAndBlog">
             <PersonalTabs />
-            <h1>Hello react</h1>
+            <PersonalBlog />
         </div>
     )
 }
