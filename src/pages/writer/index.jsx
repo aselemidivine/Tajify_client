@@ -57,9 +57,7 @@ const Writer = () => {
             {/* <Feeds /> */}
             <Filter />
             <TrendyNews />
-
             <TopCreators />
-
             <div className="ads__second__">
               <div className="ads__second__1">
                 <AdsSecond />
@@ -226,7 +224,7 @@ const WriterContainer = styled.div`
     align-items: center;
     margin-top: 136px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     .custom__style {
       width: 100%;
     }
@@ -321,6 +319,15 @@ const WriterContainer = styled.div`
     .ads__second {
       max-width: 637px;
     }
+
+    .ads__second__1 {
+      max-width: 495px;
+    }
+
+    .recommended__sidebar {
+      max-width: 236px;
+    }
+    
     .ads__first {
       width: 488px;
     }
@@ -341,9 +348,5 @@ const WriterContainer = styled.div`
     .news__flex {
       max-width: 563px;
     }
-
-
-
-
   }
 `;

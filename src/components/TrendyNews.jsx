@@ -138,9 +138,9 @@ const TrendyNews = () => {
 export default TrendyNews;
 
 const TrendyContainer = styled.div`
-  max-width: 1248px;
 
-  .trendy__container {
+.trendy__container {
+    max-width: 1248px;
     display: flex;
     justify-content: space-between;
   }
