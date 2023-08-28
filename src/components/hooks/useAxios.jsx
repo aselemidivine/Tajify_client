@@ -1,6 +1,5 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-import dayjs from "dayjs";
 import { State } from "../../context/AuthProvider";
 import { useNavigate } from "react-router";
 

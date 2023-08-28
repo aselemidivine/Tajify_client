@@ -26,7 +26,6 @@ function TopCreators() {
         >
           {creators.map((creator) => {
             return (
-              <Link to="/writers-profile">
                 <div className="creator">
                   <Card
                     key={creator.name}
@@ -35,7 +34,7 @@ function TopCreators() {
                   />
                   <p>{creator.name}</p>
                 </div>
-              </Link>
+      
             );
           })}
         </div>
