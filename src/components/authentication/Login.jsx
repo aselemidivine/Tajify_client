@@ -83,16 +83,15 @@
 
 // export default Login;
 
-
-
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../index.css";
 import "./auth.css";
 import { FcGoogle } from "react-icons/fc";
 import { SiFacebook } from "react-icons/si";
 import { HiOutlineKey } from "react-icons/hi";
-import { BiSolidUser } from "react-icons/bi";
+import { AiOutlineMail } from "react-icons/ai";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Image1 from "../../assets/images/pngs/login-slide-img-1.png";
 import Image2 from "../../assets/images/pngs/login-slide-img-2.png";
@@ -102,11 +101,13 @@ import { Link } from "react-router-dom";
 const LOGIN_URL = "http://localhost:3005/api/users/login"; // Replace with your actual API endpoint
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -115,7 +116,7 @@ const Login = () => {
     try {
       const response = await axios.post(
         LOGIN_URL,
-        JSON.stringify({ username, password }),
+        JSON.stringify({ email, password }),
         {
           headers: { "Content-Type": "application/json" },
         }
@@ -123,9 +124,12 @@ const Login = () => {
 
       console.log(JSON.stringify(response.data));
       setLoading(false);
+
       // Handle success and redirection
+      navigate("/writer");
     } catch (err) {
       console.error(err);
+      setErrMsg("Invalid login credentials"); // Update error message for unsuccessful login
       setLoading(false);
       setErrMsg("Login Failed");
     }
@@ -151,17 +155,22 @@ const Login = () => {
             <p> or </p>
           </span>
 
-          <form className="login__form" autoComplete="off" onSubmit={handleSubmit}>
+          <form
+            className="login__form"
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
             <div className="form__item">
-              <BiSolidUser className="input__icon" />
+              <AiOutlineMail className="input__icon" />
               <input
-                type="text"
+                type="email"
                 className="form__input"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                placeholder="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+           
             <div className="form__item">
               <HiOutlineKey className="input__icon" />
               <input
@@ -202,4 +211,3 @@ const Login = () => {
 };
 
 export default Login;
-

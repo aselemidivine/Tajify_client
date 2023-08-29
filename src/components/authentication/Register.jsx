@@ -258,7 +258,6 @@ import { State } from "../../context/AuthProvider";
 
 import "../../index.css";
 import "./auth.css";
-
 import { HiOutlineKey } from "react-icons/hi";
 import { BiSolidUser } from "react-icons/bi";
 import { FaRegEyeSlash } from "react-icons/fa";
@@ -271,6 +270,8 @@ import LoaderSpinner from "../LoaderSpinner";
 const REGISTER_URL = "http://localhost:3005/api/users/signup"; // Replace with your actual API endpoint
 
 const Register = () => {
+
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -294,6 +295,8 @@ const Register = () => {
 
       console.log(JSON.stringify(response.data));
       setLoading(false);
+      navigate("/login");
+
       // Handle success and redirection
     } catch (err) {
       console.error(err);
