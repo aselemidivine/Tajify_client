@@ -10,7 +10,7 @@ const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
 function SubHeader() {
 
-  const [isRegistered, setIsRegistered] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(true);
 
   return (
     <header className="header">

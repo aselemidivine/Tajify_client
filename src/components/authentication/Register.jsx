@@ -273,6 +273,7 @@ const REGISTER_URL = "http://localhost:3005/api/users/signup"; // Replace with y
 const Register = () => {
 
   const navigate = useNavigate();
+  const { user, handleChange } = useAuthContext();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -296,6 +297,7 @@ const Register = () => {
 
       console.log(JSON.stringify(response.data));
       setLoading(false);
+      handleChange(response.user, response.token);
       navigate("/login");
 
       // Handle success and redirection

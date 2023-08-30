@@ -8,7 +8,7 @@ const lists = ['Blogs', 'Gigs', 'Course', 'Market', 'Explore'];
 function MainHeader() {
     return (
         <header className='header'>
-            <span className="header__logo">Tajify</span>
+            <span className="header__logo header__logo-2">Tajify</span>
             <nav className="navbar">
               <ui className="navbar__list">
                 {lists.map(list => {

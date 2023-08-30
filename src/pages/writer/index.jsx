@@ -18,12 +18,13 @@ import "../../pages/blogHome/main.css";
 import MainHeader from "../../components/MainHeader";
 import TopCreators from "../../components/TopCreators";
 import { Link } from "react-router-dom";
+import SubHeader from "../../components/SubHeader";
 
 const Writer = () => {
   return (
     <WriterContainer>
       <div className="index__page">
-        <MainHeader />
+        <SubHeader />
         <div className="custom__alignment">
           <div className=" custom__width ">
             {/* <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] "> */}

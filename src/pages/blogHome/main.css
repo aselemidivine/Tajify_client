@@ -11,6 +11,7 @@
 header.header-green {
     background-color: #008001;
     gap: 6.2rem;
+
 }
 header.header-green .header__input {
     padding: 1.2rem;
@@ -21,9 +22,17 @@ header.header-green .navbar__list--link, .header-green .navbar__icons {
 header.header-green .navbar__list {
     gap: 2rem;
 }
-.header__logo {
-    font-size: 2.8rem;
-    display: inline-block;
+.header {
+
+    .header__logo {
+        font-size: 2.8rem;
+        display: inline-block;
+        
+    }
+}
+
+.header__logo-2 {
+    color: #008001;
 }
 .header .navbar {
     display: flex;
