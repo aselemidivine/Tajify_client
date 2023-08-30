@@ -1,17 +1,17 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
-import { State } from "../../context/AuthProvider";
+
+import { useAuthContext } from "../../context/AuthContext";
 
 const ProtectedRoute = () => {
   const location = useLocation();
-  const { user } = State();
+  const { user } = useAuthContext();
 
   return user ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
 export const UnProtectedRoute = () => {
-  const { user } = State();
 
-  return user ? <Navigate to="/" replace /> : <Outlet />;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

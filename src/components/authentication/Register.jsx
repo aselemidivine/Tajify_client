@@ -254,7 +254,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios"; // Make sure to import axios
 import { useNavigate } from "react-router-dom";
-import { State } from "../../context/AuthProvider";
+
 
 import "../../index.css";
 import "./auth.css";
@@ -266,6 +266,7 @@ import { FcGoogle } from "react-icons/fc";
 import SignupImg from "../../assets/images/pngs/signup-img.png";
 import { Link } from "react-router-dom";
 import LoaderSpinner from "../LoaderSpinner";
+import { useAuthContext } from "../../context/AuthContext";
 
 const REGISTER_URL = "http://localhost:3005/api/users/signup"; // Replace with your actual API endpoint
 
@@ -304,6 +305,12 @@ const Register = () => {
       setErrMsg("Registration Failed");
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
 
 
   return (
