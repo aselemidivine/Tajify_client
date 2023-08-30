@@ -5,60 +5,53 @@ import "../pages/blogHome/main.css";
 import { LiaAngleDownSolid } from "react-icons/lia";
 import { FiBell } from "react-icons/fi";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
+import { useAuthContext } from "../context/AuthContext";
 
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
 function SubHeader() {
-
-  const [isRegistered, setIsRegistered] = useState(true);
+  const { user } = useAuthContext();
 
   return (
     <header className="header">
       <span className="header__logo">Tajify</span>
       <nav className="navbar">
         <ui className="navbar__list">
-              <li className="navbar__list--item">
-                <Link to="/writer" className="navbar__list--link">
-                  Blogs
-                </Link>
-              </li>
-              <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
-                  Gigs
-                </Link>
-              </li>
-              <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
-                  Course
-                </Link>
-              </li>
-              <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
-                  Market
-                </Link>
-              </li>
-              <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
-                  Explore
-                </Link>
-              </li>
+          <li className="navbar__list--item">
+            <Link to="/" className="navbar__list--link">
+              Home
+            </Link>
+          </li>
+          <li className="navbar__list--item">
+            <Link to="/writer" className="navbar__list--link">
+              Blogs
+            </Link>
+          </li>
+          <li className="navbar__list--item">
+            <Link to="/coming-soon" className="navbar__list--link">
+              Gigs
+            </Link>
+          </li>
+          <li className="navbar__list--item">
+            <Link to="/coming-soon" className="navbar__list--link">
+              Course
+            </Link>
+          </li>
+          <li className="navbar__list--item">
+            <Link to="/coming-soon" className="navbar__list--link">
+              Market
+            </Link>
+          </li>
+          <li className="navbar__list--item">
+            <Link to="/coming-soon" className="navbar__list--link">
+              Explore
+            </Link>
+          </li>
         </ui>
 
-        {/* {isRegistered ? (
-            <>
-              <Link to="/editor">
-                <HiOutlinePencilSquare className="navbar__icons" />
-              </Link>
-              <FiBell className="navbar__icons" />
-              <Profile />
-            </>
-          ) : (
-            <button className="get-started-button">Get Started</button>
-          )} */}
 
         <span className="Navbar__others">
-
-        {isRegistered ? (
+          {user && (
             <>
               <Link to="/editor">
                 <HiOutlinePencilSquare className="navbar__icons" />
@@ -66,8 +59,11 @@ function SubHeader() {
               <FiBell className="navbar__icons" />
               <Profile />
             </>
-          ) : (
-            <Link to="/signup" className="nav__button">Get Started</Link>
+          )}
+          {!user && (
+            <Link to="/signup" className="nav__button">
+              Get Started
+            </Link>
           )}
         </span>
       </nav>

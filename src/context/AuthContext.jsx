@@ -193,11 +193,11 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Storing user and token as JSON strings in cookies
-    Cookies.set("user", JSON.stringify(user));
-    Cookies.set("token", token);
+    // Cookies.set("user", JSON.stringify(user));
+    // Cookies.set("token", token);
 
-    // Cookies.set("user", JSON.stringify(user), { expires: 365 });
-    // Cookies.set("token", token, { expires: 365 });
+    Cookies.set("user", JSON.stringify(user), { expires: 365 });
+    Cookies.set("token", token, { expires: 365 });
   }, [user, token]);
 
   let contextData = {

@@ -13,6 +13,7 @@ import Help from "./pages/help";
 import Privacy from "./pages/privacy";
 import Editor from "./pages/editor";
 import Profile from "./pages/profile";
+import ComingSoon from "./pages/comingSoon/ComingSoon";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </Route>
         <Route element={<UnProtectedRoute />}>
           <Route path="/details" element={<BlogDetails />}></Route>
+          <Route path="/coming-soon" element={<ComingSoon />}></Route>
           <Route path="/" element={<BlogHome />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Register />}></Route>

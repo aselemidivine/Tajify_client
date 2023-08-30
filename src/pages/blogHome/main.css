@@ -114,6 +114,13 @@ header.header-green .navbar__list {
     height: 100%;
     height: 100%;
 }
+
+.profile__bane--container {
+    .profile__name {
+        color: #008001;
+    }
+}
+
 .profile__name {
     font-size: 1.4rem;
 }

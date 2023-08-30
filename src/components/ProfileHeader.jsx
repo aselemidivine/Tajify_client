@@ -13,32 +13,37 @@ function ProfileHeader() {
       <nav className="navbar">
         <ui className="navbar__list">
               <li className="navbar__list--item">
-                <Link to="/writer" className="navbar__list--link">
+                <Link to="/" className="navbar__list--link">
                   Home
                 </Link>
               </li>
               <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
+                <Link to="/writer" className="navbar__list--link">
+                  Blogs
+                </Link>
+              </li>
+              <li className="navbar__list--item">
+                <Link to="/coming-soon" className="navbar__list--link">
                   Channel
                 </Link>
               </li>
               <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
+                <Link to="/coming-soon" className="navbar__list--link">
                   Course
                 </Link>
               </li>
               <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
+                <Link to="/coming-soon" className="navbar__list--link">
                   Digiwork
                 </Link>
               </li>
               <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
+                <Link to="/coming-soon" className="navbar__list--link">
                   Market
                 </Link>
               </li>
               <li className="navbar__list--item">
-                <Link to="" className="navbar__list--link">
+                <Link to="/coming-soon" className="navbar__list--link">
                   More
                 </Link>
               </li>
