@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Tabs from "../../components/Tabs";
@@ -9,6 +9,13 @@ import '../../pages/blogHome/main.css'
 
 
 const WritersProfile = () => {
+
+
+  useEffect(() => {
+    // This code will run after the component has rendered
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
   return (
     <WritersProfileContainer>
     <div className="blog__container">

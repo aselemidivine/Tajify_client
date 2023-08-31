@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import Ads from "../../components/Ads";
@@ -21,6 +21,13 @@ import { Link } from "react-router-dom";
 import SubHeader from "../../components/SubHeader";
 
 const Writer = () => {
+
+  useEffect(() => {
+    // This code will run after the component has rendered
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
+
   return (
     <WriterContainer>
       <div className="index__page">

@@ -146,6 +146,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  background: #d9d9d9;
+  height: 161px;
 }
 
 .ads__body {
