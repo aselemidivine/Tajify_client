@@ -255,31 +255,35 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios"; // Make sure to import axios
 import { useNavigate } from "react-router-dom";
 
-
 import "../../index.css";
 import "./auth.css";
 import { HiOutlineKey } from "react-icons/hi";
 import { BiSolidUser } from "react-icons/bi";
-import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import SignupImg from "../../assets/images/pngs/signup-img.png";
 import { Link } from "react-router-dom";
 import LoaderSpinner from "../LoaderSpinner";
 import { useAuthContext } from "../../context/AuthContext";
+import Loader from "../Loader";
 
 const REGISTER_URL = "http://localhost:3005/api/users/signup"; // Replace with your actual API endpoint
 
 const Register = () => {
-
   const navigate = useNavigate();
   const { user, handleChange } = useAuthContext();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -296,7 +300,7 @@ const Register = () => {
       );
 
       console.log(JSON.stringify(response.data));
-      setLoading(false);
+      setLoading(true);
       handleChange(response.user, response.token);
       navigate("/login");
 
@@ -313,7 +317,6 @@ const Register = () => {
       navigate("/");
     }
   }, [user]);
-
 
   return (
     <section className="signup__section">
@@ -362,21 +365,32 @@ const Register = () => {
               <div className="form__item">
                 <HiOutlineKey className="input__icon" />
                 <input
-                  type="password"
+                  // type="password"
+                  type={showPassword ? "text" : "password"}
                   className="form__input"
                   placeholder="Password"
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                
                 />
-                <FaRegEyeSlash className="password__icon" />
+                {showPassword ? (
+                  <FaRegEye
+                    onClick={togglePasswordVisibility}
+                    className="password__icon"
+                  />
+                ) : (
+                  <FaRegEyeSlash
+                    onClick={togglePasswordVisibility}
+                    className="password__icon"
+                  />
+                )}
               </div>
               <div className="form__item">
                 <HiOutlineKey className="input__icon" />
                 <input
-                  type="password"
+                  // type="password"
+                  type={showPassword ? "text" : "password"}
                   className="form__input"
                   placeholder="Confirm Password"
                   onChange={(e) => setPasswordConfirm(e.target.value)}
@@ -384,9 +398,18 @@ const Register = () => {
                   required
                   // aria-invalid={validMatch ? "false" : "true"}
                   // aria-describedby="confirmnote"
-                 
                 />
-                <FaRegEyeSlash className="password__icon" />
+                {showPassword ? (
+                  <FaRegEye
+                    onClick={togglePasswordVisibility}
+                    className="password__icon"
+                  />
+                ) : (
+                  <FaRegEyeSlash
+                    onClick={togglePasswordVisibility}
+                    className="password__icon"
+                  />
+                )}
               </div>
               <div className="form__flex">
                 <input type="checkbox" className="form__check-box" id="check" />
@@ -403,16 +426,15 @@ const Register = () => {
                 </label>
               </div>
 
-              <div className="form__item">
-                {/* <Link to="/login"> */}
-                <button
-                  className="form__submit button"
-                  // disabled={!validPwd || !validMatch}
-                >
-                  Create Account
-                </button>
-                {/* </Link> */}
-              </div>
+              {loading ? (
+                <Loader />
+              ) : (
+                <div className="form__item">
+                  <button className="form__submit button">
+                    Create Account
+                  </button>
+                </div>
+              )}
             </form>
           </div>
           <div className="signup__images--box">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,14 +11,14 @@ import { FcGoogle } from "react-icons/fc";
 import { SiFacebook } from "react-icons/si";
 import { HiOutlineKey } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import Image1 from "../../assets/images/pngs/login-slide-img-1.png";
 import Image2 from "../../assets/images/pngs/login-slide-img-2.png";
 import Image3 from "../../assets/images/pngs/login-slide-img-3.png";
-
+// import LoaderSpinner from "../LoaderSpinner";
+import Loader from "../Loader";
 
 const LOGIN_URL = "http://localhost:3005/api/users/login"; // Replace with your actual API endpoint
-
 
 const Login = () => {
   const { user, handleChange } = useAuthContext();
@@ -28,12 +27,13 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [errMsg, setErrMsg] = useState("");
-
-
-
-
   const [errors, setErrors] = useState(null);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const validate = () => {
     if (email != "" && password != "") {
@@ -48,9 +48,6 @@ const Login = () => {
     setLoading(true);
     setErrMsg(""); // Reset error message
 
-
-
-
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -63,7 +60,7 @@ const Login = () => {
       if (response.data.data.token) {
         toast.success("Login Success!");
         handleChange(response.data.data.user, response.data.data.token);
-        setLoading(false);
+        setLoading(true);
         navigate("/writer"); // Redirect on successful login
       } else {
         setLoading(false);
@@ -77,13 +74,12 @@ const Login = () => {
     }
   };
 
-
-
   useEffect(() => {
     if (user) {
       navigate("/writer");
     }
   }, [user]);
+
   return (
     <section className="login__section">
       <div className="login__container login">
@@ -123,13 +119,23 @@ const Login = () => {
             <div className="form__item">
               <HiOutlineKey className="input__icon" />
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="form__input"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <FaRegEyeSlash className="password__icon" />
+              {showPassword ? (
+                <FaRegEye
+                  onClick={togglePasswordVisibility}
+                  className="password__icon"
+                />
+              ) : (
+                <FaRegEyeSlash
+                  onClick={togglePasswordVisibility}
+                  className="password__icon"
+                />
+              )}
             </div>
             <div className="form__flex">
               <input type="checkbox" className="form__checkbox" id="checkbox" />
@@ -140,11 +146,13 @@ const Login = () => {
                 forgot password?
               </a>
             </div>
-            <div className="form__item">
-              <button className="form__submit" disabled={loading}>
-                {loading ? "Logging in..." : "Login"}
-              </button>
-            </div>
+            {loading ? (
+              <Loader />
+            ) : (
+              <div className="form__item">
+                <button className="form__submit">Login</button>
+              </div>
+            )}
             {errMsg && <p className="error">{errMsg}</p>}
             <span className="form__extra">
               New to Tajify? <Link to="/signup">Create Account</Link>

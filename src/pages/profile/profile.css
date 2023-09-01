@@ -387,3 +387,12 @@ body {
 
     font-size: 1.4rem;
 }
+
+/* Footer */
+.writer__foter {
+    .custom__style {
+      width: 363px;
+      height: 95px;
+      background: #fff;
+    }
+  }

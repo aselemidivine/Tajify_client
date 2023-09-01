@@ -1,6 +1,6 @@
 import React from "react";
 import Spinner from "./Spinner";
-import LoaderCss from "./LoaderCss.css";
+import "../assets/css/loader.css";
 
 const Loader = () => {
   return (

@@ -37,7 +37,7 @@
 
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import "../pages/blogHome/main.css";
 import { LiaAngleDownSolid } from "react-icons/lia";
@@ -51,35 +51,41 @@ function SubHeader() {
   const { user } = useAuthContext();
   const [isRegistered, setIsRegistered] = useState(true);
 
+  const activeLinkStyle = {
+    fontWeight: "bold", // You can customize this style
+    color: "blue", // Customize the text color for active links
+    // Add more styles as needed
+  };
+
   return (
     <header className='header'>
     <span className="header__logo header__logo-2">Tajify</span>
       <nav className="navbar">
         <ui className="navbar__list">
           <li className="navbar__list--item">
-            <Link to="/writer" className="navbar__list--link">
+            <NavLink exact to="/writer" className="navbar__list--link" activeStyle={activeLinkStyle}>
               Blogs
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar__list--item">
-            <Link to="/coming-soon" className="navbar__list--link">
+            <NavLink to="/coming-soon" className="navbar__list--link" activeStyle={activeLinkStyle}>
               Gigs
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar__list--item">
-            <Link to="/coming-soon" className="navbar__list--link">
+            <NavLink to="/coming-soon" className="navbar__list--link" activeStyle={activeLinkStyle}>
               Course
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar__list--item">
-            <Link to="/coming-soon" className="navbar__list--link">
+            <NavLink to="/coming-soon" className="navbar__list--link" activeStyle={activeLinkStyle}>
               Market
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar__list--item">
-            <Link to="/coming-soon" className="navbar__list--link">
+            <NavLink to="/coming-soon" className="navbar__list--link" activeStyle={activeLinkStyle}>
               Explore
-            </Link>
+            </NavLink>
           </li>
         </ui>
 

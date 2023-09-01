@@ -53,6 +53,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import parse from "html-react-parser";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { useAuthContext } from "../../context/AuthContext";
+import Loader from "../../components/Loader";
 
 const LOGIN_URL = "http://localhost:3005/api/blogs"; // Replace with your actual API endpoint
 
@@ -63,10 +64,14 @@ const Editor = () => {
   const [text, setText] = useState(""); // Blog post content
   const [category, setCategory] = useState(""); // Blog post category
   const [tags, setTags] = useState(""); // Blog post tags
+  const [loading, setLoading] = useState(false);
 
-  const handlePublish = async () => {
+  const handlePublish = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
     try {
-      // console.log("Token:", token); 
+      // console.log("Token:", token);
       const response = await axios.post(
         LOGIN_URL,
         JSON.stringify({
@@ -86,12 +91,15 @@ const Editor = () => {
 
       if (response.ok) {
         console.log("Blog post created successfully!");
+        setLoading(true);
+
         // Reset the editor content or perform any other necessary actions
       } else {
         console.error("Error creating blog post");
       }
     } catch (error) {
       console.error("Error:", error);
+      setLoading(false);
     }
   };
 
@@ -139,14 +147,13 @@ const Editor = () => {
             onChange={(e) => setTags(e.target.value)}
           />
 
-          <div className="editor__button">
-            <button
-              onClick={handlePublish}
-              className="w-[119px] h-[40px] bg-[#4CAF50] text-white text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24"
-            >
-              Publish
-            </button>
-          </div>
+          {loading ? (
+            <Loader />
+          ) : (
+            <div className="editor__button">
+              <button onClick={handlePublish} className="w-[119px] h-[40px] bg-[#4CAF50] text-white text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">Publish</button>
+            </div>
+          )}
         </div>
       </div>
     </div>

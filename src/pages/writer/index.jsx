@@ -21,12 +21,10 @@ import { Link } from "react-router-dom";
 import SubHeader from "../../components/SubHeader";
 
 const Writer = () => {
-
   useEffect(() => {
     // This code will run after the component has rendered
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, []);
-
 
   return (
     <WriterContainer>
@@ -79,13 +77,11 @@ const Writer = () => {
                     <h4>Recommended</h4>
                   </div>
                   <div className="recommended__news_1">
-                  <Link to="/details">
-
-
-                    <div className="recommended__news_img">
-                      <img src={Feeds1} className="news__img" />
-                    </div>
-                  </Link>
+                    <Link to="/details">
+                      <div className="recommended__news_img">
+                        <img src={Feeds1} className="news__img" />
+                      </div>
+                    </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Five things to know about EFCC acting chairman
@@ -103,13 +99,11 @@ const Writer = () => {
                     </div>
                   </div>
                   <div className="recommended__news_1">
-                  <Link to="/writers-profile">
-
-
-                    <div className="recommended__news_img">
-                      <img src={Feeds1} className="news__img" />
-                    </div>
-                  </Link>
+                    <Link to="/writers-profile">
+                        <div className="recommended__news_img">
+                          <img src={Feeds1} className="news__img" />
+                        </div>
+                    </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Al Pacino, 83, welcomes son..

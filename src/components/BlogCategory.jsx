@@ -29,29 +29,25 @@ const BlogCategory = () => {
             <div className="bold__text">Lifestyle</div>
           </div>
           <div className="main__news">
-          <Link to="/details">
-
-
-            <img
-              src={Lifestyle}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <Link to="/details">
+              <img
+                src={Lifestyle}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </Link>
+            </Link>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
             <div className="p-4">
               <div className="flex items-center justify-between">
-              <Link to="/writers-profile">
-
-
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
+                <Link to="/writers-profile">
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
                   />
-                  </Link>
+                </Link>
                 <div>
                   <p className="text-[12px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
@@ -213,28 +209,24 @@ const BlogCategory = () => {
             <div className="bold__text">Sport</div>
           </div>
           <div className="main__news">
-          <Link to="/writers-profile">
-
-
-            <img
-              src={Sport}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <Link to="/writers-profile">
+              <img
+                src={Sport}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </Link>
+            </Link>
             <h1 className="bold__text">
               Who is next football Super Hero. Check the future star
             </h1>
             <div className="p-4">
               <div className="flex items-center justify-between">
-              <Link to="/writers-profile">
-
-
-                <img
-                  src={profilePhoto3}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
+                <Link to="/writers-profile">
+                  <img
+                    src={profilePhoto3}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
                   />
-                  </Link>
+                </Link>
                 <div>
                   <p className="text-[12px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
@@ -265,12 +257,14 @@ const BlogCategory = () => {
                 <div className="mt-5 mb-5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img
-                        src={profilePhoto2}
-                        alt="Profile"
-                        className="w-10 h-10 mr-5 rounded-full"
-                      />
-                      <p className="text-[12px] text-gray-800">John Doe</p>
+                      <Link to="/writers-profile">
+                        <img
+                          src={profilePhoto2}
+                          alt="Profile"
+                          className="w-10 h-10 mr-5 rounded-full"
+                        />
+                        <p className="text-[12px] text-gray-800">John Doe</p>
+                      </Link>
                     </div>
                     {/* <p className="mt-2 text-gray-700"></p> */}
 
@@ -349,12 +343,14 @@ const BlogCategory = () => {
                 <div className="mt-5 mb-5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img
-                        src={profilePhoto1}
-                        alt="Profile"
-                        className="w-10 h-10 mr-5 rounded-full"
-                      />
-                      <p className="text-[12px] text-gray-800">John Doe</p>
+                      <Link to="/writers-profile">
+                        <img
+                          src={profilePhoto1}
+                          alt="Profile"
+                          className="w-10 h-10 mr-5 rounded-full"
+                        />
+                        <p className="text-[12px] text-gray-800">John Doe</p>
+                      </Link>
                     </div>
                     {/* <p className="mt-2 text-gray-700"></p> */}
 
