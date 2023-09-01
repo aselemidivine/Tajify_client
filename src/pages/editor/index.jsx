@@ -84,18 +84,19 @@ const Editor = () => {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-            // Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjFiMjk5YmVhY2Q2N2E1MmQzZDg1OSIsImlhdCI6MTY5MzU2MTU2NSwiZXhwIjoxNjk2MTUzNTY1fQ.bMeSfRUeFZ4awkmR4mtqADHBmSPeoFsTY2O3w9MGFM4`,
           },
         }
       );
 
       if (response.ok) {
         console.log("Blog post created successfully!");
-        setLoading(true);
+        setLoading(false);
 
         // Reset the editor content or perform any other necessary actions
       } else {
         console.error("Error creating blog post");
+        setLoading(false);
+
       }
     } catch (error) {
       console.error("Error:", error);
