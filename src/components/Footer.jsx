@@ -23,10 +23,10 @@ function Footer() {
                         <li><a href="#" className="links__link">Creators</a></li>
                     </ul>
                     <ul className="socials__icons">
-                        <li><a href="#" className="social__icon--link"><AiOutlineInstagram /></a></li>
-                        <li><a href="#" className="social__icon--link"><AiFillFacebook /></a></li>
-                        <li><a href="#" className="social__icon--link"><AiFillTwitterSquare /></a></li>
-                        <li><a href="#" className="social__icon--link"><BsPinterest /></a></li>
+                        <li><a href="#" className="social__icon--links"><AiOutlineInstagram /></a></li>
+                        <li><a href="#" className="social__icon--links"><AiFillFacebook /></a></li>
+                        <li><a href="#" className="social__icon--links"><AiFillTwitterSquare /></a></li>
+                        <li><a href="#" className="social__icon--links"><BsPinterest /></a></li>
                     </ul>
                 </div>
                 <div className="logo-n-copyright">

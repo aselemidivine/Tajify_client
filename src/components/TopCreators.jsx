@@ -26,15 +26,14 @@ function TopCreators() {
         >
           {creators.map((creator) => {
             return (
-                <div className="creator">
-                  <Card
-                    key={creator.name}
-                    imagePath={creator.imagePath}
-                    title={""}
-                  />
-                  <p>{creator.name}</p>
-                </div>
-      
+              <div className="creator">
+                <Card
+                  key={creator.name}
+                  imagePath={creator.imagePath}
+                  title={""}
+                />
+                <p>{creator.name}</p>
+              </div>
             );
           })}
         </div>

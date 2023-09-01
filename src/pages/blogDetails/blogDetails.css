@@ -235,9 +235,18 @@ h1 {
   margin-top: 10px;
 }
 
+
+
 .social__icon--link:link,
 .social__icon--link:visited {
   color: gray;
+  text-decoration: none;
+  font-size: 2.6rem;
+}
+
+.social__icon--links:link,
+.social__icon--links:visited {
+  color: #fff;
   text-decoration: none;
   font-size: 2.6rem;
 }

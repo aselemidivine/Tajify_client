@@ -52,11 +52,12 @@ import axios from "axios";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import parse from "html-react-parser";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { useAuthContext } from "../../context/AuthContext";
 
 const LOGIN_URL = "http://localhost:3005/api/blogs"; // Replace with your actual API endpoint
 
-
 const Editor = () => {
+  const { user, token, handleChange } = useAuthContext();
   const [creator, setCreator] = useState(""); // Creator's name
   const [title, setTitle] = useState(""); // Blog post title
   const [text, setText] = useState(""); // Blog post content
@@ -65,34 +66,23 @@ const Editor = () => {
 
   const handlePublish = async () => {
     try {
-
+      // console.log("Token:", token); 
       const response = await axios.post(
         LOGIN_URL,
-        JSON.stringify({  title: title,  content: text, category: category, tags: tags.split(","), }),
+        JSON.stringify({
+          title: title,
+          content: text,
+          category: category,
+          tags: tags.split(","),
+        }),
         {
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+            // Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjFiMjk5YmVhY2Q2N2E1MmQzZDg1OSIsImlhdCI6MTY5MzU2MTU2NSwiZXhwIjoxNjk2MTUzNTY1fQ.bMeSfRUeFZ4awkmR4mtqADHBmSPeoFsTY2O3w9MGFM4`,
+          },
         }
       );
-
-
-      // const response = await fetch("http://localhost:3005/api/blogs", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   // body: JSON.stringify({
-      //   body: {
-      //     creator: creator,
-      //     title: title,
-      //     content: text,
-      //     category: category,
-      //     tags: tags.split(","), // Assuming tags are comma-separated
-      //   },
-      //   // body: JSON.stringify({ content: text }), // Assuming you want to send the blog content
-      // });
-
-      
-
 
       if (response.ok) {
         console.log("Blog post created successfully!");
