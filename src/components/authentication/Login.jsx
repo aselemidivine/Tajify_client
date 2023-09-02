@@ -15,8 +15,8 @@ import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import Image1 from "../../assets/images/pngs/login-slide-img-1.png";
 import Image2 from "../../assets/images/pngs/login-slide-img-2.png";
 import Image3 from "../../assets/images/pngs/login-slide-img-3.png";
-// import LoaderSpinner from "../LoaderSpinner";
 import Loader from "../Loader";
+// import LoaderSpinner from "../LoaderSpinner";
 
 const LOGIN_URL = "http://localhost:3005/api/users/login"; // Replace with your actual API endpoint
 
@@ -147,7 +147,10 @@ const Login = () => {
               </a>
             </div>
             {loading ? (
-              <Loader />
+              <div className="loader__container">
+                {/* <LoaderSpinner /> */}
+                <Loader />
+              </div>
             ) : (
               <div className="form__item">
                 <button className="form__submit">Login</button>

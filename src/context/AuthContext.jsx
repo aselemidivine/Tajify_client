@@ -151,8 +151,8 @@ export const AuthProvider = ({ children }) => {
 
 
   const [user, setUser] = useState(() => Cookies.get("user") ? JSON.parse(Cookies.get("user")) : null);
-  // const [user, setUser] = useState(Cookies.get("user"));
-  const [token, setToken] = useState(Cookies.get("token") || null);
+  // const [token, setToken] = useState(Cookies.get("token") || null);
+  const [token, setToken] = useState(Cookies.get("token"));
 
   const handleChange = (user, token) => {
     setUser(user);
@@ -163,36 +163,47 @@ export const AuthProvider = ({ children }) => {
     setUser(user);
   };
 
-  const logout = () => {
-    fetch(`${import.meta.env.VITE_SERVER_URL}/logout`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        Cookies.remove("user");
-        Cookies.remove("token");
-      })
-      .catch((error) => {
-        console.error(error);
-        Cookies.remove("user");
-        Cookies.remove("token");
-      });
-  };
+  // const logout = () => {
+  //   fetch(`${import.meta.env.VITE_SERVER_URL}/logout`, {
+  //     method: "POST",
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       Cookies.remove("user");
+  //       Cookies.remove("token");
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //       Cookies.remove("user");
+  //       Cookies.remove("token");
+  //     });
+  // };
 
-  const shouldKick = (e) => {
-    if (e.response.data.message) {
-      if (e.response.data.message == "Unauthenticated.") {
-        Cookies.remove("user");
-        Cookies.remove("token");
-        window.location.href = "/";
-      }
-    }
-  };
+  // const shouldKick = (e) => {
+  //   if (e.response.data.message) {
+  //     if (e.response.data.message == "Unauthenticated.") {
+  //       Cookies.remove("user");
+  //       Cookies.remove("token");
+  //       window.location.href = "/";
+  //     }
+  //   }
+  // };
+
+
+  // const shouldKick = (e) => {
+  //   if (e.response && e.response.data && e.response.data.message) {
+  //     if (e.response.data.message === "Unauthenticated.") {
+  //       Cookies.remove("user");
+  //       Cookies.remove("token");
+  //       window.location.href = "/";
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     // Storing user and token as JSON strings in cookies
@@ -208,8 +219,8 @@ export const AuthProvider = ({ children }) => {
     token: token,
     handleChange,
     handleUser,
-    logout,
-    shouldKick,
+    // logout,
+    // shouldKick,
   };
 
   return (

@@ -15,7 +15,8 @@ function Article({
 }) {
   return (
     <figure className="article__figure">
-      <Link to="/details">
+      <Link to="/details/:id">
+      {/* <Link to="/details/blogs/:_id"> */}
         <div className="article__image--box">
           <img
             src={image}

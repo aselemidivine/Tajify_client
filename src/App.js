@@ -20,13 +20,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<ProtectedRoute />}>
-          <Route path="/writers-profile" element={<WritersProfile />}></Route>
-          <Route path="/writer" element={<Writer />}></Route>
           <Route path="/editor" element={<Editor />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/writer" element={<Writer />}></Route>
         </Route>
         <Route element={<UnProtectedRoute />}>
-          <Route path="/details" element={<BlogDetails />}></Route>
+          <Route path="/writers-profile" element={<WritersProfile />}></Route>
+          <Route path="/details/:id" element={<BlogDetails />}></Route>
+          {/* <Route path="/details/blogs/:_id" element={<BlogDetails />}></Route> */}
           <Route path="/coming-soon" element={<ComingSoon />}></Route>
           <Route path="/" element={<BlogHome />}></Route>
           <Route path="/login" element={<Login />}></Route>

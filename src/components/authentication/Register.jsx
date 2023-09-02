@@ -264,7 +264,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import SignupImg from "../../assets/images/pngs/signup-img.png";
 import { Link } from "react-router-dom";
-import LoaderSpinner from "../LoaderSpinner";
+// import LoaderSpinner from "../LoaderSpinner";
 import { useAuthContext } from "../../context/AuthContext";
 import Loader from "../Loader";
 
@@ -427,7 +427,11 @@ const Register = () => {
               </div>
 
               {loading ? (
+                <div className="loader__container">
+                {/* <LoaderSpinner /> */}
+
                 <Loader />
+                </div>
               ) : (
                 <div className="form__item">
                   <button className="form__submit button">
