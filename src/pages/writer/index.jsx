@@ -19,7 +19,7 @@ import MainHeader from "../../components/MainHeader";
 import TopCreators from "../../components/TopCreators";
 import { Link } from "react-router-dom";
 import SubHeader from "../../components/SubHeader";
-
+import "./write.css"
 const Writer = () => {
 
   useEffect(() => {
@@ -35,31 +35,33 @@ const Writer = () => {
         <div className="custom__alignment">
           <div className=" custom__width ">
             {/* <div className="writers-body flex justify-between text-center items-center h-[90px] mt-[33px] mb-[33px] "> */}
-            <div className="writers-body">
-              <div
-                style={{ clipPath: "polygon(0 0, 78% 0, 100% 100%, 0% 100%)" }}
-                className=" polygon__button"
-              >
-                <span className="span__white">Top News</span>
+            <div className="writers-bodys mt-8">
+              <div className="flex items-center pp">
+                <div
+                  style={{ clipPath: "polygon(0 0, 78% 0, 100% 100%, 0% 100%)" }}
+                  className=" polygon__button"
+                >
+                  <span className="span__white">Top News</span>
+                </div>
+                <div className="span__style">
+                  <span>Traveling with kids can be rough. Parents ......</span>
+                </div>
               </div>
-              <div className="span__style">
-                <span>Traveling with kids can be rough. Parents ......</span>
-              </div>
-              <div className="ads__first">
-                <Ads />
+              <div className="ads__second">
+                <AdsSecond />
               </div>
             </div>
             {/* <div className="custom__width">
 
             <Tabs /> 
             </div> */}
-            <div className="flex justify-between items-end mb-10">
+            <div className="flex justify-between flirt items-end my-10">
               <div className="ads__second">
                 <AdsSecond />
               </div>
               <div>
                 <Link to="/editor">
-                  <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
+                  <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer fear justify-center rounded-lg p-21 px-78">
                     Add Post
                   </button>
                 </Link>
@@ -69,23 +71,23 @@ const Writer = () => {
             <Filter />
             <TrendyNews />
             <TopCreators />
-            <div className="ads__second__">
+            <div className="ads__second__ gap-10">
               <div className="ads__second__1">
                 <AdsSecond />
               </div>
               <div className="recommended__sidebar">
-                <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+                <div className="custom__style1 opo bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
                   <div className="categories">
                     <h4>Recommended</h4>
                   </div>
                   <div className="recommended__news_1">
-                  <Link to="/details">
+                    <Link to="/details">
 
 
-                    <div className="recommended__news_img">
-                      <img src={Feeds1} className="news__img" />
-                    </div>
-                  </Link>
+                      <div className="recommended__news_img">
+                        <img src={Feeds1} className="news__img" />
+                      </div>
+                    </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Five things to know about EFCC acting chairman
@@ -103,13 +105,13 @@ const Writer = () => {
                     </div>
                   </div>
                   <div className="recommended__news_1">
-                  <Link to="/writers-profile">
+                    <Link to="/writers-profile">
 
 
-                    <div className="recommended__news_img">
-                      <img src={Feeds1} className="news__img" />
-                    </div>
-                  </Link>
+                      <div className="recommended__news_img">
+                        <img src={Feeds1} className="news__img" />
+                      </div>
+                    </Link>
                     <div className="recommended__news_contents">
                       <p className="bold__text">
                         Al Pacino, 83, welcomes son..
@@ -144,9 +146,8 @@ export default Writer;
 
 const WriterContainer = styled.div`
   margin-bottom: 80px;
-
   .custom__width {
-    max-width: 120rem;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 2.8rem;
@@ -261,15 +262,7 @@ const WriterContainer = styled.div`
 
   .recommended__sidebar {
     max-width: 279px;
-    // position: absolute;
-    right: 0;
-    // right: 31px;
-    top: 0px;
-    .custom__style {
-      width: 100%;
-      height: 282px;
-      margin-bottom: 30px;
-    }
+    
   }
 
   .span__style {

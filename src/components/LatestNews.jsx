@@ -12,226 +12,228 @@ import { LiaComments } from "react-icons/lia";
 import { BiTime } from "react-icons/bi";
 import Ads from "./Ads";
 import WriterFooter from "../components/WriterFooter";
-
+import "./mediaQueries.css"
 const LatestNews = () => {
   return (
     <LatestNewsContainer>
       <div className="featured__container">
 
-      <div className="featured__articles">
-        <div className="featured__articles__ads">
-          <Ads />
-        </div>
-        <h3 className="featured__h3 ">Featured Articles</h3>
-        <div className="my-6">
-          <h4 className="featured__h4 my-6 ">
-            The Great AI Disruption: Six Startling Predictions That Will Shape
-            Our Lives and Test O...
-          </h4>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Ai} className="" />
-            </div>
-            <div className="featured__news_contents">
-              <div className="span__light">
-                As we rapidly advance into an AI-driven world, our lives are
-                becoming more intertwined with artificial..read more...
-                <span className="read___more">View More</span>
+        <div className="featured__articles">
+          <div className="featured__articles__ads">
+            <Ads />
+          </div>
+          <h3 className="featured__h3 ">Featured Articles</h3>
+          <div className="my-6">
+            <h4 className="featured__h4 my-6 ">
+              The Great AI Disruption: Six Startling Predictions That Will Shape
+              Our Lives and Test O...
+            </h4>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Ai} className="" />
               </div>
-              <div className="mt-2 flex items-center">
-                <BiTime className="text-gray-600 mr-2" />
-                <span className="text-gray-600 font-bold text-[10px]">
-                  03: 23pm
-                </span>
+              <div className="featured__news_contents">
+                <div className="span__light">
+                  As we rapidly advance into an AI-driven world, our lives are
+                  becoming more intertwined with artificial..read more...
+                  <span className="read___more">View More</span>
+                </div>
+                <div className="mt-2 flex items-center">
+                  <BiTime className="text-gray-600 mr-2" />
+                  <span className="text-gray-600 font-bold text-[10px]">
+                    03: 23pm
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="my-6">
-          <h4 className="featured__h4 my-6 ">
-            The Great AI Disruption: Six Startling Predictions That Will Shape
-            Our Lives and Test O...
-          </h4>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Ai2} className="" />
-            </div>
-            <div className="featured__news_contents">
-              <div className="span__light">
-                But I must explain to you how all this mistaken idea of
-                denouncing sure and praising pain was born and I will give you a
-                complete account.
-                <span className="read___more">View More</span>
+          <div className="my-6">
+            <h4 className="featured__h4 my-6 ">
+              The Great AI Disruption: Six Startling Predictions That Will Shape
+              Our Lives and Test O...
+            </h4>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Ai2} className="" />
               </div>
-              <div className="mt-2 flex items-center">
-                <BiTime className="text-gray-600 mr-2" />
-                <span className="text-gray-600 font-bold text-[10px]">
-                  03: 23pm
-                </span>
+              <div className="featured__news_contents">
+                <div className="span__light">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing sure and praising pain was born and I will give you a
+                  complete account.
+                  <span className="read___more">View More</span>
+                </div>
+                <div className="mt-2 flex items-center">
+                  <BiTime className="text-gray-600 mr-2" />
+                  <span className="text-gray-600 font-bold text-[10px]">
+                    03: 23pm
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+
+          
         </div>
 
-        <div className="writer__foter">
-          <WriterFooter />
+        <div className="tow">
+         <div>
+         <div className="wrapper__div">
+            <div className="header-box"></div>
+            <div className="bold__text">Latest News</div>
+          </div>
+          <div className=" news__flex flex flex-wrap gap-5">
+            <div className="main__news">
+              <div className="main__news__img">
+                <img
+                  src={News1}
+                  className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+                />
+              </div>
+              <h1 className="bold__text">
+                Mystify Winner Is Retired Because of Wealth's Beds Ankle World
+                Wide.
+              </h1>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="text-[10px] text-gray-800">John Doe</p>
+                    <p className="text-gray-600 text-sm"></p>
+                  </div>
+                  <p className="mt-2 text-gray-700"></p>
+                  <div className="mt-2 flex items-center">
+                    <AiOutlineCalendar className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">
+                      12th, May 2023 - 03: 23pm
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center">
+                    <LiaComments className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">23 Comm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="main__news">
+              <div className="main__news__img">
+                <img
+                  src={News2}
+                  className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+                />
+              </div>
+              <h1 className="bold__text">
+                Mystify Winner Is Retired Because of Wealth's Beds Ankle World
+                Wide.
+              </h1>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="text-[10px] text-gray-800">John Doe</p>
+                    <p className="text-gray-600 text-sm"></p>
+                  </div>
+                  <p className="mt-2 text-gray-700"></p>
+                  <div className="mt-2 flex items-center">
+                    <AiOutlineCalendar className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">
+                      12th, May 2023 - 03: 23pm
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center">
+                    <LiaComments className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">23 Comm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="main__news">
+              <div className="news__img">
+                <img
+                  src={News3}
+                  className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+                />
+              </div>
+              <h1 className="bold__text">
+                Mystify Winner Is Retired Because of Wealth's Beds Ankle World
+                Wide.
+              </h1>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="text-[10px] text-gray-800">John Doe</p>
+                    <p className="text-gray-600 text-sm"></p>
+                  </div>
+                  <p className="mt-2 text-gray-700"></p>
+                  <div className="mt-2 flex items-center">
+                    <AiOutlineCalendar className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">
+                      12th, May 2023 - 03: 23pm
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center">
+                    <LiaComments className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">23 Comm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="main__news">
+              <div className="news__img">
+                <img
+                  src={News4}
+                  className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+                />
+              </div>
+              <h1 className="bold__text">
+                Mystify Winner Is Retired Because of Wealth's Beds Ankle World
+                Wide.
+              </h1>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="text-[10px] text-gray-800">John Doe</p>
+                    <p className="text-gray-600 text-sm"></p>
+                  </div>
+                  <p className="mt-2 text-gray-700"></p>
+                  <div className="mt-2 flex items-center">
+                    <AiOutlineCalendar className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">
+                      12th, May 2023 - 03: 23pm
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center">
+                    <LiaComments className="text-gray-600 mr-2" />
+                    <span className="text-gray-600 text-[10px]">23 Comm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
         </div>
       </div>
-
-      <div className="lifestyle">
-        <div className="wrapper__div">
-          <div className="header-box"></div>
-          <div className="bold__text">Latest News</div>
-        </div>
-        <div className=" news__flex flex flex-wrap gap-5">
-          <div className="main__news">
-            <div className="main__news__img">
-              <img
-                src={News1}
-                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-              />
-            </div>
-            <h1 className="bold__text">
-              Mystify Winner Is Retired Because of Wealth's Beds Ankle World
-              Wide.
-            </h1>
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="text-[10px] text-gray-800">John Doe</p>
-                  <p className="text-gray-600 text-sm"></p>
-                </div>
-                <p className="mt-2 text-gray-700"></p>
-                <div className="mt-2 flex items-center">
-                  <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">
-                    12th, May 2023 - 03: 23pm
-                  </span>
-                </div>
-                <div className="mt-2 flex items-center">
-                  <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">23 Comm</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="main__news">
-            <div className="main__news__img">
-              <img
-                src={News2}
-                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-              />
-            </div>
-            <h1 className="bold__text">
-              Mystify Winner Is Retired Because of Wealth's Beds Ankle World
-              Wide.
-            </h1>
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="text-[10px] text-gray-800">John Doe</p>
-                  <p className="text-gray-600 text-sm"></p>
-                </div>
-                <p className="mt-2 text-gray-700"></p>
-                <div className="mt-2 flex items-center">
-                  <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">
-                    12th, May 2023 - 03: 23pm
-                  </span>
-                </div>
-                <div className="mt-2 flex items-center">
-                  <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">23 Comm</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="main__news">
-            <div className="news__img">
-              <img
-                src={News3}
-                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-              />
-            </div>
-            <h1 className="bold__text">
-              Mystify Winner Is Retired Because of Wealth's Beds Ankle World
-              Wide.
-            </h1>
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="text-[10px] text-gray-800">John Doe</p>
-                  <p className="text-gray-600 text-sm"></p>
-                </div>
-                <p className="mt-2 text-gray-700"></p>
-                <div className="mt-2 flex items-center">
-                  <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">
-                    12th, May 2023 - 03: 23pm
-                  </span>
-                </div>
-                <div className="mt-2 flex items-center">
-                  <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">23 Comm</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="main__news">
-            <div className="news__img">
-              <img
-                src={News4}
-                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
-              />
-            </div>
-            <h1 className="bold__text">
-              Mystify Winner Is Retired Because of Wealth's Beds Ankle World
-              Wide.
-            </h1>
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="text-[10px] text-gray-800">John Doe</p>
-                  <p className="text-gray-600 text-sm"></p>
-                </div>
-                <p className="mt-2 text-gray-700"></p>
-                <div className="mt-2 flex items-center">
-                  <AiOutlineCalendar className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">
-                    12th, May 2023 - 03: 23pm
-                  </span>
-                </div>
-                <div className="mt-2 flex items-center">
-                  <LiaComments className="text-gray-600 mr-2" />
-                  <span className="text-gray-600 text-[10px]">23 Comm</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="writer__foter">
+            <WriterFooter />
       </div>
-      </div>
-
     </LatestNewsContainer>
   );
 };
@@ -241,7 +243,6 @@ export default LatestNews;
 const LatestNewsContainer = styled.div`
 
 .featured__container {
-
   display: flex;
   margin-top: 34px;
   margin-bottom: 10px;
@@ -249,7 +250,7 @@ const LatestNewsContainer = styled.div`
 }
 
   .news__flex {
-    width: 678px;
+    width: fit-content;  
     display: flex;
     justify-content: space-between;
   }
@@ -360,7 +361,7 @@ const LatestNewsContainer = styled.div`
 
   .writer__foter {
     .custom__style {
-      width: 363px;
+      width: 100%;
       height: 95px;
     }
   }

@@ -1,0 +1,116 @@
+.wait {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+.pip{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.yy{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .featured__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+  }
+  .tow{
+    width: 400px;
+  }
+  .main__news {
+    width: 100%;
+    margin-right: 23px;
+    margin-top: 20px;
+    margin-bottom: 27px;
+  }
+.opp{
+    width: 200px;
+}
+.pet {
+    width: 485px;
+}
+@media (max-width: 1000px) {
+    .blog__category__container{
+        flex-wrap: wrap;
+        width: 90vw;
+    }
+    .opp{
+        width: 100%;
+    }
+    .main__news{
+        width: 100vw;
+    }
+}
+@media (max-width: 853px) {
+    .main__news{
+        max-width: 100vw;
+        /* display: flex; */
+    }
+    .blog__category__container{
+        width: 89vw;
+    }
+    .lifestyle{
+        width: 100vw;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .trendy__container{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .main__news{
+        width: 89vw;
+    }
+    .yy{
+        font-size: 20px;
+        width: 89vw;
+    }
+    .wait{
+        font-size: max(35px);
+        margin: 10px 0;
+        width:89vw;
+    }
+    .trendy__img{
+        width: 89vw;
+    }
+}
+@media (max-width: 738px) {
+    .featured__container{
+        flex-wrap: wrap;
+        width: 89vw;
+        justify-content: center;
+    }
+  
+    .tow{
+        width: 100%
+    }
+}
+@media (max-width: 462px) {
+   .pip{
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 40px;
+   }
+   .op{
+    width: 100vw;
+  }
+}
+@media (max-width: 440px) {
+    .wait{
+        font-size: 27px;
+        font-weight: bolder;
+    }
+    .yy{
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,46 @@
+.writers-bodys{
+    display: flex;
+}
+.custom__style1 {
+    width: 100%;
+    height: 282px;
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+@media (max-width: 800px) {
+    
+}
+@media (max-width: 850px) {
+    .writers-bodys{
+        flex-wrap: wrap-reverse;
+        width: 100%;
+    }
+}
+@media (max-width: 728px) {
+    .flirt{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+    .fear{
+        width: 88vw;
+    }
+}
+@media (max-width: 479px) {
+    .pp{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .ads__second__{
+        flex-wrap: wrap;
+        align-items: normal;
+    }
+    .custom__style1{
+        width: 88vw;
+        display: block;
+    }
+}

@@ -18,7 +18,7 @@ import profilePhoto2 from "../assets/images/pngs/Profile-img-2.png";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { LiaComments } from "react-icons/lia";
 import { Link } from "react-router-dom";
-
+import "./mediaQueries.css"
 const BlogCategory = () => {
   return (
     <BlogCategoryContainer>
@@ -29,29 +29,27 @@ const BlogCategory = () => {
             <div className="bold__text">Lifestyle</div>
           </div>
           <div className="main__news">
-          <Link to="/details">
-
-
-            <img
-              src={Lifestyle}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <Link to="/details">
+              <img
+                src={Lifestyle}
+                className="align-middle opp  object-cover transition duration-300 ease-linear mb-5"
               />
-              </Link>
+            </Link>
             <h1 className="bold__text">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
             <div className="p-4">
               <div className="flex items-center justify-between">
-              <Link to="/writers-profile">
+                <Link to="/writers-profile">
 
 
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
+                  <img
+                    src={profilePhoto}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
                   />
-                  </Link>
+                </Link>
                 <div>
                   <p className="text-[12px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
@@ -74,7 +72,7 @@ const BlogCategory = () => {
             <div className="featured__news_1">
               <Link to="/details">
                 <div className="featured__news_img">
-                  <img src={Lifestyle2} className="" />
+                  <img src={Lifestyle2} className="pet" />
                 </div>
               </Link>
               <div className="featured__news_contents">
@@ -120,7 +118,7 @@ const BlogCategory = () => {
             <div className="featured__news_1">
               <Link to="/details">
                 <div className="featured__news_img">
-                  <img src={Lifestyle3} className="" />
+                  <img src={Lifestyle3} className="pet" />
                 </div>
               </Link>
               <div className="featured__news_contents">
@@ -165,7 +163,7 @@ const BlogCategory = () => {
             </div>
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Lifestyle3} className="" />
+                <img src={Lifestyle3} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -213,28 +211,28 @@ const BlogCategory = () => {
             <div className="bold__text">Sport</div>
           </div>
           <div className="main__news">
-          <Link to="/writers-profile">
+            <Link to="/writers-profile">
 
 
-            <img
-              src={Sport}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              <img
+                src={Sport}
+                className="align-middle opp object-cover transition duration-300 ease-linear mb-5"
               />
-              </Link>
+            </Link>
             <h1 className="bold__text">
               Who is next football Super Hero. Check the future star
             </h1>
             <div className="p-4">
               <div className="flex items-center justify-between">
-              <Link to="/writers-profile">
+                <Link to="/writers-profile">
 
 
-                <img
-                  src={profilePhoto3}
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
+                  <img
+                    src={profilePhoto3}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full"
                   />
-                  </Link>
+                </Link>
                 <div>
                   <p className="text-[12px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
@@ -256,7 +254,7 @@ const BlogCategory = () => {
           <div className="featured__news">
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Lifestyle5} className="" />
+                <img src={Lifestyle5} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -298,7 +296,7 @@ const BlogCategory = () => {
             </div>
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Lifestyle6} className="" />
+                <img src={Lifestyle6} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -340,7 +338,7 @@ const BlogCategory = () => {
             </div>
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Lifestyle4} className="" />
+                <img src={Lifestyle4} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -390,7 +388,7 @@ const BlogCategory = () => {
           <div className="main__news">
             <img
               src={Technology}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+              className="align-middle opp object-cover transition duration-300 ease-linear mb-5"
             />
             <h1 className="bold__text">
               Who is next football Super Hero. Check the future star
@@ -423,7 +421,7 @@ const BlogCategory = () => {
           <div className="featured__news">
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Technology1} className="" />
+                <img src={Technology1} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -465,7 +463,7 @@ const BlogCategory = () => {
             </div>
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Lifestyle1} className="" />
+                <img src={Lifestyle1} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -507,7 +505,7 @@ const BlogCategory = () => {
             </div>
             <div className="featured__news_1">
               <div className="featured__news_img">
-                <img src={Technology2} className="" />
+                <img src={Technology2} className="pet" />
               </div>
               <div className="featured__news_contents">
                 <p className="bold__text">
@@ -560,9 +558,7 @@ const BlogCategoryContainer = styled.div`
   .blog__category__container {
     max-width: 120rem;
     display: flex;
-    margin-top: 34px;
-    margin-bottom: 10px;
-    margin-top: 98px;
+    margin: 80px 0;
     justify-content: space-between;
   }
 
@@ -590,12 +586,7 @@ const BlogCategoryContainer = styled.div`
     line-height: normal;
   }
 
-  .main__news {
-    max-width: 400px;
-    margin-right: 23px;
-    margin-top: 20px;
-    margin-bottom: 27px;
-  }
+  
 
   .featured__news_1 {
     display: flex;
@@ -610,9 +601,7 @@ const BlogCategoryContainer = styled.div`
 
   .featured__news_img {
     margin-right: 10px;
-    img {
-      width: 485px;
-    }
+    
   }
 
   .news__img {
@@ -621,9 +610,7 @@ const BlogCategoryContainer = styled.div`
     margin-right: 9px;
   }
 
-  .lifestyle {
-    width: 400px;
-  }
+  
 
   // .lifestyle {
   //   display: flex;
@@ -638,14 +625,4 @@ const BlogCategoryContainer = styled.div`
   //   margin-bottom: 20px; /* Space between rows */
   // }
 
-  @media (max-width: 768px) {
-    .blog__category__container {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .main__news,
-    .featured__news {
-      flex: 0 0 100%; /* 1 card per row */
-    }
-  }
 `;

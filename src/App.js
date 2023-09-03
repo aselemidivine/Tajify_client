@@ -19,12 +19,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<ProtectedRoute />}>
+        {/* <Route element={<ProtectedRoute />}> */}
           <Route path="/writers-profile" element={<WritersProfile />}></Route>
           <Route path="/writer" element={<Writer />}></Route>
           <Route path="/editor" element={<Editor />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-        </Route>
+        {/* </Route> */}
         <Route element={<UnProtectedRoute />}>
           <Route path="/details" element={<BlogDetails />}></Route>
           <Route path="/coming-soon" element={<ComingSoon />}></Route>

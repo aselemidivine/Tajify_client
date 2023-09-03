@@ -5,7 +5,7 @@ import Ads from "./Ads";
 import Ai from "../assets/images/pngs/Ai.png";
 import { BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import "./mediaQueries.css"
 const TrendyNews = () => {
   return (
     <TrendyContainer>
@@ -15,14 +15,14 @@ const TrendyNews = () => {
             <div className="trendy__img">
               <img
                 src={Feeds1}
-                className="align-middle object-cover transition duration-300 ease-linear"
+                className="align-middle take object-cover transition duration-300 ease-linear"
               />
             </div>
           </Link>
-          <h1 className="bold__text">
+          <h1 className="wait">
             The Radical Strategy Behind Trump’s Promise to ‘Go After’.....
           </h1>
-          <p>
+          <p className="yy">
             When Donald Trump responded to his latest indictment by promising to
             appoint a special prosecutor if he’s reelected to “go after”
             President Joe Biden and his family, he signaled that a second......{" "}
@@ -31,102 +31,104 @@ const TrendyNews = () => {
             </Link>
           </p>
         </div>
-        <div className="featured__news">
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Feeds1} className="news__img" />
-            </div>
-            <div className="featured__news_contents">
-              <p className="bold__text">
-                Five things to know about EFCC acting chairman
-              </p>
-              <div className="span__light">1 hour ago</div>
-            </div>
-          </div>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Feeds1} className="news__img" />
-            </div>
-            <div className="featured__news_contents">
-              <p className="bold__text">
-                Five things to know about EFCC acting chairman
-              </p>
-              <div className="span__light">1 hour ago</div>
-            </div>
-          </div>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Feeds1} className="news__img" />
-            </div>
-            <div className="featured__news_contents">
-              <p className="bold__text">
-                Five things to know about EFCC acting chairman
-              </p>
-              <div className="span__light">1 hour ago</div>
-            </div>
-          </div>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Feeds1} className="news__img" />
-            </div>
-            <div className="featured__news_contents">
-              <p className="bold__text">
-                Five things to know about EFCC acting chairman
-              </p>
-              <div className="span__light">1 hour ago</div>
-            </div>
-          </div>
-          <div className="featured__news_1">
-            <div className="featured__news_img">
-              <img src={Feeds1} className="news__img" />
-            </div>
-            <div className="featured__news_contents">
-              <p className="bold__text">
-                Five things to know about EFCC acting chairman
-              </p>
-              <div className="span__light">1 hour ago</div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="ads__sidebar">
-            <Ads />
-          </div>
-          <div className="categories__sidebar ">
-            <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
-              <div className="categories">
-                <h4>Categories</h4>
+        <div className="pip">
+          <div className="featured__news">
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Feeds1} className="news__img" />
               </div>
-              <div className="categories__list">
-                <div className="category__h5">
-                  <h5>Fashion</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
-                </div>
+              <div className="featured__news_contents">
+                <p className="bold__text">
+                  Five things to know about EFCC acting chairman
+                </p>
+                <div className="span__light">1 hour ago</div>
+              </div>
+            </div>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Feeds1} className="news__img" />
+              </div>
+              <div className="featured__news_contents">
+                <p className="bold__text">
+                  Five things to know about EFCC acting chairman
+                </p>
+                <div className="span__light">1 hour ago</div>
+              </div>
+            </div>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Feeds1} className="news__img" />
+              </div>
+              <div className="featured__news_contents">
+                <p className="bold__text">
+                  Five things to know about EFCC acting chairman
+                </p>
+                <div className="span__light">1 hour ago</div>
+              </div>
+            </div>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Feeds1} className="news__img" />
+              </div>
+              <div className="featured__news_contents">
+                <p className="bold__text">
+                  Five things to know about EFCC acting chairman
+                </p>
+                <div className="span__light">1 hour ago</div>
+              </div>
+            </div>
+            <div className="featured__news_1">
+              <div className="featured__news_img">
+                <img src={Feeds1} className="news__img" />
+              </div>
+              <div className="featured__news_contents">
+                <p className="bold__text">
+                  Five things to know about EFCC acting chairman
+                </p>
+                <div className="span__light">1 hour ago</div>
+              </div>
+            </div>
+          </div>
 
-                <div className="category__h5">
-                  <h5>Sport</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
+          <div className="op">
+            <div className="ads__sidebar">
+              <Ads />
+            </div>
+            <div className="categories__sidebar ">
+              <div className="custom__style bg-[#D9D9D9] w-[728px] h-[90px] flex flex-wrap justify-center items-center">
+                <div className="categories">
+                  <h4>Categories</h4>
                 </div>
-                <div className="category__h5">
-                  <h5>Education</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
-                </div>
-                <div className="category__h5">
-                  <h5>Entertainment</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
-                </div>
-                <div className="category__h5">
-                  <h5>Technology</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
-                </div>
-                <div className="category__h5">
-                  <h5>Travel</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
-                </div>
-                <div className="category__h5">
-                  <h5>Others</h5>
-                  <BsChevronRight className="text-gray-600 mr-2" />
+                <div className="categories__list">
+                  <div className="category__h5">
+                    <h5>Fashion</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+
+                  <div className="category__h5">
+                    <h5>Sport</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+                  <div className="category__h5">
+                    <h5>Education</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+                  <div className="category__h5">
+                    <h5>Entertainment</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+                  <div className="category__h5">
+                    <h5>Technology</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+                  <div className="category__h5">
+                    <h5>Travel</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
+                  <div className="category__h5">
+                    <h5>Others</h5>
+                    <BsChevronRight className="text-gray-600 mr-2" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -281,4 +283,5 @@ const TrendyContainer = styled.div`
       height: 169px;
     }
   }
+  
 `;
