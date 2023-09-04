@@ -14,6 +14,9 @@ import Privacy from "./pages/privacy";
 import Editor from "./pages/editor";
 import Profile from "./pages/profile";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
+import PremiumContent from "./pages/premium/premiumContent";
+// import Wallet from "./pages/wallet/Wallet";
+// import ThankYou from "./pages/thankyou/ThankYou";
 
 function App() {
   return (
@@ -23,6 +26,13 @@ function App() {
           <Route path="/editor" element={<Editor />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/writer" element={<Writer />}></Route>
+          <Route path="/premium" element={<PremiumContent />}></Route>
+
+          {/* wallet */}
+          {/* <Route path="/wallet" element={<Wallet />} /> */}
+
+          {/* thank you */}
+          {/* <Route path="/thank-you/:ref" element={<ThankYou />} /> */}
         </Route>
         <Route element={<UnProtectedRoute />}>
           <Route path="/writers-profile" element={<WritersProfile />}></Route>

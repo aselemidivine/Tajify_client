@@ -31,16 +31,18 @@ import Profile from "../../components/Profile";
 // import Loader from "../../components/Loader";
 import LoaderSpiner from "../../components/LoaderSpinner";
 
-const SINGLE_BLOGS_URL =
-  "http://localhost:3005/api/blogs/64edfe64306fb36f9a0d7fd3"; // Updated API URL
-// `http://localhost:3005/api/blogs/${_id}`
+// const SINGLE_BLOGS_URL =
+//   // "http://localhost:3005/api/blogs/64edfe64306fb36f9a0d7fd3"; // Updated API URL
+// `http://localhost:3005/api/blogs/:${id}`;
 
 const BlogDetails = () => {
   const { token } = useAuthContext();
-  const { id } = useParams(); // This retrieves the ID from the URL parameter
+  const {id} = useParams(); // This retrieves the ID from the URL parameter
 
   const [loading, setLoading] = useState(false);
   const [post, setPost] = useState([]);
+
+
 
   useEffect(() => {
     setLoading(true);
@@ -48,8 +50,7 @@ const BlogDetails = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(SINGLE_BLOGS_URL, {
-          // const response = await axios.get(`http://localhost:3005/api/blogs/${id}`, {
+          const response = await axios.get(`http://localhost:3005/api/blogs/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -75,8 +76,7 @@ const BlogDetails = () => {
 
   return (
     <div className="blog__container">
-      {/* <BlogDetailsContainer> */}
-      {/* <Navbar /> */}
+    
       <SubHeader />
 
       {loading ? (

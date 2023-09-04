@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { HiDotsVertical } from "react-icons/hi";
+import axios from "axios";
+
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
 
 const Tabs = () => {
   return (
@@ -28,6 +31,65 @@ const Tabs = () => {
     </TabsContainer>
   );
 };
+
+// export default Tabs;
+
+
+// const Tabs = () => {
+//   const { category } = useParams();
+//   const [selectedCategory, setSelectedCategory] = useState("News"); // Initialize with the default category
+
+
+
+//   const handleTabClick = (category) => {
+//     setSelectedCategory(category);
+//   };
+
+//   useEffect(() => {
+//     // Fetch blogs based on the selected category
+//     const fetchBlogsByCategory = async () => {
+//       try {
+//         const response = await axios.get(`http://localhost:3005/api/blogs/:${category}`);
+//         // Handle the response data and update your component state with the fetched blogs
+//         console.log(response.data.data.blogs); // For demonstration purposes, log the response
+//       } catch (error) {
+//         console.error("Error fetching blogs:", error);
+//       }
+//     };
+
+//     fetchBlogsByCategory();
+//   }, [category]); // Fetch blogs whenever the selected category changes
+
+//   return (
+//     <TabsContainer>
+//       <div className="custom__tabs">
+//         <div className="custom__tab__container">
+//           <div
+//             className={`custom__tab__bg ${selectedCategory === "News" ? "active" : ""}`}
+//             onClick={() => handleTabClick("News")}
+//           >
+//             News
+//           </div>
+//           <div
+//             className={`custom__tab__bg ${selectedCategory === "Sport" ? "active" : ""}`}
+//             onClick={() => handleTabClick("Sport")}
+//           >
+//             Sport
+//           </div>
+//           {/* Add more tabs for other categories */}
+//         </div>
+//         <div className="icons">
+//           <i className="cursor-pointer text-black h-6 w-6">
+//             <AiOutlineSearch />
+//           </i>
+//           <i className="cursor-pointer text-black h-6 w-6">
+//             <HiDotsVertical />
+//           </i>
+//         </div>
+//       </div>
+//     </TabsContainer>
+//   );
+// };
 
 export default Tabs;
 

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@100&display=swap");
 
 * {
   padding: 0;
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat' sans-serif;
+  font-family: "Montserrat" sans-serif;
   font-size: 1.6rem;
   line-height: 1;
   color: #333;
@@ -42,7 +42,7 @@ body {
   margin-bottom: 1.8rem;
   color: #fff;
   margin-bottom: 2.4rem;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 .heading__tetariary {
   font-size: 2.2rem;
@@ -56,7 +56,7 @@ body {
   opacity: 0;
 }
 .hero--extra {
-  color: #FFC107;
+  color: #ffc107;
 }
 
 .ads__box--xl {
@@ -64,7 +64,7 @@ body {
   height: 25rem;
   background-color: #fff;
   position: relative;
-  box-shadow: 0 .4rem 2rem rgba(0, 0, 0, .15);
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
 }
 .ads__box--big {
   width: 90%;
@@ -72,8 +72,9 @@ body {
   background-color: #eee;
   position: relative;
 }
-.ads__box--big::after, .ads__box--xl::after {
-  content: 'AD';
+.ads__box--big::after,
+.ads__box--xl::after {
+  content: "AD";
   display: inline-block;
   display: flex;
   justify-content: center;
@@ -117,4 +118,10 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 150px;
+}
+
+.display__col {
+  display: grid;
+  height: 400px;
+  width: 600px;
 }

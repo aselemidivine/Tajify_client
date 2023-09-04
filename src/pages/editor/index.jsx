@@ -64,17 +64,23 @@ const Editor = () => {
       <SubHeader />
 
       <div className="custom__width editor__width">
-        <div className="">
-          <input
+        <div className="display__col">
+          {/* <input
             type="text"
             placeholder="Creator's Name"
             value={creator}
             onChange={(e) => setCreator(e.target.value)}
-          />
+          /> */}
           <input
-            type="text"
+            type="title"
             placeholder="Blog Title"
             value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+
+          <input
+            type="file"
+            // value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
