@@ -11,6 +11,8 @@ const Tabs = () => {
     <TabsContainer>
       <div className="custom__tabs ">
         <div className="custom__tab__container">
+        {/* <Link to={`/details/${post._id}`}> */}
+
           <div className="custom__tab__bg ">News</div>
           <div className="custom__tab__bg__ ">Sport</div>
           <div className="custom__tab__bg__ ">Travel</div>

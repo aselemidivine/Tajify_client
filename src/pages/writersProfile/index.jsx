@@ -6,6 +6,7 @@ import AdsSecond from "../../components/Ads2";
 import Profile from "../../components/Profile";
 import SubHeader from "../../components/SubHeader";
 import '../../pages/blogHome/main.css'
+import { Link } from "react-router-dom";
 
 
 const WritersProfile = () => {
@@ -25,9 +26,12 @@ const WritersProfile = () => {
         <div className=" custom__width h-full mt-[33px] mb-[33px] ">
           <div className="flex justify-between items-end">
             <div>
+              <Link to="/editor">
+
               <button className="add__post ">
                 Add Post
               </button>
+              </Link>
             </div>
             <div className="ads__second">
               <AdsSecond />

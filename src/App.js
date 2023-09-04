@@ -35,7 +35,7 @@ function App() {
           {/* <Route path="/thank-you/:ref" element={<ThankYou />} /> */}
         </Route>
         <Route element={<UnProtectedRoute />}>
-          <Route path="/writers-profile" element={<WritersProfile />}></Route>
+          <Route path="/writers-profile/:id" element={<WritersProfile />}></Route>
           <Route path="/details/:id" element={<BlogDetails />}></Route>
           {/* <Route path="/details/blogs/:_id" element={<BlogDetails />}></Route> */}
           <Route path="/coming-soon" element={<ComingSoon />}></Route>
