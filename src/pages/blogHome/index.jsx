@@ -14,6 +14,9 @@ import './main.css';
 
 
 const BlogHome = () => {
+
+
+
   return (
     <>
       <MainHeader />
@@ -21,7 +24,7 @@ const BlogHome = () => {
       <MostPopularCourses />
       <TreadingArticles />
       <ExploreSkills />
-      <ExploreCategories />
+          <ExploreCategories />
       <TopNewsAndFeaturedArticles />
       <TopCreators />
       <ExploreMore />

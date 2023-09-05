@@ -45,6 +45,47 @@ const BlogCategory = ({ category }) => {
     fetchData();
   }, [token]);
 
+
+
+//   try {
+//     // Toggle follow state and send a request to update the server
+//     const newFollowState = !isFollowing;
+//     setIsFollowing(newFollowState);
+
+//     // Send a request to update follow status on the server
+//     await axios.post(`/api/posts/${postId}/follow`, { isFollowing: newFollowState });
+//   } catch (error) {
+//     console.error('Error updating follow status:', error);
+//   }
+// };
+
+// const handleLike = async () => {
+//   try {
+//     // Increment like count and send a request to update the server
+//     setLikeCount(likeCount + 1);
+
+//     // Send a request to update like count on the server
+//     await axios.post(`/api/posts/${postId}/like`);
+//   } catch (error) {
+//     console.error('Error updating like count:', error);
+//   }
+// };
+
+// const handleComment = async () => {
+//   try {
+//     // Increment comment count and send a request to update the server
+//     setCommentCount(commentCount + 1);
+
+//     // Navigate to the comment section (you may use React Router for this)
+//   } catch (error) {
+//     console.error('Error updating comment count:', error);
+//   }
+// };
+
+
+
+
+
   return (
     <BlogCategoryContainer>
       <div className="blog__category__container">
@@ -56,7 +97,9 @@ const BlogCategory = ({ category }) => {
               <div className="bold__text">{post.category}</div>
             </div>
             <div className="main__news">
-              <Link to="/writers-profile">
+              {/* <Link to="/writers-profile"> */}
+              <Link to={`/details/${post._id}`}>
+              
                 <img
                   src={Lifestyle}
                   className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"

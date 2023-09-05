@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileWriter from "../assets/images/pngs/Profile-img-writer.png";
 import Feeds1 from "../assets/images/pngs/feeds1.png";
@@ -14,6 +14,7 @@ import {
   AiFillTwitterSquare,
 } from "react-icons/ai";
 import { BsPinterest } from "react-icons/bs";
+import axios from "axios";
 
 import Lifestyle from "../assets/images/pngs/profile-news.png";
 import ProfileNews2 from "../assets/images/pngs/profile-news-2.png";
@@ -22,22 +23,128 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import { LiaComments } from "react-icons/lia";
 import Ads from "./Ads";
 import WriterFooter from "./WriterFooter";
+import { useAuthContext } from "../context/AuthContext";
 import AdsSecond from "./Ads2";
+import { useParams } from "react-router-dom";
+
+// const ShareButton = ({ postUrl }) => {
+//   const handleCopyClick = () => {
+//     // Copy the post's URL to the clipboard
+//     navigator.clipboard.writeText(postUrl);
+//     alert("Copied to clipboard!");
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleCopyClick}>Copy Link</button>
+//     </div>
+//   );
+// };
+
+// export default ShareButton;
 
 const Profile = () => {
+  const { id } = useParams(); // This retrieves the ID from the URL parameter
+  const { user, token } = useAuthContext();
+  const [error, setError] = useState(null);
+  const [creator, setCreator] = useState([]);
+
+  const [isFollowing, setIsFollowing] = useState(false);
+
+  // Define the handleFollowClick function outside of useEffect
+  const handleFollowClick = async () => {
+    try {
+      if (!id) {
+        // Handle the case where id is not defined
+        console.error("User ID is not defined");
+        return;
+      }
+      const response = await axios.post(
+        `http://localhost:3005/api/users/${id}/request-follow`,
+        null,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        setIsFollowing(!isFollowing);
+      }
+    } catch (error) {
+      console.error("Error following user:", error);
+    }
+  };
+
+  useEffect(() => {
+    // Fetch the list of creators from your API
+    fetch(`http://localhost:3005/api/users/${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        const users = data.users;
+        setCreator(users);
+      })
+      .catch((error) => {
+        setError(error);
+        console.error("Error fetching creators:", error);
+      });
+  }, []);
+
+  // const fetchData = async () => {
+  //   try {
+  //       const response = await axios.get(`http://localhost:3005/api/users/${id}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
+
+  //     if (response.data.data.users) {
+  //       // Handle the fetched data and set it in state
+  //       // setPosts(response.data);
+  //       setCreator(response.data.data.users);
+  //     } else {
+  //       console.error("Error fetching user");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   // fetchData();
+  //   setCreator();
+  // }, [id, user, token]);
+
   return (
-    <ProfileContainer>
-      <div className="profile">
+    // <div>
+    //   {creator.map(creators => (
+    //     <div key={creators.id}>
+    //       <h3>{creator.username}</h3>
+    //       {/* Render other user data here */}
+    //     </div>
+    //   ))}
+    // </div>
+      <ProfileContainer>
+      <div className="profile"  >
         <div className="profile__container__1">
-          <div className="profile__container">
+          <div className="profile__container" >
             <div className="profile__news_img">
               <img src={ProfileWriter} className="profile__img" />
             </div>
           </div>
+
           <div className="writers__container">
             <div className="profile__socials">
               <div>
-                <h3>Filter Mark</h3>
+                {/* <h3>{creators.fullname}</h3> */}
+                <h3>Aselemi Divine</h3>
                 <ul className="socials__icons">
                   <li>
                     <a href="#" className="social__icon--link">
@@ -62,8 +169,11 @@ const Profile = () => {
                 </ul>
               </div>
               <div>
-                <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">
-                  Subscribe
+                <button
+                  onClick={handleFollowClick}
+                  className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78"
+                >
+                  {isFollowing ? "Unfollow" : "Follow"}
                 </button>
               </div>
             </div>
@@ -310,14 +420,12 @@ const Profile = () => {
         </div>
         <div className="flex flex-wrap gap-16">
           <div className="main__news__1">
-          <div className="img__container">
-
-
-            <img
-              src={News3}
-              className="align-middle object-cover transition duration-300 ease-linear mb-5"
+            <div className="img__container">
+              <img
+                src={News3}
+                className="align-middle object-cover transition duration-300 ease-linear mb-5"
               />
-              </div>
+            </div>
             <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -348,14 +456,12 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-          <div className="img__container">
-
-
-            <img
-              src={News2}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <div className="img__container">
+              <img
+                src={News2}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </div>
+            </div>
             <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -386,14 +492,12 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-          <div className="img__container">
-
-
-            <img
-              src={News3}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <div className="img__container">
+              <img
+                src={News3}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </div>
+            </div>
             <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -424,14 +528,12 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-          <div className="img__container">
-
-
-            <img
-              src={News4}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <div className="img__container">
+              <img
+                src={News4}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </div>
+            </div>
             <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
@@ -505,14 +607,12 @@ const Profile = () => {
             </div>
           </div>
           <div className="main__news__1">
-          <div className="img__container">
-
-
-            <img
-              src={News2}
-              className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
+            <div className="img__container">
+              <img
+                src={News2}
+                className="align-middle w-full object-cover transition duration-300 ease-linear mb-5"
               />
-              </div>
+            </div>
             <h1 className="bold__text__pink">
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
