@@ -16,7 +16,7 @@ import Profile from "./pages/profile";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
 import PremiumContent from "./pages/premium/premiumContent";
 import BlogsCategoryPage from "./components/blogsCategoryPage/BlogsCategoryPage";
-// import Wallet from "./pages/wallet/Wallet";
+import Wallet from "./pages/wallet/Wallet";
 // import ThankYou from "./pages/thankyou/ThankYou";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           <Route path="/premium" element={<PremiumContent />}></Route>
 
           {/* wallet */}
-          {/* <Route path="/wallet" element={<Wallet />} /> */}
+          <Route path="/wallet" element={<Wallet />} />
 
           {/* thank you */}
           {/* <Route path="/thank-you/:ref" element={<ThankYou />} /> */}

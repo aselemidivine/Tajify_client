@@ -68,20 +68,7 @@ function ExploreCategories({ category }) {
           className="category__cards"
           style={{ gridTemplateColumns: `repeat(${categories.length}, 1fr)` }}
         >
-          {/* {blogs.map((blog) => (
-              <div className="creator" key={blog._id}>
-                <Link to={`/writers-profile/${blog._id}`}>
-                  <figure className="card__figure">
-                    <img
-                      className="card__figure--image"
-                      src={lifyStyleImg}
-                      // alt={title}
-                    />
-                    <p className="card__figure--title">{blog.category}</p>
-                  </figure>
-                </Link>
-              </div>
-            ))} */}
+      
 
           {categories.map((category) => {
             return (

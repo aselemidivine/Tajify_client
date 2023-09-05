@@ -3,7 +3,6 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import creator4 from "../../assets/images/pngs/writers-1.png";
 
-
 const BlogsCategoryPage = () => {
   const { category } = useParams(); // This retrieves the Category from the URL parameter
 
@@ -14,7 +13,6 @@ const BlogsCategoryPage = () => {
       try {
         const response = await axios.get(
           `http://localhost:3005/api/blogs/category/${category}`
-          // "http://localhost:3005/api/blogs/category/travel"
         );
         if (response.data.data.blogs) {
           console.log(response);
@@ -30,28 +28,23 @@ const BlogsCategoryPage = () => {
 
   return (
     <div className="creator">
-        {/* <figure className="card__figure">
-          <img
-            className="card__figure--image"
-            // src={creator4}
-            // alt={title}
-          />
-          <p className="card__figure--title">{blogsCategory.content}</p>
-        </figure> */}
-         <h2>{category.toUpperCase()} Blogs</h2>
+      <h2>{category.toUpperCase()} Blogs</h2>
       <ul>
+        <img
+          className="card__figure--image"
+          src={creator4}
+          // alt={title}
+        />
         {blogsCategory.map((blog) => (
           <li key={blog._id}>
             <h3>{blog.title}</h3>
             <p>{blog.content}</p>
-            {/* Render other blog details as needed */}
           </li>
         ))}
       </ul>
     </div>
   );
 
-  // return <div>{blogsCategory.title}</div>;
 };
 
 export default BlogsCategoryPage;

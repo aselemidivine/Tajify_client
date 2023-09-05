@@ -13,8 +13,8 @@ import {
   } from "@chakra-ui/react";
 import CurrencyInput from "react-currency-input-field";
 import { PaystackButton } from "react-paystack";
-import { useDataContext } from '../../context/DataContext';
-import { useAuthContext } from '../../context/AuthContext';
+// import { useDataContext } from '../../context/DataContext';
+// import { useAuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
 
 const DepositModal = ({isOpen, onClose}) => {
