@@ -221,6 +221,7 @@ header.header-green .navbar__list {
 .course__cards {
     display: grid;
     gap: 2.2rem;
+    overflow-x: auto;
 }
 .card__figure {
     width: 100%;
@@ -743,6 +744,9 @@ header.header-green .navbar__list {
 
 /* 1130px = 113rem = 70.625em */
 @media screen and (max-width: 70.625em) {
+    .header {
+        padding: 3rem;
+    }
     .section__container {
         padding: 0 3.2rem;
     }
@@ -925,6 +929,7 @@ header.header-green .navbar__list {
     }
     .hero__form {
         max-width: 80%;
+        justify-content: space-between;
     }
     .hero__form--btn {
         padding: 1.4rem 3.2rem;
@@ -943,11 +948,10 @@ header.header-green .navbar__list {
         overflow-x: scroll;
     }
     .course__section .section__container {
+        width: 125rem;
         overflow: hidden;
-    border: 1px solid #000;
     }
     .course__cards {
-        width: 125rem;
         height: auto;
         overflow-x: scroll;
     }
