@@ -104,7 +104,7 @@ function TopCreators() {
             creators.map((creator) => {
               return (
                 <div className="creator" key={creator._id}>
-                  <Link to={`/writers-profile/${creator._id}`}>
+                  <Link to={`/writers-profile/${creator.slug}`}>
                     <figure className="card__figure">
                       <img
                         className="card__figure--image"

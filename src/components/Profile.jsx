@@ -77,59 +77,53 @@ const Profile = () => {
     }
   };
 
-  useEffect(() => {
-    // Fetch the list of creators from your API
-    fetch(`http://localhost:3005/api/users/${id}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        const users = data.users;
-        setCreator(users);
-      })
-      .catch((error) => {
-        setError(error);
-        console.error("Error fetching creators:", error);
-      });
-  }, []);
-
-  // const fetchData = async () => {
-  //   try {
-  //       const response = await axios.get(`http://localhost:3005/api/users/${id}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
-
-  //     if (response.data.data.users) {
-  //       // Handle the fetched data and set it in state
-  //       // setPosts(response.data);
-  //       setCreator(response.data.data.users);
-  //     } else {
-  //       console.error("Error fetching user");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // };
-
   // useEffect(() => {
-  //   // fetchData();
-  //   setCreator();
-  // }, [id, user, token]);
+  //   // Fetch the list of creators from your API
+  //   fetch(`http://localhost:3005/api/users/${id}`)
+  //     // .then((response) => {
+  //     //   if (!response.ok) {
+  //     //     throw new Error("Network response was not ok");
+  //     //   }
+  //     //   return response.json();
+  //     // })
+  //     .then((data) => {
+  //       console.log(data);
+  //       const users = data.users;
+  //       setCreator(users);
+  //     })
+  //     .catch((error) => {
+  //       setError(error);
+  //       console.log(error.message);
+  //       console.error("Error fetching creators:", error);
+  //     });
+  // }, []);
+
+  const fetchData = async () => {
+    try {
+        const response = await axios.get(`http://localhost:3005/api/users/${id}`);
+
+      if (response.data.data.user) {
+        // Handle the fetched data and set it in state
+        // setPosts(response.data);
+        console.log(response);
+        setCreator(response.data.data.user);
+      } else {
+        console.error("Error fetching user");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [id, user, token]);
 
   return (
     // <div>
-    //   {creator.map(creators => (
-    //     <div key={creators.id}>
-    //       <h3>{creator.username}</h3>
-    //       {/* Render other user data here */}
+    //     <div>
+    //       <h3>{creator.fullname}</h3>
     //     </div>
-    //   ))}
     // </div>
       <ProfileContainer>
       <div className="profile"  >
@@ -144,7 +138,7 @@ const Profile = () => {
             <div className="profile__socials">
               <div>
                 {/* <h3>{creators.fullname}</h3> */}
-                <h3>Aselemi Divine</h3>
+                <h3>{creator.username}</h3>
                 <ul className="socials__icons">
                   <li>
                     <a href="#" className="social__icon--link">
