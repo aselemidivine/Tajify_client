@@ -38,10 +38,8 @@ function App() {
         <Route element={<UnProtectedRoute />}>
           <Route path="/writers-profile/:id" element={<WritersProfile />}></Route>
           <Route path="/details/:id" element={<BlogDetails />}></Route>
-          {/* <Route path="/category/:category" element={<BlogCategoryPage />}></Route> */}
+          {/* <Route path="/category/category/:category" element={<BlogsCategoryPage />}></Route> */}
           <Route path="/category/:category" element={<BlogsCategoryPage />}></Route>
-
-          {/* <Route path="/details/blogs/:_id" element={<BlogDetails />}></Route> */}
           <Route path="/coming-soon" element={<ComingSoon />}></Route>
           <Route path="/" element={<BlogHome />}></Route>
           <Route path="/login" element={<Login />}></Route>
