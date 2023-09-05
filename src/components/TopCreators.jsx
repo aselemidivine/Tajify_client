@@ -52,6 +52,7 @@ import Card from "./Card";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
+import LoaderSpinner from './LoaderSpinner';
 
 function TopCreators() {
   const { token } = useAuthContext();
@@ -83,7 +84,8 @@ function TopCreators() {
 
 
   if (loading) {
-    return <div>Loading...</div>;
+    // return <div>Loading...</div>;
+    return <LoaderSpinner />
   }
 
   if (error) {
@@ -118,7 +120,7 @@ function TopCreators() {
               );
             })
           ) : (
-            <div>No creators found.</div>
+            <div style={{margin: '0rem auto'}}>No creators found.</div>
           )}
         </div>
       </div>
