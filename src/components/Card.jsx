@@ -3,7 +3,7 @@ import { useAuthContext } from "../context/AuthContext";
 import { useEffect, useState } from "react";
 
 
-function Card({ title, imagePath }) {
+function Card({ title, imagePath, categoryField }) {
 
 
   const { token } = useAuthContext();
@@ -58,7 +58,7 @@ function Card({ title, imagePath }) {
 
   return (
     <figure className="card__figure">
-      <Link to={`/category/${blogs.category}`}>
+      <Link to={`/category/${categoryField}`}>
 
         <img className="card__figure--image" src={imagePath} alt={title} />
         <p className="card__figure--title">{title}</p>

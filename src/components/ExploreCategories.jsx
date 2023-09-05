@@ -16,6 +16,7 @@ const categories = [
   {
     title: "sports",
     imagePath: sportImg,
+    categoryField: 'sport'
   },
   {
     title: "entertainment",
@@ -173,6 +174,7 @@ function ExploreCategories({ category }) {
                 key={category.title}
                 title={category.title}
                 imagePath={category.imagePath}
+                category={category.categoryField}
               />
             );
           })}
