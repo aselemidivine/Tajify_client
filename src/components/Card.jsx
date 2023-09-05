@@ -1,69 +1,43 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-
-function Card({ title, imagePath, categoryField }) {
-
-
+function Card({ title, imagePath  }) {
   const { token } = useAuthContext();
-  const [loading, setLoading] = useState(false);
-  const [blogs, setBlogs] = useState([]);
-
 
   // useEffect(() => {
-  //   // Fetch the list of creators from your API
-  //     fetch(`http://localhost:3005/api/blogs`)
-  //       .then((data) => {
-  //         console.log(data);
-  //         const users = data.category;
-  //         setBlogs(users.slice(0, 5));
-  //       })
-  //       .catch((error) => {
-  //         setLoading(false);
-  //         console.error("Error fetching creators:", error);
-  //       });
-  //   }, []);
+  //   console.log(blogs);
+  // }, [blogs]);
 
-  useEffect(() => {
-    setLoading(true);
+  // useEffect(() => {
+  //   const fetchBlogsByCategory = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `http://localhost:3005/api/blogs/category/${category}`
+  //       );
+  //       if (response.data) {
+  //         console.log(response);
+  //         // setBlogsCategory(response.data.data.blogs.category);
+  //         setBlogs(response.data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching blogs:", error);
+  //     }
+  //   };
 
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(All_BLOGS_URL, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        if (response.data.data.blogs) {
-          // Handle the fetched data and set it in state
-          // setPosts(response.data);
-          setBlogs(response.data.data.blogs.slice(0, 3));
-        } else {
-          console.error("Error fetching posts");
-        }
-
-        setLoading(false);
-      } catch (error) {
-        console.error("Error:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [token]);
-
-  
+  //   fetchBlogsByCategory();
+  // }, []);
 
   return (
-    <figure className="card__figure">
-      <Link to={`/category/${categoryField}`}>
-
+    <Link to={`/category/${title}`}>
+    {/* <Link to={`/category/${categoryField}`}> */}
+      {/* <Link to={"/category"}> */}
+      <figure className="card__figure">
         <img className="card__figure--image" src={imagePath} alt={title} />
         <p className="card__figure--title">{title}</p>
-      </Link>
-    </figure>
+      </figure>
+    </Link>
   );
 }
 
