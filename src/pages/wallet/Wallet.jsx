@@ -10,9 +10,17 @@ import { IoMdAdd } from "react-icons/io";
 import WalletTabs from "./WalletTabs";
 import DepositModal from "../../components/wallets/DepositModal";
 import { toast } from "react-toastify";
-import DashCard2 from "../../components/cards/DashCard2";
 import SubHeader from "../../components/MainHeader";
+
+
 const Wallet = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+
+  //deposit modal states
+  const [showDepositModal, setShowDepositModal] = useState(false);
+  const handleCloseDepositModal = () => setShowDepositModal(false);
+  const handleOpenDepositModal = () => setShowDepositModal(true);
 
   return (
     <>
@@ -35,12 +43,12 @@ const Wallet = () => {
 
             <div className="flex-auto max-md:flex justify-around  mt-3">
               <div className="deposit-container mb-4">
-                {/* <DepositModal isOpen={showDepositModal} onClose={handleCloseDepositModal}/> */}
+                <DepositModal isOpen={showDepositModal} onClose={handleCloseDepositModal}/>
                 <p className="text-xl text-center mb-2">Deposit</p>
                 <div className="deposit-div flex justify-center">
                   <div>
-                    {/* <div className="px-4 py-4 bg-green-300  rounded-full bg-opacity-30 hover:scale-110 hover:bg-green-400 hover:bg-opacity-100 transition-all duration-300 group" onClick={handleOpenDepositModal}> */}
-                    <div className="px-4 py-4 bg-green-300  rounded-full bg-opacity-30 hover:scale-110 hover:bg-green-400 hover:bg-opacity-100 transition-all duration-300 group" >
+                    <div className="px-4 py-4 bg-green-300  rounded-full bg-opacity-30 hover:scale-110 hover:bg-green-400 hover:bg-opacity-100 transition-all duration-300 group" onClick={handleOpenDepositModal}>
+                    {/* <div className="px-4 py-4 bg-green-300  rounded-full bg-opacity-30 hover:scale-110 hover:bg-green-400 hover:bg-opacity-100 transition-all duration-300 group" > */}
                       <IoMdAdd
                         className="text-green-500 group-hover:text-white"
                         // size={24}
