@@ -15,6 +15,7 @@ import Editor from "./pages/editor";
 import Profile from "./pages/profile";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
 import PremiumContent from "./pages/premium/premiumContent";
+import BlogsCategoryPage from "./components/blogsCategoryPage/BlogsCategoryPage";
 // import Wallet from "./pages/wallet/Wallet";
 // import ThankYou from "./pages/thankyou/ThankYou";
 
@@ -37,6 +38,9 @@ function App() {
         <Route element={<UnProtectedRoute />}>
           <Route path="/writers-profile/:id" element={<WritersProfile />}></Route>
           <Route path="/details/:id" element={<BlogDetails />}></Route>
+          {/* <Route path="/category/:category" element={<BlogCategoryPage />}></Route> */}
+          <Route path="/category/:category" element={<BlogsCategoryPage />}></Route>
+
           {/* <Route path="/details/blogs/:_id" element={<BlogDetails />}></Route> */}
           <Route path="/coming-soon" element={<ComingSoon />}></Route>
           <Route path="/" element={<BlogHome />}></Route>
