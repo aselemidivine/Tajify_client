@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import "../pages/blogHome/main.css";
 import { LiaAngleDownSolid } from "react-icons/lia";
-import { FiBell } from "react-icons/fi";
-import { HiOutlinePencilSquare } from "react-icons/hi2";
+import { BsBell } from "react-icons/bs";
+import { SlNote } from "react-icons/sl";
 import { useAuthContext } from "../context/AuthContext";
 
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
@@ -20,7 +20,9 @@ function SubHeader() {
 
   return (
     <header className="header">
+       <NavLink to="/">
       <span className="header__logo">Tajify</span>
+      </NavLink>
       <nav className="navbar">
         <ui className="navbar__list">
           <li className="navbar__list--item">
@@ -59,9 +61,9 @@ function SubHeader() {
           {user && (
             <>
               <Link to="/editor">
-                <HiOutlinePencilSquare className="navbar__icons" />
+                <SlNote className="navbar__icons" />
               </Link>
-              <FiBell className="navbar__icons" />
+              <BsBell className="navbar__icons" />
               <Profile />
             </>
           )}

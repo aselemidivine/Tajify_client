@@ -7,11 +7,14 @@
 
   .navbar__icons {
     color: #fff;
-
   }
 
   .navbar__list--link:visited {
     color: #fff;
+  }
+
+  .navbar__link--link:hover, .navbar__icons:hover {
+    color: #ccc;
   }
 
   .header__logo {
@@ -47,31 +50,14 @@ h1 {
   object-fit: cover;
 }
 
-.custom__width {
-  max-width: 119rem;
-  padding: 46px;
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.writers__stats {
-  padding: 10px;
-}
-
-.icons__flex {
-  display: flex;
-}
-
 .reaction {
   display: flex;
   align-items: center;
-  margin-right: 23px;
-  justify-content: space-between;
+  gap: .6rem;
 }
 .writer__icons {
-  width: 26px;
-  height: 21px;
+  font-size: 2.4rem;
+  /* height: 2.4; */
   cursor: pointer;
 }
 
@@ -98,9 +84,6 @@ h1 {
   justify-content: space-between;
 }
 
-/* .img__and__details__container {
-} */
-
 .paragraph__container {
   margin: 30px 0;
 }
@@ -114,14 +97,14 @@ h1 {
 }
 
 .details__paragraph {
-  font-size: 23px;      /* Adjust the font size as needed */
-  line-height: 1.6;     /* Adjust the line height as needed */
-  margin-bottom: 1.5em; /* Add some spacing between paragraphs */
+  font-size: 1.6rem;      
+  line-height: 1.6;    
+  margin-bottom: 4rem; 
 }
 
-.details__paragraph__italics {
-  font-size: 23px;      /* Adjust the font size as needed */
-  line-height: 1.6;     /* Adjust the line height as needed */
+.details__paragraph--italics {
+  font-size: 1.8rem; 
+  line-height: 1.7;
   margin-bottom: 1.5em;
   font-style: italic;
   padding: 20px;
@@ -137,9 +120,14 @@ h1 {
   height: 185px;
 }
 
-.writers__stats__container {
-  padding: 20px;
+.ads__box--big.width-100 {
+  width: 100%;
 }
+
+.writers__stats {
+  padding-top: 4.2rem;
+}
+
 
 .ads__body {
   padding: 10px;
@@ -162,15 +150,14 @@ h1 {
     width: 920px;
   }
 }
-.section__container {
-  max-width: 120rem;
+.content__container {
+  max-width: 105rem;
   margin: 0 auto;
-  padding: 0 2.8rem;
+  padding: 0 3.2rem;
 }
-
 .profile__comments {
   display: flex;
-  justify-content: space-between;
+  gap: 2.4rem;
   align-items: center;
 }
 
@@ -180,19 +167,25 @@ h1 {
 }
 
 .main__news__img {
-  margin-top: 40px;
+  margin-top: 4rem;
+  width: 100rem;
+  height: 40rem;
 }
 
 .profile__photo {
-  width: 83px;
-  height: 71px;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  overflow: hidden;
   img {
     object-fit: cover;
-    border-radius: 10px;
   }
 }
+.blog__author {
+  font-size: 2rem;
+}
 
-.profile__container__1 {
+.profile__container-main {
     display: flex;
     justify-content: space-between;
     width: 931px;
@@ -284,4 +277,26 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 150px;
+}
+
+
+
+
+/* *********  ********* */
+
+.blog__title {
+  font-size: 5.2rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.blog__info {
+  font-size: 1.2rem;
+  color: #444;
+}
+.blog__metrics {
+  display: flex;
+  gap: 4.8rem;
 }

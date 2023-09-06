@@ -22,7 +22,7 @@ const WritersProfile = () => {
     <div className="blog__container">
 
       <SubHeader />
-      <div className="custom__alignment">
+      <div className="section__container">
         <div className=" custom__width h-full mt-[33px] mb-[33px] ">
           <div className="flex justify-between items-end">
             <div>
@@ -33,11 +33,9 @@ const WritersProfile = () => {
               </button>
               </Link>
             </div>
-            <div className="ads__second">
-              <AdsSecond />
-            </div>
+            <div className="ads__box--xl" style={{width: '60%', height: '12rem'}}>&nbsp;</div>
           </div>
-          <div className="custom__tabs">
+          <div className="">
             <Tabs />
           </div>
           <Profile />

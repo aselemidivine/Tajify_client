@@ -6,7 +6,7 @@ const DashCard = () => {
       <div
         className={`flex flex-col px-6 py-10 overflow-hidden bg-gradient-to-br from-[#f1544a]  to-secondary rounded  shadow-lg duration-300 hover:shadow-2xl group`}
       >
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row justify-between items-center" >
         <div className="px-4 py-4 bg-blue-200  rounded-xl bg-opacity-30">
             <FaRegMoneyBillAlt className="text-white" size={24} />
           </div>

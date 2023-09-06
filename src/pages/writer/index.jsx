@@ -43,18 +43,14 @@ const Writer = () => {
               <div className="span__style">
                 <span>Traveling with kids can be rough. Parents ......</span>
               </div>
-              <div className="ads__first">
-                <Ads />
-              </div>
+              <div className="ads__box--xl" style={{width: '60%', height: '12rem'}}>&nbsp;</div>
             </div>
             {/* <div className="custom__width">
 
             <Tabs /> 
             </div> */}
             <div className="flex justify-between items-end mb-10">
-              <div className="ads__second">
-                <AdsSecond />
-              </div>
+            <div className="ads__box--xl" style={{width: '80%', height: '12rem'}}>&nbsp;</div>
               <div>
                 <Link to="/editor">
                   <button className="w-[166px] h-[40px] bg-[#F06] text-center text-white flex items-center cursor-pointer justify-center rounded-lg p-21 px-78">

@@ -101,7 +101,7 @@ const TabsContainer = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
-    gap: 10px;
+    padding: 1.6rem 0;
   }
 
   .custom__tab__container {

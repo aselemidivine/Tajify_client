@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import SubHeader from "../../components/SubHeader";
 import "../../pages/blogDetails/blogDetails.css";
@@ -48,16 +46,47 @@ const Editor = () => {
         setLoading(false);
 
         // Reset the editor content or perform any other necessary actions
-      } else {
-        console.error("Error creating blog post");
-        setLoading(false);
-
-      }
+      } 
     } catch (error) {
       console.error("Error:", error);
       setLoading(false);
     }
   };
+
+//   const handleImageUpload = async (e) => {
+//   const file = e.target.files[0];
+
+//   if (file) {
+//     try {
+//       const formData = new FormData();
+//       formData.append("image", file);
+
+//       // Make an Axios POST request to upload the image
+//       const response = await axios.post(
+//         "http://localhost:3005/api/upload-image",
+//         formData,
+//         {
+//           headers: {
+//             "Content-Type": "multipart/form-data",
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+
+//       if (response.data.url) {
+//         // Image uploaded successfully, you can get the image URL from the response
+//         const imageUrl = response.data.url;
+
+//         // Insert the image URL into the CKEditor content
+//         const updatedText = `${text}<img src="${imageUrl}" alt="Uploaded Image" />`;
+//         setText(updatedText);
+//       }
+//     } catch (error) {
+//       console.error("Error uploading image:", error);
+//     }
+//   }
+// };
+
 
   return (
     <div className="blog__container">
@@ -65,12 +94,6 @@ const Editor = () => {
 
       <div className="custom__width editor__width">
         <div className="display__col">
-          {/* <input
-            type="text"
-            placeholder="Creator's Name"
-            value={creator}
-            onChange={(e) => setCreator(e.target.value)}
-          /> */}
           <input
             type="title"
             placeholder="Blog Title"
@@ -80,8 +103,10 @@ const Editor = () => {
 
           <input
             type="file"
+            accept="image/*"
+            name="imgTitle"
+            // onChange={(e) => handleImageUpload(e)}
             // value={title}
-            onChange={(e) => setTitle(e.target.value)}
           />
 
           <CKEditor
@@ -89,7 +114,7 @@ const Editor = () => {
             data={text}
             config={{
               height: 900, // Set your desired height here
-            }}
+            }}b className='editor__textarea'
             onChange={(event, editor) => {
               const data = editor.getData();
               setText(data);
@@ -113,7 +138,12 @@ const Editor = () => {
             <Loader />
           ) : (
             <div className="editor__button">
-              <button onClick={handlePublish} className="w-[119px] h-[40px] bg-[#4CAF50] text-white text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24">Publish</button>
+              <button
+                onClick={handlePublish}
+                className="w-[119px] h-[40px] bg-[#4CAF50] text-white text-center flex items-center cursor-pointer justify-center rounded-lg p-10 px-24"
+              >
+                Publish
+              </button>
             </div>
           )}
         </div>

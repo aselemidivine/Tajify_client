@@ -191,24 +191,24 @@ const Profile = () => {
               Trump administration officials, have used veto power over other
               companies, forcing them to buy their products instead of .
             </h1>
-            <div className="flex profile__comments items-center justify-between">
+            <div className="flex r-profile-container profile__comments items-center justify-between">
               <img
                 src={profilePhoto}
                 alt="Profile"
                 className="w-10 h-10 rounded-full"
               />
-              <div>
+              <div className="r-profile">
                 <p className="text-[12px] text-gray-800">John Doe</p>
                 <p className="text-gray-600 text-sm"></p>
               </div>
-              <p className="mt-2 text-gray-700"></p>
+              <p className="mr-profile"></p>
               <div className="mt-2 flex items-center">
                 <AiOutlineCalendar className="text-gray-600 mr-2" />
                 <span className="text-gray-600 text-[12px]">
                   12th, May 2023 - 03: 23pm
                 </span>
               </div>
-              <div className="mt-2 flex items-center">
+              <div className="r-profile">
                 <LiaComments className="text-gray-600 mr-2" />
                 <span className="text-gray-600 text-[12px]">23 Comm</span>
               </div>
@@ -233,7 +233,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -269,7 +269,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -305,7 +305,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -341,25 +341,25 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
-              <div className="flex items-center justify-between">
+            <div className="r-profile-info">
+              <div className="flex r-profile-container items-center justify-between">
                 <img
                   src={profilePhoto}
                   alt="Profile"
                   className="w-10 h-10 rounded-full"
                 />
-                <div>
+                <div className="r-profile">
                   <p className="text-[12px] text-gray-800">John Doe</p>
                   <p className="text-gray-600 text-sm"></p>
                 </div>
-                <p className="mt-2 text-gray-700"></p>
+                <p className="r-profile"></p>
                 <div className="mt-2 flex items-center">
                   <AiOutlineCalendar className="text-gray-600 mr-2" />
                   <span className="text-gray-600 text-[12px]">
                     12th, May 2023 - 03: 23pm
                   </span>
                 </div>
-                <div className="mt-2 flex items-center">
+                <div className="r-profile">
                   <LiaComments className="text-gray-600 mr-2" />
                   <span className="text-gray-600 text-[12px]">23 Comm</span>
                 </div>
@@ -379,24 +379,24 @@ const Profile = () => {
               Trump administration officials, have used veto power over other
               companies, forcing them to buy their products instead of .
             </h1>
-            <div className="flex profile__comments items-center justify-between">
+            <div className="flex r-profile-container profile__comments items-center justify-between">
               <img
                 src={profilePhoto}
                 alt="Profile"
                 className="w-10 h-10 rounded-full"
               />
-              <div>
+              <div className="r-profile">
                 <p className="text-[12px] text-gray-800">John Doe</p>
                 <p className="text-gray-600 text-sm"></p>
               </div>
               <p className="mt-2 text-gray-700"></p>
-              <div className="mt-2 flex items-center">
+              <div className="r-profile">
                 <AiOutlineCalendar className="text-gray-600 mr-2" />
                 <span className="text-gray-600 text-[12px]">
                   12th, May 2023 - 03: 23pm
                 </span>
               </div>
-              <div className="mt-2 flex items-center">
+              <div className="r-profile">
                 <LiaComments className="text-gray-600 mr-2" />
                 <span className="text-gray-600 text-[12px]">23 Comm</span>
               </div>
@@ -424,7 +424,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -460,7 +460,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -496,7 +496,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -532,7 +532,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -558,9 +558,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="ads__second">
-          <AdsSecond />
-        </div>
+        <div className="ads__box--xl" style={{width: '100%', height: '12rem', margin: '1.4rem 0'}}>&nbsp;</div>
 
         <div className="flex flex-wrap gap-16">
           <div className="main__news__1">
@@ -575,7 +573,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -611,7 +609,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -647,7 +645,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -683,7 +681,7 @@ const Profile = () => {
               Mystify Winner Is Retired Because of Wealth's Beds Ankle World
               Wide.
             </h1>
-            <div className="p-4">
+            <div className="r-profile-info">
               <div className="flex items-center justify-between">
                 <img
                   src={profilePhoto}
@@ -802,15 +800,14 @@ const ProfileContainer = styled.div`
 
   .profile__container {
     display: flex;
-    height: 40px;
+    height: 18rem;
     margin-bottom: 10px;
-    justify-content: space-between;
+    justify-content: space;
   }
 
   .profile__container__1 {
     display: flex;
-    width: 931px;
-    height: 190px;
+    gap:2.4rem;
   }
 
   .view__all {
@@ -861,19 +858,18 @@ const ProfileContainer = styled.div`
   }
 
   .profile__news_img {
-    width: 181px;
-    height: 181px;
+    height: 18rem;
+    overflow: hidden;
+    border-radius: 2rem;
   }
 
   .profile__img {
-    border-radius: 20px;
+    height: 100%;
   }
 
-  .writers__container {
-    width: 635px;
-    padding: 12px;
+  .profile__container__1 .writers__container {
     height: 190px;
-    margin-left: 40px;
+    margin: 0;
   }
 
   .featured__news_contents {
@@ -900,31 +896,31 @@ const ProfileContainer = styled.div`
   }
 
   .profile {
-    max-width: 931px;
+    max-width: 90rem;
+    margin-right:3rem
   }
 
   .profile__socials {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
   }
 
   .main__news__img {
     width: 100%;
+    height: 30rem;
   }
 
   .main__news {
-    padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 2rem;
     margin-bottom: 27px;
-    border-top: 2px solid #d9d9d9;
-    border-bottom: 2px solid #d9d9d9;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
   }
 
   .main__news__1 {
     max-width: 400px;
-    // margin-right: 23px;
-    margin-top: 20px;
+    // margin-right: 1.6rem;
+    // margin-top: 20px;
   }
 
   .profile__comments {
@@ -935,10 +931,9 @@ const ProfileContainer = styled.div`
 
   .bold__text__pink {
     color: #f06;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
   }
 
   .profile__ads {
@@ -963,6 +958,15 @@ const ProfileContainer = styled.div`
     }
   }
 
+  .r-profile-container {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .r-profile {
+    display: flex;
+  }
+
   .main__news_img {
     width: 388px;
     height: 242px;
@@ -973,8 +977,12 @@ const ProfileContainer = styled.div`
   }
 
   .img__container {
-    width: 388px;
-    height: 242px;
-    margin-bottom: 23px;
+    width: 40rem;
+    height: 24rem;
+    margin-bottom: 1rem;
+  }
+
+  .r-profile-info {
+    display: flex;
   }
 `;

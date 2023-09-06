@@ -12,7 +12,7 @@ function FollowAndJobs() {
         <Jobs amount={4} />
       </div>
       <div className="writer__foter">
-        <WriterFooter />
+        {/* <WriterFooter /> */}
       </div>
       {/* <ProfileFooter /> */}
     </div>

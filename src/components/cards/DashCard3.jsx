@@ -4,7 +4,7 @@ import Currency from "react-currency-formatter";
 
 const DashCard3 = ({}) => {
   return (
-    <div className="w-full p-2 lg:w-1/3 md:w-1/2">
+    <div className="w-full p-2 lg:w-1/3 md:w-1/2" >
       <div
         className={`flex flex-col px-6 py-10 overflow-hidden bg-gradient-to-br from-[#585aa8]  to-primary rounded shadow-lg duration-300 hover:shadow-2xl group`}
       >

@@ -85,17 +85,18 @@ const BlogDetails = () => {
         </div>
       ) : post ? ( // Check if post is not null before rendering
         <div key={post._id} className="blog__content">
-          <div className="custom__width">
-            <div className="ads__body">
+          <div className="content__container">
+            {/* <div className="ads__body">
               <div className="ads__second">
                 <AdsSecond />
               </div>
-            </div>
-            <h1>{post.title}</h1>
+            </div> */}
+            <div className="ads__box--big width-100">&nbsp;</div>
 
             <div className="writers__stats">
               <div className="writers__stats__container">
                 <div className="img__and__details__container">
+                  <h1 className="blog__title">{post.title}</h1>
                   <div className="img__and__details">
                     <div>
                       <div className="profile__comments">
@@ -103,14 +104,14 @@ const BlogDetails = () => {
                           <img src={profilePhoto} alt="Profile" className="" />
                         </div>
                         <div>
-                          <p className="text-[12px] text-gray-800">John Doe</p>
-                          <p className="text-gray-600 text-sm"></p>
+                          <p className="blog__author">John Doe</p>
+                          <p className="blog__info">7 min read Jan 17, 2018</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="img__and__details__2">
-                    <div className="icons__flex">
+                    <div className="blog__metrics">
                       <div className="reaction">
                         <PiHandsClappingThin className="writer__icons" />
                         <span>4.5k</span>
@@ -174,7 +175,7 @@ const BlogDetails = () => {
                 have moments when we lose ourselves emotionally, get all caught
                 up in what’s going on in our heads and hearts.
               </p>
-              <p className="details__paragraph__italics">
+              <p className="details__paragraph--italics">
                 But the most telling sign is a lack of emotional control.
                 Especially an inability to control anger. If you want the inside
                 oil on a partner, watch how they deal with stress, frustration
@@ -207,7 +208,7 @@ const BlogDetails = () => {
             </Link>
             <div>
               <TabsArticle />
-              <div className="profile__container__1">
+              <div className="profile__container-main">
                 <div className="profile__container">
                   <div className="profile__news_img">
                     <img src={Creator} className="profile__img" />
