@@ -86,3 +86,36 @@ const Wallet = () => {
 
 
 export default Wallet;
+
+
+
+  {/* <ModalOverlay /> */}
+      {/* <ModalContent>
+        <ModalHeader>
+          <h1 className="text-2xl text-green-600">Add a Comment</h1>
+        </ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <div>
+            <Textarea
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            //   placeholder={`Write your comment, ${user.name}...`}
+              size="sm"
+            />
+          </div>
+        </ModalBody>
+
+        <ModalFooter>
+          <div className="">
+            <Button
+              onClick={handleComment}
+              colorScheme="green"
+              size="sm"
+              ml="auto"
+            >
+              Comment
+            </Button>
+          </div>
+        </ModalFooter>
+      </ModalContent> */}

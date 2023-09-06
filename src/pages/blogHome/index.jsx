@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainHeader from "../../components/MainHeader";
 import SubHeader from "../../components/SubHeader";
 import Hero from "../../components/Hero";
@@ -13,18 +13,28 @@ import Footer from "../../components/Footer";
 import "./main.css";
 
 const BlogHome = () => {
+
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen(isDropdownOpen);
+  // };
+
   return (
     <>
-      <MainHeader />
-      <Hero />
-      <MostPopularCourses />
-      <TreadingArticles />
-      <ExploreSkills />
-      <ExploreCategories />
-      <TopNewsAndFeaturedArticles />
-      <TopCreators />
-      <ExploreMore />
-      <Footer />
+      {/* <div className="click__outside--modal" onClick={toggleDropdown}>
+        asdcasdcf
+      </div> */}
+        <MainHeader />
+        <Hero />
+        <MostPopularCourses />
+        <TreadingArticles />
+        <ExploreSkills />
+        <ExploreCategories />
+        <TopNewsAndFeaturedArticles />
+        <TopCreators />
+        <ExploreMore />
+        <Footer />
     </>
   );
 };

@@ -11,7 +11,7 @@ import ProtectedRoute, {
 } from "./components/authentication/ProtectedRoute";
 import Help from "./pages/help";
 import Privacy from "./pages/privacy";
-import Editor from "./pages/editor";
+import EditorPage from "./pages/editor";
 import Profile from "./pages/profile";
 import ComingSoon from "./pages/comingSoon/ComingSoon";
 import PremiumContent from "./pages/premium/premiumContent";
@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<ProtectedRoute />}>
-          <Route path="/editor" element={<Editor />}></Route>
+          <Route path="/editor" element={<EditorPage />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/writer" element={<Writer />}></Route>
           <Route path="/premium" element={<PremiumContent />}></Route>

@@ -4,13 +4,23 @@ import "../../pages/blogDetails/blogDetails.css";
 import axios from "axios";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import parse from "html-react-parser";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { Editor } from "@tinymce/tinymce-react";
+// import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { useAuthContext } from "../../context/AuthContext";
 import Loader from "../../components/Loader";
+import 'tinymce/tinymce';
 
-const LOGIN_URL = "http://localhost:3005/api/blogs"; // Replace with your actual API endpoint
+// Import any additional CSS or styles if needed
+import 'tinymce/themes/silver';
+import 'tinymce/icons/default';
 
-const Editor = () => {
+
+
+
+const BLOG_POST_URL = "http://localhost:3005/api/blogs"; // Replace with your actual API endpoint
+const UPLOAD_ENDPOINT = "https://api.cloudinary.com/v1_1/dlvm6us0n/image";
+
+const EditorPage = () => {
   const { user, token, handleChange } = useAuthContext();
   const [creator, setCreator] = useState(""); // Creator's name
   const [title, setTitle] = useState(""); // Blog post title
@@ -19,6 +29,10 @@ const Editor = () => {
   const [tags, setTags] = useState(""); // Blog post tags
   const [loading, setLoading] = useState(false);
 
+  const handleEditorChange = (content, editor) => {
+    console.log("Content was updated:", content);
+  };
+
   const handlePublish = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -26,7 +40,7 @@ const Editor = () => {
     try {
       // console.log("Token:", token);
       const response = await axios.post(
-        LOGIN_URL,
+        BLOG_POST_URL,
         JSON.stringify({
           title: title,
           content: text,
@@ -46,47 +60,41 @@ const Editor = () => {
         setLoading(false);
 
         // Reset the editor content or perform any other necessary actions
-      } 
+      }
     } catch (error) {
       console.error("Error:", error);
       setLoading(false);
     }
   };
 
-//   const handleImageUpload = async (e) => {
-//   const file = e.target.files[0];
+  // function uploadAdapter(loader) {
+  //   return {
+  //     upload : () => {
+  //       return new Promise((resolve, reject) => {
+  //         const body = new FormData();
+  //         loader.file.then((file) => {
+  //           body.append("uploadImg", file);
+  //           fetch(`${BLOG_POST_URL}/${UPLOAD_ENDPOINT}`, {
+  //             method: "post",
+  //             body: body
+  //           }).then((res) => res.json())
+  //           .then((res) => {
+  //             resolve({default: `${BLOG_POST_URL}/${res.url}`})
+  //           })
+  //           .catch((err) => {
+  //             reject(err);
+  //           })
+  //         })
+  //       })
+  //     }
+  //   }
+  // }
 
-//   if (file) {
-//     try {
-//       const formData = new FormData();
-//       formData.append("image", file);
-
-//       // Make an Axios POST request to upload the image
-//       const response = await axios.post(
-//         "http://localhost:3005/api/upload-image",
-//         formData,
-//         {
-//           headers: {
-//             "Content-Type": "multipart/form-data",
-//             Authorization: `Bearer ${token}`,
-//           },
-//         }
-//       );
-
-//       if (response.data.url) {
-//         // Image uploaded successfully, you can get the image URL from the response
-//         const imageUrl = response.data.url;
-
-//         // Insert the image URL into the CKEditor content
-//         const updatedText = `${text}<img src="${imageUrl}" alt="Uploaded Image" />`;
-//         setText(updatedText);
-//       }
-//     } catch (error) {
-//       console.error("Error uploading image:", error);
-//     }
-//   }
-// };
-
+  // function uploadPlugin(editor) {
+  //   editor.plugins.get("FileRespository").createUploadAdapter = (loader) => {
+  //     return uploadAdapter(loader);
+  //   }
+  // }
 
   return (
     <div className="blog__container">
@@ -101,16 +109,10 @@ const Editor = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <input
-            type="file"
-            accept="image/*"
-            name="imgTitle"
-            // onChange={(e) => handleImageUpload(e)}
-            // value={title}
-          />
+          <input type="file" accept="image/*" name="imgTitle" />
 
-          <CKEditor
-            editor={ClassicEditor}
+          {/* <CKEditor
+            editor={CKEditor}
             data={text}
             config={{
               height: 900, // Set your desired height here
@@ -119,6 +121,25 @@ const Editor = () => {
               const data = editor.getData();
               setText(data);
             }}
+          /> */}
+
+          <Editor
+            initialValue="<p>This is the initial content of the editor</p>"
+            // init={{
+            //   plugins: "link image code",
+            //   toolbar:
+            //     "undo redo | bold italic | alignleft aligncenter alignright | code",
+            // }}
+            init={{
+              plugins: 'link image code',
+              toolbar:
+                'undo redo | bold italic | alignleft aligncenter alignright | code image',
+            }}
+            onEditorChange={handleEditorChange}
+            // onChange={(event, editor) => {
+            //   const data = editor.getData();
+            //   setText(data);
+            // }}
           />
 
           <input
@@ -152,4 +173,4 @@ const Editor = () => {
   );
 };
 
-export default Editor;
+export default EditorPage;

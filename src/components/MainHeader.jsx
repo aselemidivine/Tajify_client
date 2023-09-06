@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import profilePhoto from "../assets/images/pngs/Profile-img-skills.png";
 import "../pages/blogHome/main.css";
@@ -90,9 +90,9 @@ function SubHeader() {
           {/* {isRegistered ? ( */}
           {user && (
             <>
-              <Link to="/editor">
+              {/* <Link to="/editor">
                 <SlNote className="navbar__icons" />
-              </Link>
+              </Link> */}
               <BsBell className="navbar__icons" />
               <div className="profile__bane--container">
                 <Profile />
@@ -112,10 +112,33 @@ function SubHeader() {
 
 function Profile() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  // Close the dropdown when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    // Add the event listener when the dropdown is open
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      // Remove the event listener when the dropdown is closed
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   return (
     <div className="header__profile--box">
@@ -130,18 +153,7 @@ function Profile() {
       </Link>
       <p className="profile__name">Aselemi Divine</p>
       <LiaAngleDownSolid className="navbar__icons" onClick={toggleDropdown} />
-      {isDropdownOpen && (
-        // <div className="profile__dropdown-menu">
-        //   <Link to="/profile" className="dropdown-menu__link">
-        //     Profile
-        //   </Link>
-        //   <Link to="/settings" className="dropdown-menu__link">
-        //     Settings
-        //   </Link>
-        //   <button className="dropdown-menu__link">Logout</button>
-        // </div>
-        <DropdownMenu />
-      )}
+      {isDropdownOpen && <DropdownMenu />}
     </div>
   );
 }

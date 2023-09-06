@@ -19,17 +19,16 @@ import { FiShare } from "react-icons/fi";
 import { AiOutlineComment } from "react-icons/ai";
 import { BsSave } from "react-icons/bs";
 import axios from "axios";
-
 // import "../../index.css";
 import "../../pages/blogDetails/blogDetails.css";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../components/Footer";
 import TreadingArticles from "../../components/TreadingArticles";
 import { useAuthContext } from "../../context/AuthContext";
-
 import Profile from "../../components/Profile";
 // import Loader from "../../components/Loader";
 import LoaderSpiner from "../../components/LoaderSpinner";
+import Comments from "../../components/comments/Comments";
 
 // const SINGLE_BLOGS_URL =
 //   // "http://localhost:3005/api/blogs/64edfe64306fb36f9a0d7fd3"; // Updated API URL
@@ -37,12 +36,28 @@ import LoaderSpiner from "../../components/LoaderSpinner";
 
 const BlogDetails = () => {
   const { token } = useAuthContext();
-  const {id} = useParams(); // This retrieves the ID from the URL parameter
+  const { id } = useParams(); // This retrieves the ID from the URL parameter
 
   const [loading, setLoading] = useState(false);
   const [post, setPost] = useState([]);
+  //comment modal states
+
+  // const [showDepositModal, setShowDepositModal] = useState(false);
+  // const handleCloseDepositModal = () => setShowDepositModal(false);
+  // const handleOpenDepositModal = () => setShowDepositModal(true);
 
 
+  const [showCommentModal, setShowCommentModal] = useState(false);
+
+  // Function to open the comment modal
+  const handleOpenCommentModal = () => {
+    setShowCommentModal(true);
+  };
+
+  // Function to close the comment modal
+  const handleCloseCommentModal = () => {
+    setShowCommentModal(false);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -50,11 +65,14 @@ const BlogDetails = () => {
 
     const fetchData = async () => {
       try {
-          const response = await axios.get(`http://localhost:3005/api/blogs/${id}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          `http://localhost:3005/api/blogs/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (response.data.data.blog) {
           // Handle the fetched data and set it in state
@@ -76,7 +94,6 @@ const BlogDetails = () => {
 
   return (
     <div className="blog__container">
-    
       <SubHeader />
 
       {loading ? (
@@ -117,8 +134,19 @@ const BlogDetails = () => {
                         <span>4.5k</span>
                       </div>
                       <div className="reaction">
-                        <AiOutlineComment className="writer__icons" />
+                        {/* Render the comment icon and attach a click handler */}
+                        <div onClick={handleOpenCommentModal}>
+                          <AiOutlineComment className="writer__icons" />
+                        </div>
+
+                        {/* Render the comment count */}
                         <span>65</span>
+
+                        {/* Render the Comments component within a modal */}
+                        <Comments
+                          isOpen={showCommentModal}
+                          onClose={handleCloseCommentModal}
+                        />
                       </div>
                     </div>
                     <div className="downloads">

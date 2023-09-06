@@ -1,47 +1,56 @@
-import React from 'react';
-import { AiOutlineUser } from 'react-icons/ai';
-import { VscLibrary } from 'react-icons/vsc';
-import { BsBarChart } from 'react-icons/bs'
+import React from "react";
+import { AiOutlineUser } from "react-icons/ai";
+import { VscLibrary } from "react-icons/vsc";
+import { BsBarChart } from "react-icons/bs";
+import { CiWallet } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function DropdownMenu() {
   return (
-    <div className='dropdown-menu'>
+    <div className="dropdown-menu">
       <ul className="dropdown-list dropdown-list--top">
-        <li className="dropdown-item">
+        <Link to="/profile">
+          <li className="dropdown-item">
             <AiOutlineUser />
             <p>Profile</p>
+          </li>
+        </Link>
+        <li className="dropdown-item">
+          <VscLibrary />
+          <p>Library</p>
         </li>
         <li className="dropdown-item">
-            <VscLibrary />
-            <p>Library</p>
+          <BsBarChart />
+          <p>Stats</p>
         </li>
-        <li className="dropdown-item">
-            <BsBarChart />
-            <p>Stats</p>
-        </li>
+        <Link to="/wallet">
+          <li className="dropdown-item">
+            <CiWallet />
+
+            <p>Wallet</p>
+          </li>
+        </Link>
       </ul>
 
       <ul className="dropdown-list dropdown-list--bottom">
         <li className="dropdown-item">
-            <p>Settings</p>
+          <p>Settings</p>
         </li>
         <li className="dropdown-item">
-            <p>Recommendation</p>
+          <p>Recommendation</p>
         </li>
         <li className="dropdown-item">
-            <p>Publication</p>
+          <p>Publication</p>
         </li>
         <li className="dropdown-item">
-            <p>Help Center</p>
+          <p>Help Center</p>
         </li>
         <li className="dropdown-item">
-            <p>Upgrade</p>
+          <p>Upgrade</p>
         </li>
       </ul>
-
-
     </div>
-  )
+  );
 }
 
-export default DropdownMenu
+export default DropdownMenu;

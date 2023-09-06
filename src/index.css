@@ -130,7 +130,7 @@ body {
 .dropdown-menu {
   max-width: 30rem;
   width: 30rem;
-  height: 45rem;
+  max-height: 49rem;
   background-color: #fff;
   padding: 2.4rem 3rem;
   overflow-y: auto;
@@ -141,7 +141,8 @@ body {
   top: 8rem;
   right: 1rem;
   transition: all .25s;
-  opacity: 1;
+  /* opacity: 1; */
+  opacity: 0.9;
   /* box-shadow: .2rem 0 1.2rem rgba(0, 0, 0, 0.15); */
 }
 .dropdown-list {
@@ -161,4 +162,9 @@ body {
 .dropdown-list--bottom {
   border-top: 1px solid #eee;
   padding-top: 2rem;
+}
+
+.click__outside--modal {
+  position: fixed;
+  opacity: 0;
 }

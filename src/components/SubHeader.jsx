@@ -6,6 +6,7 @@ import { LiaAngleDownSolid } from "react-icons/lia";
 import { BsBell } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
 import { useAuthContext } from "../context/AuthContext";
+import DropdownMenu from "./DropdownMenu";
 
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
@@ -78,6 +79,42 @@ function SubHeader() {
   );
 }
 
+// function Profile() {
+//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+//   const toggleDropdown = () => {
+//     setIsDropdownOpen(!isDropdownOpen);
+//   };
+
+//   return (
+//     <div className="header__profile--box">
+//       <Link to="/profile">
+//         <div className="profile__image--box" onClick={toggleDropdown}>
+//           <img
+//             src={profilePhoto}
+//             alt="profile image"
+//             className="profile__image"
+//           />
+//         </div>
+//       </Link>
+//       <p className="profile__name">Aselemi Divine</p>
+//       <LiaAngleDownSolid className="navbar__icons" />
+//       {isDropdownOpen && (
+//         <div className="profile__dropdown-menu">
+//           <Link to="/profile" className="dropdown-menu__link">
+//             Profile
+//           </Link>
+//           <Link to="/settings" className="dropdown-menu__link">
+//             Settings
+//           </Link>
+//           <button className="dropdown-menu__link">Logout</button>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+
 function Profile() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -88,7 +125,7 @@ function Profile() {
   return (
     <div className="header__profile--box">
       <Link to="/profile">
-        <div className="profile__image--box" onClick={toggleDropdown}>
+        <div className="profile__image--box">
           <img
             src={profilePhoto}
             alt="profile image"
@@ -97,17 +134,18 @@ function Profile() {
         </div>
       </Link>
       <p className="profile__name">Aselemi Divine</p>
-      <LiaAngleDownSolid className="navbar__icons" />
+      <LiaAngleDownSolid className="navbar__icons" onClick={toggleDropdown} />
       {isDropdownOpen && (
-        <div className="profile__dropdown-menu">
-          <Link to="/profile" className="dropdown-menu__link">
-            Profile
-          </Link>
-          <Link to="/settings" className="dropdown-menu__link">
-            Settings
-          </Link>
-          <button className="dropdown-menu__link">Logout</button>
-        </div>
+        // <div className="profile__dropdown-menu">
+        //   <Link to="/profile" className="dropdown-menu__link">
+        //     Profile
+        //   </Link>
+        //   <Link to="/settings" className="dropdown-menu__link">
+        //     Settings
+        //   </Link>
+        //   <button className="dropdown-menu__link">Logout</button>
+        // </div>
+        <DropdownMenu />
       )}
     </div>
   );
