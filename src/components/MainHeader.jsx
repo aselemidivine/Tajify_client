@@ -7,12 +7,13 @@ import { BsBell } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
 import { useAuthContext } from "../context/AuthContext";
 import DropdownMenu from "./DropdownMenu";
+import Notification from "./notification/Notification";
 
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
 function SubHeader() {
   const { user } = useAuthContext();
-  const [isRegistered, setIsRegistered] = useState(true);
+
 
   const activeLinkStyle = {
     fontWeight: "bold", // You can customize this style
@@ -90,10 +91,9 @@ function SubHeader() {
           {/* {isRegistered ? ( */}
           {user && (
             <>
-              {/* <Link to="/editor">
-                <SlNote className="navbar__icons" />
-              </Link> */}
-              <BsBell className="navbar__icons" />
+              <div className="profile__bane--container">
+                <NotificationIcon />
+              </div>
               <div className="profile__bane--container">
                 <Profile />
               </div>
@@ -107,6 +107,44 @@ function SubHeader() {
         </span>
       </nav>
     </header>
+  );
+}
+
+function NotificationIcon() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Close the dropdown when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    // Add the event listener when the dropdown is open
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      // Remove the event listener when the dropdown is closed
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+  return (
+    <div className="header__profile--box">
+      <BsBell className="navbar__icons" onClick={toggleDropdown} />
+      {isDropdownOpen && <Notification toggleDropdown={toggleDropdown} />}
+    </div>
   );
 }
 
@@ -152,6 +190,9 @@ function Profile() {
         </div>
       </Link>
       <p className="profile__name">Aselemi Divine</p>
+      {/* <div className="outsideclick">
+
+      </div> */}
       <LiaAngleDownSolid className="navbar__icons" onClick={toggleDropdown} />
       {isDropdownOpen && <DropdownMenu />}
     </div>

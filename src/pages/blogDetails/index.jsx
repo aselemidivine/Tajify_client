@@ -29,6 +29,7 @@ import Profile from "../../components/Profile";
 // import Loader from "../../components/Loader";
 import LoaderSpiner from "../../components/LoaderSpinner";
 import Comments from "../../components/comments/Comments";
+import Notification from "../../components/notification/Notification";
 
 // const SINGLE_BLOGS_URL =
 //   // "http://localhost:3005/api/blogs/64edfe64306fb36f9a0d7fd3"; // Updated API URL
@@ -40,24 +41,15 @@ const BlogDetails = () => {
 
   const [loading, setLoading] = useState(false);
   const [post, setPost] = useState([]);
-  //comment modal states
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // const [showDepositModal, setShowDepositModal] = useState(false);
-  // const handleCloseDepositModal = () => setShowDepositModal(false);
-  // const handleOpenDepositModal = () => setShowDepositModal(true);
-
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   const [showCommentModal, setShowCommentModal] = useState(false);
 
-  // Function to open the comment modal
-  const handleOpenCommentModal = () => {
-    setShowCommentModal(true);
-  };
-
-  // Function to close the comment modal
-  const handleCloseCommentModal = () => {
-    setShowCommentModal(false);
-  };
+ 
 
   useEffect(() => {
     setLoading(true);
@@ -135,19 +127,20 @@ const BlogDetails = () => {
                       </div>
                       <div className="reaction">
                         {/* Render the comment icon and attach a click handler */}
-                        <div onClick={handleOpenCommentModal}>
-                          <AiOutlineComment className="writer__icons" />
+                        <div onClick={toggleDropdown} className="reaction">
+                          <AiOutlineComment
+                            className="writer__icons"
+                            onClick={toggleDropdown}
+                          />
+
+                          {/* Render the comment count */}
+            
+                            <span>65</span>
                         </div>
-
-                        {/* Render the comment count */}
-                        <span>65</span>
-
-                        {/* Render the Comments component within a modal */}
-                        <Comments
-                          isOpen={showCommentModal}
-                          onClose={handleCloseCommentModal}
-                        />
                       </div>
+                          {isDropdownOpen && (
+                            <Comments toggleDropdown={toggleDropdown} />
+                            )}
                     </div>
                     <div className="downloads">
                       <BsSave className="writer__icons" />

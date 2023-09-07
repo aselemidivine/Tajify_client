@@ -168,3 +168,9 @@ body {
   position: fixed;
   opacity: 0;
 }
+
+.outsideclick {
+  width: 500px;
+  height: 500px;
+  background: #333;
+}
