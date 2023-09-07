@@ -93,7 +93,7 @@ const BlogDetails = () => {
           <LoaderSpiner />
         </div>
       ) : post ? ( // Check if post is not null before rendering
-        <div key={post._id} className="blog__content">
+        <div key={post._id} className="blog__content" >
           <div className="content__container">
             {/* <div className="ads__body">
               <div className="ads__second">

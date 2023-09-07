@@ -141,8 +141,8 @@ function NotificationIcon() {
   }, [isDropdownOpen]);
 
   return (
-    <div className="header__profile--box">
-      <BsBell className="navbar__icons" onClick={toggleDropdown} />
+    <div className="header__profile--box"  onClick={toggleDropdown}>
+      <BsBell className="navbar__icons" />
       {isDropdownOpen && <Notification toggleDropdown={toggleDropdown} />}
     </div>
   );
@@ -194,7 +194,7 @@ function Profile() {
 
       </div> */}
       <LiaAngleDownSolid className="navbar__icons" onClick={toggleDropdown} />
-      {isDropdownOpen && <DropdownMenu />}
+      {isDropdownOpen && <DropdownMenu toggleDropdown={toggleDropdown} />}
     </div>
   );
 }

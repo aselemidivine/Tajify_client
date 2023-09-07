@@ -45,10 +45,7 @@ const Writer = () => {
               </div>
               <div className="ads__box--xl" style={{width: '60%', height: '12rem'}}>&nbsp;</div>
             </div>
-            {/* <div className="custom__width">
-
-            <Tabs /> 
-            </div> */}
+         
             <div className="flex justify-between items-end mb-10">
             <div className="ads__box--xl" style={{width: '80%', height: '12rem'}}>&nbsp;</div>
               <div>

@@ -5,7 +5,7 @@ import { BsBarChart } from "react-icons/bs";
 import { CiWallet } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
-function DropdownMenu() {
+function DropdownMenu( {}) {
   return (
     <div className="dropdown-menu">
       <ul className="dropdown-list dropdown-list--top">

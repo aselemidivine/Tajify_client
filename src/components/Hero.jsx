@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import Shield from './svgs/Shield';
 
 
-function Hero() {
+function Hero( ) {
     return (
         <div className="hero__section">
             <div className="section__container">

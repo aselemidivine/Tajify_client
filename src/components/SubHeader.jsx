@@ -7,6 +7,7 @@ import { BsBell } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
 import { useAuthContext } from "../context/AuthContext";
 import DropdownMenu from "./DropdownMenu";
+import Notification from "./notification/Notification";
 
 const lists = ["Blogs", "Gigs", "Course", "Market", "Explore"];
 
@@ -64,7 +65,9 @@ function SubHeader() {
               <Link to="/editor">
                 <SlNote className="navbar__icons" />
               </Link>
-              <BsBell className="navbar__icons" />
+              <div className="profile__bane--container">
+                <NotificationIcon />
+              </div>
               <Profile />
             </>
           )}
@@ -115,12 +118,33 @@ function SubHeader() {
 // }
 
 
+function NotificationIcon() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+ 
+
+  return (
+    <div className="header__profile--box"  onClick={toggleDropdown}>
+      <BsBell className="navbar__icons" />
+      {isDropdownOpen && <Notification toggleDropdown={toggleDropdown} />}
+    </div>
+  );
+}
+
+
+
 function Profile() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+ 
 
   return (
     <div className="header__profile--box">
@@ -134,19 +158,11 @@ function Profile() {
         </div>
       </Link>
       <p className="profile__name">Aselemi Divine</p>
+      {/* <div className="outsideclick">
+
+      </div> */}
       <LiaAngleDownSolid className="navbar__icons" onClick={toggleDropdown} />
-      {isDropdownOpen && (
-        // <div className="profile__dropdown-menu">
-        //   <Link to="/profile" className="dropdown-menu__link">
-        //     Profile
-        //   </Link>
-        //   <Link to="/settings" className="dropdown-menu__link">
-        //     Settings
-        //   </Link>
-        //   <button className="dropdown-menu__link">Logout</button>
-        // </div>
-        <DropdownMenu />
-      )}
+      {isDropdownOpen && <DropdownMenu toggleDropdown={toggleDropdown} />}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import creator4 from "../../assets/images/pngs/writers-1.png";
 
+
 const BlogsCategoryPage = () => {
   const { category } = useParams(); // This retrieves the Category from the URL parameter
 
@@ -27,7 +28,8 @@ const BlogsCategoryPage = () => {
   }, []);
 
   return (
-    <div className="creator">
+    <div>
+    
       <h2>{category.toUpperCase()} Blogs</h2>
       <ul>
         <img
@@ -44,7 +46,8 @@ const BlogsCategoryPage = () => {
       </ul>
     </div>
   );
-
 };
 
 export default BlogsCategoryPage;
+
+
