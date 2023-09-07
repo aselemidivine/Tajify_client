@@ -34,6 +34,7 @@
 import { useState } from 'react';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { LiaComments } from 'react-icons/lia';
+import CardComments from './comments/CardComments';
 
 function ArticleSocialInfo({ avatarImg, articleComments, articleViews, initialLikes }) {
 //   const [likes, setLikes] = useState(initialLikes);
@@ -93,7 +94,7 @@ function ArticleSocialInfo({ avatarImg, articleComments, articleViews, initialLi
     // Make an API request to the server to add the comment
     // You'll need to implement this part on your Node.js server
   };
-  
+
   return (
     <div className="article__social--info">
       <div className="social--info">
@@ -116,22 +117,12 @@ function ArticleSocialInfo({ avatarImg, articleComments, articleViews, initialLi
       <div className="social--info">
         <LiaComments onClick={toggleComments} />
         <p className="article__social--figure">{articleComments} comments</p>
-      </div>
       {showComments && (
-        <div className="comment-section">
-          {/* Display comments here */}
-          {comments.map((comment, index) => (
-            <div key={index} className="comment">
-              {comment}
-            </div>
-          ))}
-          {/* Add a new comment form */}
-          <form onSubmit={(e) => {e.preventDefault(); addComment(e.target.comment.value)}}>
-            <input type="text" name="comment" placeholder="Add a comment" />
-            <button type="submit">Submit</button>
-          </form>
+          <div>
+          <CardComments />
         </div>
       )}
+      </div>
 
     </div>
   );
