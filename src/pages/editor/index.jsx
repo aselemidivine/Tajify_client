@@ -125,21 +125,14 @@ const EditorPage = () => {
 
           <Editor
             initialValue="<p>This is the initial content of the editor</p>"
-            // init={{
-            //   plugins: "link image code",
-            //   toolbar:
-            //     "undo redo | bold italic | alignleft aligncenter alignright | code",
-            // }}
+          
             init={{
               plugins: 'link image code',
               toolbar:
                 'undo redo | bold italic | alignleft aligncenter alignright | code image',
             }}
             onEditorChange={handleEditorChange}
-            // onChange={(event, editor) => {
-            //   const data = editor.getData();
-            //   setText(data);
-            // }}
+         
           />
 
           <input

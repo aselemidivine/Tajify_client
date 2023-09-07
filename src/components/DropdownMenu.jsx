@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function DropdownMenu( {}) {
   return (
-    <div className="dropdown-menu">
+    <div className="dropdown-menu shadow-2xl">
       <ul className="dropdown-list dropdown-list--top">
         <Link to="/profile">
           <li className="dropdown-item">

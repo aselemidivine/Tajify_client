@@ -319,6 +319,7 @@ header.header-green .navbar__list {
     align-items: center;
 }
 .social--info {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: .4rem;
